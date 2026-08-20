@@ -127,7 +127,7 @@ pub unsafe extern "C" fn content_classifier_engine_check_network_request_prepars
     NS_OK
 }
 
-/// Request check for the Waterfox blocker that also reports redirect and
+/// Request check for the Fennec blocker that also reports redirect and
 /// rewrite directives. Kept separate from the function above so upstream can
 /// reshape its own check without touching the blocker path.
 #[no_mangle]
@@ -242,7 +242,7 @@ pub unsafe extern "C" fn content_classifier_engine_get_csp_directives_preparsed(
 }
 
 /// `$replace=` requires adblock-rs support that is not part of the vendored
-/// crate. Keep the FFI surface stable for the Waterfox blocker service, but
+/// crate. Keep the FFI surface stable for the Fennec blocker service, but
 /// report no native directives unless the vendored engine grows them.
 #[no_mangle]
 pub unsafe extern "C" fn content_classifier_engine_get_replace_directives_preparsed(

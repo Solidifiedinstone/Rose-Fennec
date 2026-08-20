@@ -1,0 +1,45 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+colors-dialog2 =
+    .title = Colori
+    .style = min-width: 42em
+colors-close-key =
+    .key = w
+colors-page-override = Sostituisci i colori specificati nella pagina con quelli selezionati
+    .accesskey = c
+colors-page-override-option-always =
+    .label = sempre
+colors-page-override-option-auto =
+    .label = solo con temi a contrasto elevato
+colors-page-override-option-never =
+    .label = mai
+colors-text-and-background = Testo e sfondo
+colors-text =
+    .label = Testo
+    .accesskey = T
+colors-text-background =
+    .label = Sfondo
+    .accesskey = S
+colors-text-header = Testo
+    .accesskey = T
+colors-background = Sfondo
+    .accesskey = S
+colors-use-system =
+    .label = Usa i colori di sistema
+    .accesskey = U
+colors-underline-links =
+    .label = Sottolinea i link
+    .accesskey = o
+colors-links-header = Colori link
+colors-links-unvisited =
+    .label = Link non visitati
+    .accesskey = L
+colors-links-visited =
+    .label = Link visitati
+    .accesskey = v
+colors-unvisited-links = Link non visitati
+    .accesskey = L
+colors-visited-links = Link visitati
+    .accesskey = v

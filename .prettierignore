@@ -38,7 +38,7 @@ build/build-clang/**
 testing/profiles/**/user.js
 
 # The nested localization repository contains legacy .js property files.
-waterfox/browser/locales/**
+fennec/browser/locales/**
 
 # Ignore CORS fixtures which require specific resource hashes.
 dom/security/test/sri/script*
@@ -65,7 +65,7 @@ toolkit/components/formautofill/shared/CreditCardRuleset.sys.mjs
 
 # Ignore preprocessed xhtml/html files
 browser/base/content/aboutDialog.xhtml
-waterfox/browser/base/content/aboutDialog.xhtml
+fennec/browser/base/content/aboutDialog.xhtml
 browser/base/content/browser.xhtml
 browser/base/content/default-bookmarks.html
 browser/base/content/hiddenWindowMac.xhtml
@@ -1016,9 +1016,9 @@ build/pgo/js-input/
 # browser/ exclusions
 browser/app/
 browser/branding/**/firefox-branding.js
-waterfox/browser/app/profile/
-waterfox/browser/branding/**/firefox-branding.js
-waterfox/browser/themes/lepton/prefs-lepton.js
+fennec/browser/app/profile/
+fennec/browser/branding/**/firefox-branding.js
+fennec/browser/themes/lepton/prefs-lepton.js
 # Gzipped test file.
 browser/base/content/test/general/gZipOfflineChild.html
 browser/base/content/test/urlbar/file_blank_but_not_blank.html

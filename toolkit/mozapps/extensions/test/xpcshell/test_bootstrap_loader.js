@@ -1863,7 +1863,7 @@ add_task(async function test_current_hybrid_grandfathering() {
   }
 });
 
-add_task(async function test_waterfox_legacy_signing_state_matrix() {
+add_task(async function test_fennec_legacy_signing_state_matrix() {
   const previousRealCertChecks = gUseRealCertChecks;
   const previousPrivilegedSignatures = AddonTestUtils.usePrivilegedSignatures;
   const previousSigningRequired = Services.prefs.getBoolPref(

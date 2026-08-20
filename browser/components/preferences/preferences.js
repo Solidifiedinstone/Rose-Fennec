@@ -244,7 +244,16 @@ const CONFIG_PANES = Object.freeze({
   },
   appearance: {
     l10nId: "preferences-appearance-header",
-    groupIds: ["appearance", "browserTheme", "relatedSettings"],
+    // Rose first: it is what this browser looks like, and the Firefox
+    // light/dark chooser below it only decides what pages are told.
+    groupIds: [
+      "roseTheme",
+      "roseShape",
+      "roseEffects",
+      "appearance",
+      "browserTheme",
+      "relatedSettings",
+    ],
     module: "chrome://browser/content/preferences/config/appearance.mjs",
     iconSrc: "chrome://global/skin/icons/eye.svg",
     visible: () => srdSectionPrefs.all,
@@ -565,7 +574,7 @@ function init_all() {
   }
 
   ChromeUtils.importESModule(
-    "chrome://browser/content/waterfox/settings/WaterfoxSettingsPanes.mjs",
+    "chrome://browser/content/fennec/settings/FennecSettingsPanes.mjs",
     { global: "current" }
   );
 

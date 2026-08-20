@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-pine-dawn@fennec"
+    }
+  },
+  "name": "Ros\u00e9 Pine Dawn",
+  "description": "The Ros\u00e9 Pine Dawn palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#faf4ed",
+      "frame_inactive": "#faf4ed",
+      "tab_background_text": "#9893a5",
+      "tab_selected": "#e8ded5",
+      "tab_text": "#575279",
+      "tab_line": "#b4637a",
+      "tab_loading": "#b4637a",
+      "toolbar": "#fffaf3",
+      "toolbar_text": "#575279",
+      "toolbar_field": "#f2e9e1",
+      "toolbar_field_text": "#575279",
+      "toolbar_field_border": "#e8ded5",
+      "toolbar_field_focus": "#e8ded5",
+      "toolbar_field_text_focus": "#575279",
+      "toolbar_field_border_focus": "#b4637a",
+      "toolbar_top_separator": "#e8ded5",
+      "toolbar_bottom_separator": "#e8ded5",
+      "toolbar_vertical_separator": "#e8ded5",
+      "ntp_background": "#faf4ed",
+      "ntp_text": "#575279",
+      "popup": "#f2e9e1",
+      "popup_text": "#575279",
+      "popup_border": "#e8ded5",
+      "popup_highlight": "#dcb0bc",
+      "popup_highlight_text": "#575279",
+      "sidebar": "#fffaf3",
+      "sidebar_text": "#575279",
+      "sidebar_border": "#e8ded5",
+      "sidebar_highlight": "#dcb0bc",
+      "sidebar_highlight_text": "#575279",
+      "button_background_hover": "#f2e9e1",
+      "button_background_active": "#e8ded5",
+      "icons": "#9893a5",
+      "icons_attention": "#b4637a",
+      "bookmark_text": "#575279",
+      "error_text": "#b4637a"
+    },
+    "properties": {
+      "color_scheme": "light",
+      "content_color_scheme": "light"
+    }
+  }
+}

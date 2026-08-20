@@ -1,0 +1,13 @@
+browser.jar:
+%   content browser %content/browser/ contentaccessible=yes
+    content/browser/fennec/settings/FennecSettingsPanes.mjs          (FennecSettingsPanes.mjs)
+    content/browser/fennec/settings/fennecAdBlocking.mjs             (fennecAdBlocking.mjs)
+    content/browser/fennec/settings/fennecAppearance.mjs             (fennecAppearance.mjs)
+    content/browser/fennec/settings/fennecAppearance.css             (fennecAppearance.css)
+    content/browser/fennec/settings/fennecDataCollection.mjs         (fennecDataCollection.mjs)
+    content/browser/fennec/settings/fennecDns.mjs                    (fennecDns.mjs)
+    content/browser/fennec/settings/fennecHome.mjs                   (fennecHome.mjs)
+    content/browser/fennec/settings/fennecPrivacy.mjs                (fennecPrivacy.mjs)
+    content/browser/fennec/settings/fennecSearch.mjs                 (fennecSearch.mjs)
+    content/browser/fennec/settings/fennecTabs.mjs                   (fennecTabs.mjs)
+    content/browser/fennec/settings/fennecUpdates.mjs                (fennecUpdates.mjs)

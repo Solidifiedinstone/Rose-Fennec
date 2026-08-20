@@ -17,6 +17,7 @@ EXTRA_COMPONENTS += [
 EXTRA_JS_MODULES["services-settings"] += [
     "Attachments.sys.mjs",
     "Database.sys.mjs",
+    "FennecSettingsPolicy.sys.mjs",
     "IDBHelpers.sys.mjs",
     "remote-settings.sys.mjs",
     "RemoteSettings.worker.mjs",
@@ -27,7 +28,6 @@ EXTRA_JS_MODULES["services-settings"] += [
     "SyncHistory.sys.mjs",
     "UptakeTelemetry.sys.mjs",
     "Utils.sys.mjs",
-    "WaterfoxSettingsPolicy.sys.mjs",
 ]
 
 XPCOM_MANIFESTS += [

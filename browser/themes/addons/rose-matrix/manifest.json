@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-matrix@fennec"
+    }
+  },
+  "name": "Matrix",
+  "description": "The Matrix palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#000000",
+      "frame_inactive": "#000000",
+      "tab_background_text": "#4c8f63",
+      "tab_selected": "#12240f",
+      "tab_text": "#c8f7d4",
+      "tab_line": "#00ff6a",
+      "tab_loading": "#00ff6a",
+      "toolbar": "#020a02",
+      "toolbar_text": "#c8f7d4",
+      "toolbar_field": "#0a160a",
+      "toolbar_field_text": "#c8f7d4",
+      "toolbar_field_border": "#12240f",
+      "toolbar_field_focus": "#12240f",
+      "toolbar_field_text_focus": "#c8f7d4",
+      "toolbar_field_border_focus": "#00ff6a",
+      "toolbar_top_separator": "#12240f",
+      "toolbar_bottom_separator": "#12240f",
+      "toolbar_vertical_separator": "#12240f",
+      "ntp_background": "#000000",
+      "ntp_text": "#c8f7d4",
+      "popup": "#0a160a",
+      "popup_text": "#c8f7d4",
+      "popup_border": "#12240f",
+      "popup_highlight": "#0a7a38",
+      "popup_highlight_text": "#c8f7d4",
+      "sidebar": "#020a02",
+      "sidebar_text": "#c8f7d4",
+      "sidebar_border": "#12240f",
+      "sidebar_highlight": "#0a7a38",
+      "sidebar_highlight_text": "#c8f7d4",
+      "button_background_hover": "#0a160a",
+      "button_background_active": "#12240f",
+      "icons": "#4c8f63",
+      "icons_attention": "#00ff6a",
+      "bookmark_text": "#c8f7d4",
+      "error_text": "#ff5555"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

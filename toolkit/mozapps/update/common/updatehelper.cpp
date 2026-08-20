@@ -60,7 +60,7 @@ BOOL PathGetSiblingFilePath(LPWSTR destinationBuffer, LPCWSTR siblingFilePath,
  *
  * Example
  * Destination buffer value:
- *   C:\Program Files (x86)\Waterfox Maintenance Service\UpdateLogs
+ *   C:\Program Files (x86)\Fennec Maintenance Service\UpdateLogs
  *
  * @param  outBuf
  *         A buffer of size MAX_PATH + 1 to store the result.
@@ -79,7 +79,7 @@ BOOL GetSecureOutputDirectoryPath(LPWSTR outBuf) {
   wcsncpy(outBuf, progFilesX86, MAX_PATH + 1);
   CoTaskMemFree(progFilesX86);
 
-  if (!PathAppendSafe(outBuf, L"Waterfox Maintenance Service")) {
+  if (!PathAppendSafe(outBuf, L"Fennec Maintenance Service")) {
     return FALSE;
   }
 
@@ -443,7 +443,7 @@ LaunchServiceSoftwareUpdateCommand(int argc, LPCWSTR* argv) {
   // 2) The command being executed, which is "software-update"
   // 3) The path to updater.exe (from argv[0])
   LPCWSTR* updaterServiceArgv = new LPCWSTR[argc + 2];
-  updaterServiceArgv[0] = L"WaterfoxMaintenance";
+  updaterServiceArgv[0] = L"FennecMaintenance";
   updaterServiceArgv[1] = L"software-update";
 
   for (int i = 0; i < argc; ++i) {

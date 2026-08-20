@@ -79,26 +79,26 @@ jobs:
         uses: ./.github/actions/setup-rclone
       - name: Move installers from staging to production
         run: |
-          rclone moveto ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/WINNT_x86_64/Waterfox Setup ${DISPLAY_VERSION}.exe" \
-            ":s3:cdn/waterfox/releases/${DISPLAY_VERSION}/WINNT_x86_64/Waterfox Setup ${DISPLAY_VERSION}.exe"
-          rclone moveto ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/WINNT_x86_64/Waterfox Setup ${DISPLAY_VERSION}.exe.sha512" \
-            ":s3:cdn/waterfox/releases/${DISPLAY_VERSION}/WINNT_x86_64/Waterfox Setup ${DISPLAY_VERSION}.exe.sha512"
-          rclone moveto ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/Darwin_x86_64-aarch64/Waterfox ${DISPLAY_VERSION}.dmg" \
-            ":s3:cdn/waterfox/releases/${DISPLAY_VERSION}/Darwin_x86_64-aarch64/Waterfox ${DISPLAY_VERSION}.dmg"
-          rclone moveto ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/Darwin_x86_64-aarch64/Waterfox ${DISPLAY_VERSION}.dmg.sha512" \
-            ":s3:cdn/waterfox/releases/${DISPLAY_VERSION}/Darwin_x86_64-aarch64/Waterfox ${DISPLAY_VERSION}.dmg.sha512"
-          rclone moveto ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/Linux_x86_64/waterfox-${DISPLAY_VERSION}.tar.bz2" \
-            ":s3:cdn/waterfox/releases/${DISPLAY_VERSION}/Linux_x86_64/waterfox-${DISPLAY_VERSION}.tar.bz2"
-          rclone moveto ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/Linux_x86_64/waterfox-${DISPLAY_VERSION}.tar.bz2.sha512" \
-            ":s3:cdn/waterfox/releases/${DISPLAY_VERSION}/Linux_x86_64/waterfox-${DISPLAY_VERSION}.tar.bz2.sha512"
-          rclone moveto ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/WINNT_aarch64/Waterfox Setup ${DISPLAY_VERSION}.exe" \
-            ":s3:cdn/waterfox/releases/${DISPLAY_VERSION}/WINNT_aarch64/Waterfox Setup ${DISPLAY_VERSION}.exe"
-          rclone moveto ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/WINNT_aarch64/Waterfox Setup ${DISPLAY_VERSION}.exe.sha512" \
-            ":s3:cdn/waterfox/releases/${DISPLAY_VERSION}/WINNT_aarch64/Waterfox Setup ${DISPLAY_VERSION}.exe.sha512"
-          rclone moveto ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/Linux_aarch64/waterfox-${DISPLAY_VERSION}.tar.bz2" \
-            ":s3:cdn/waterfox/releases/${DISPLAY_VERSION}/Linux_aarch64/waterfox-${DISPLAY_VERSION}.tar.bz2"
-          rclone moveto ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/Linux_aarch64/waterfox-${DISPLAY_VERSION}.tar.bz2.sha512" \
-            ":s3:cdn/waterfox/releases/${DISPLAY_VERSION}/Linux_aarch64/waterfox-${DISPLAY_VERSION}.tar.bz2.sha512"
+          rclone moveto ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/WINNT_x86_64/Fennec Setup ${DISPLAY_VERSION}.exe" \
+            ":s3:cdn/fennec/releases/${DISPLAY_VERSION}/WINNT_x86_64/Fennec Setup ${DISPLAY_VERSION}.exe"
+          rclone moveto ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/WINNT_x86_64/Fennec Setup ${DISPLAY_VERSION}.exe.sha512" \
+            ":s3:cdn/fennec/releases/${DISPLAY_VERSION}/WINNT_x86_64/Fennec Setup ${DISPLAY_VERSION}.exe.sha512"
+          rclone moveto ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/Darwin_x86_64-aarch64/Fennec ${DISPLAY_VERSION}.dmg" \
+            ":s3:cdn/fennec/releases/${DISPLAY_VERSION}/Darwin_x86_64-aarch64/Fennec ${DISPLAY_VERSION}.dmg"
+          rclone moveto ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/Darwin_x86_64-aarch64/Fennec ${DISPLAY_VERSION}.dmg.sha512" \
+            ":s3:cdn/fennec/releases/${DISPLAY_VERSION}/Darwin_x86_64-aarch64/Fennec ${DISPLAY_VERSION}.dmg.sha512"
+          rclone moveto ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/Linux_x86_64/fennec-${DISPLAY_VERSION}.tar.bz2" \
+            ":s3:cdn/fennec/releases/${DISPLAY_VERSION}/Linux_x86_64/fennec-${DISPLAY_VERSION}.tar.bz2"
+          rclone moveto ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/Linux_x86_64/fennec-${DISPLAY_VERSION}.tar.bz2.sha512" \
+            ":s3:cdn/fennec/releases/${DISPLAY_VERSION}/Linux_x86_64/fennec-${DISPLAY_VERSION}.tar.bz2.sha512"
+          rclone moveto ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/WINNT_aarch64/Fennec Setup ${DISPLAY_VERSION}.exe" \
+            ":s3:cdn/fennec/releases/${DISPLAY_VERSION}/WINNT_aarch64/Fennec Setup ${DISPLAY_VERSION}.exe"
+          rclone moveto ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/WINNT_aarch64/Fennec Setup ${DISPLAY_VERSION}.exe.sha512" \
+            ":s3:cdn/fennec/releases/${DISPLAY_VERSION}/WINNT_aarch64/Fennec Setup ${DISPLAY_VERSION}.exe.sha512"
+          rclone moveto ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/Linux_aarch64/fennec-${DISPLAY_VERSION}.tar.bz2" \
+            ":s3:cdn/fennec/releases/${DISPLAY_VERSION}/Linux_aarch64/fennec-${DISPLAY_VERSION}.tar.bz2"
+          rclone moveto ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/Linux_aarch64/fennec-${DISPLAY_VERSION}.tar.bz2.sha512" \
+            ":s3:cdn/fennec/releases/${DISPLAY_VERSION}/Linux_aarch64/fennec-${DISPLAY_VERSION}.tar.bz2.sha512"
       - name: Load sign metadata
         uses: namespace-actions/download-artifact@7cbad919e4b0e09f17e9d6311a444ff002992b5b # v2
         with:
@@ -114,7 +114,7 @@ jobs:
     needs:
       - soft-release
     concurrency:
-      group: waterfox-obs-publication
+      group: fennec-obs-publication
       cancel-in-progress: false
     runs-on: namespace-profile-linux-xs
     timeout-minutes: 60
@@ -125,7 +125,7 @@ jobs:
           filter: blob:none
           sparse-checkout: |
             scripts
-            waterfox/browser/installer/linux/obs
+            fennec/browser/installer/linux/obs
       - name: Publish OBS package
         env:
           OBS_TRIGGER_TOKEN: ${{ secrets.OBS_TRIGGER_TOKEN }}
@@ -152,8 +152,8 @@ jobs:
         # Per-directory moves carry both the complete and any partial MARs.
         run: |
           for platform in WINNT_x86_64 Darwin_x86_64-aarch64 Linux_x86_64 WINNT_aarch64 Linux_aarch64; do
-            rclone move ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/update/${platform}/" \
-              ":s3:cdn/waterfox/releases/${DISPLAY_VERSION}/update/${platform}/"
+            rclone move ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/update/${platform}/" \
+              ":s3:cdn/fennec/releases/${DISPLAY_VERSION}/update/${platform}/"
           done
       - name: Flip rollout to 100 (auto-update goes live)
         env:

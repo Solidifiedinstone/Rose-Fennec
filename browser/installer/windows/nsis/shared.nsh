@@ -280,35 +280,35 @@ FunctionEnd
   StrCpy $0 "SOFTWARE\Classes"
   StrCpy $2 "$\"$8$\" -osint -url $\"%1$\""
 
-  ; Associate the file handlers with WaterfoxHTML, if they aren't already.
+  ; Associate the file handlers with FennecHTML, if they aren't already.
   ReadRegStr $6 SHCTX "$0\.htm" ""
   ${WordFind} "$6" "-" "+1{" $6
-  ${If} "$6" != "WaterfoxHTML"
-    WriteRegStr SHCTX "$0\.htm"   "" "WaterfoxHTML$5"
+  ${If} "$6" != "FennecHTML"
+    WriteRegStr SHCTX "$0\.htm"   "" "FennecHTML$5"
   ${EndIf}
 
   ReadRegStr $6 SHCTX "$0\.html" ""
   ${WordFind} "$6" "-" "+1{" $6
-  ${If} "$6" != "WaterfoxHTML"
-    WriteRegStr SHCTX "$0\.html"  "" "WaterfoxHTML$5"
+  ${If} "$6" != "FennecHTML"
+    WriteRegStr SHCTX "$0\.html"  "" "FennecHTML$5"
   ${EndIf}
 
   ReadRegStr $6 SHCTX "$0\.shtml" ""
   ${WordFind} "$6" "-" "+1{" $6
-  ${If} "$6" != "WaterfoxHTML"
-    WriteRegStr SHCTX "$0\.shtml" "" "WaterfoxHTML$5"
+  ${If} "$6" != "FennecHTML"
+    WriteRegStr SHCTX "$0\.shtml" "" "FennecHTML$5"
   ${EndIf}
 
   ReadRegStr $6 SHCTX "$0\.xht" ""
   ${WordFind} "$6" "-" "+1{" $6
-  ${If} "$6" != "WaterfoxHTML"
-    WriteRegStr SHCTX "$0\.xht"   "" "WaterfoxHTML$5"
+  ${If} "$6" != "FennecHTML"
+    WriteRegStr SHCTX "$0\.xht"   "" "FennecHTML$5"
   ${EndIf}
 
   ReadRegStr $6 SHCTX "$0\.xhtml" ""
   ${WordFind} "$6" "-" "+1{" $6
-  ${If} "$6" != "WaterfoxHTML"
-    WriteRegStr SHCTX "$0\.xhtml" "" "WaterfoxHTML$5"
+  ${If} "$6" != "FennecHTML"
+    WriteRegStr SHCTX "$0\.xhtml" "" "FennecHTML$5"
   ${EndIf}
 
 
@@ -316,26 +316,26 @@ FunctionEnd
   ; https://searchfox.org/firefox-main/source/browser/installer/windows/msix/AppxManifest.xml.in.
   ; and `os.environment.launched_to_handle` and `os.environment.invoked_to_handle` telemetry in
   ; https://searchfox.org/firefox-main/source/browser/components/BrowserContentHandler.sys.mjs.
-  ${AddAssociationIfNoneExist} ".oga" "WaterfoxHTML$5"
-  ${AddAssociationIfNoneExist} ".ogg" "WaterfoxHTML$5"
-  ${AddAssociationIfNoneExist} ".ogv" "WaterfoxHTML$5"
-  ${AddAssociationIfNoneExist} ".webm" "WaterfoxHTML$5"
-  ${AddAssociationIfNoneExist} ".svg" "WaterfoxHTML$5"
-  ${AddAssociationIfNoneExist} ".webp"  "WaterfoxHTML$5"
-  ${AddAssociationIfNoneExist} ".avif" "WaterfoxHTML$5"
-  ${AddAssociationIfNoneExist} ".jxl" "WaterfoxHTML$5"
+  ${AddAssociationIfNoneExist} ".oga" "FennecHTML$5"
+  ${AddAssociationIfNoneExist} ".ogg" "FennecHTML$5"
+  ${AddAssociationIfNoneExist} ".ogv" "FennecHTML$5"
+  ${AddAssociationIfNoneExist} ".webm" "FennecHTML$5"
+  ${AddAssociationIfNoneExist} ".svg" "FennecHTML$5"
+  ${AddAssociationIfNoneExist} ".webp"  "FennecHTML$5"
+  ${AddAssociationIfNoneExist} ".avif" "FennecHTML$5"
+  ${AddAssociationIfNoneExist} ".jxl" "FennecHTML$5"
 
-  ${AddAssociationIfNoneExist} ".pdf" "WaterfoxPDF$5"
+  ${AddAssociationIfNoneExist} ".pdf" "FennecPDF$5"
 
-  ; An empty string is used for the 5th param because WaterfoxHTML- is not a
-  ; protocol handler.  Ditto for WaterfoxPDF-.
-  ${AddDisabledDDEHandlerValues} "WaterfoxHTML$5" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
+  ; An empty string is used for the 5th param because FennecHTML- is not a
+  ; protocol handler.  Ditto for FennecPDF-.
+  ${AddDisabledDDEHandlerValues} "FennecHTML$5" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
                                  "${AppRegName} HTML Document" ""
 
-  ${AddDisabledDDEHandlerValues} "WaterfoxPDF$5" "$2" "$8,${IDI_DOCUMENT_PDF_ZERO_BASED}" \
+  ${AddDisabledDDEHandlerValues} "FennecPDF$5" "$2" "$8,${IDI_DOCUMENT_PDF_ZERO_BASED}" \
                                  "${AppRegName} PDF Document" ""
 
-  ${AddDisabledDDEHandlerValues} "WaterfoxURL$5" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" "${AppRegName} URL" \
+  ${AddDisabledDDEHandlerValues} "FennecURL$5" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" "${AppRegName} URL" \
                                  "true"
   ; An empty string is used for the 4th & 5th params because the following
   ; protocol handlers already have a display name and the additional keys
@@ -412,17 +412,17 @@ FunctionEnd
   WriteRegStr ${RegKey} "$0\Capabilities" "ApplicationIcon" "$8,${IDI_APPICON_ZERO_BASED}"
   WriteRegStr ${RegKey} "$0\Capabilities" "ApplicationName" "${BrandShortName}"
 
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".htm"   "WaterfoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".html"  "WaterfoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".shtml" "WaterfoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".xht"   "WaterfoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".xhtml" "WaterfoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".svg"   "WaterfoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".webp"  "WaterfoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".avif"  "WaterfoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".jxl"   "WaterfoxHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".htm"   "FennecHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".html"  "FennecHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".shtml" "FennecHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".xht"   "FennecHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".xhtml" "FennecHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".svg"   "FennecHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".webp"  "FennecHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".avif"  "FennecHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".jxl"   "FennecHTML$2"
 
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".pdf"   "WaterfoxPDF$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".pdf"   "FennecPDF$2"
 
   WriteRegStr ${RegKey} "$0\Capabilities\StartMenu" "StartMenuInternet" "$1"
 
@@ -430,9 +430,9 @@ FunctionEnd
   ; entire key, we need to remove any existing registration.
   DeleteRegValue ${RegKey} "$0\Capabilities\URLAssociations" "ftp"
 
-  WriteRegStr ${RegKey} "$0\Capabilities\URLAssociations" "http"   "WaterfoxURL$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\URLAssociations" "https"  "WaterfoxURL$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\URLAssociations" "mailto" "WaterfoxURL$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\URLAssociations" "http"   "FennecURL$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\URLAssociations" "https"  "FennecURL$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\URLAssociations" "mailto" "FennecURL$2"
 
   WriteRegStr ${RegKey} "Software\RegisteredApplications" "$1" "$0\Capabilities"
 
@@ -569,17 +569,17 @@ FunctionEnd
 !macroend
 !define Set32to64DidMigrateReg "!insertmacro Set32to64DidMigrateReg"
 
-; The IconHandler reference for WaterfoxHTML can end up in an inconsistent state
+; The IconHandler reference for FennecHTML can end up in an inconsistent state
 ; due to changes not being detected by the IconHandler for side by side
 ; installs (see bug 268512). The symptoms can be either an incorrect icon or no
 ; icon being displayed for files associated with Firefox (does not use SHCTX).
 !macro FixShellIconHandler RegKey
-  ; Find the correct key to update, either WaterfoxHTML or WaterfoxHTML-[PathHash]
-  StrCpy $3 "WaterfoxHTML-$AppUserModelID"
+  ; Find the correct key to update, either FennecHTML or FennecHTML-[PathHash]
+  StrCpy $3 "FennecHTML-$AppUserModelID"
   ClearErrors
   ReadRegStr $0 ${RegKey} "Software\Classes\$3\DefaultIcon" ""
   ${If} ${Errors}
-    StrCpy $3 "WaterfoxHTML"
+    StrCpy $3 "FennecHTML"
   ${EndIf}
 
   ClearErrors
@@ -735,7 +735,7 @@ FunctionEnd
 ; HKCU Software\Classes keys when associating handlers. The fix uses the merged
 ; view in HKCR to check for existance of an existing association. This macro
 ; cleans affected installations by removing the HKLM and HKCU value if it is set
-; to WaterfoxHTML when there is a value for PersistentHandler or by removing the
+; to FennecHTML when there is a value for PersistentHandler or by removing the
 ; HKCU value when the HKLM value has a value other than an empty string.
 !macro FixBadFileAssociation FILE_TYPE
   ; Only delete the default value in case the key has values for OpenWithList,
@@ -746,16 +746,16 @@ FunctionEnd
   ${WordFind} "$1" "-" "+1{" $1
   ReadRegStr $2 HKCR "${FILE_TYPE}\PersistentHandler" ""
   ${If} "$2" != ""
-    ; Since there is a persistent handler remove WaterfoxHTML as the default
-    ; value from both HKCU and HKLM if it set to WaterfoxHTML.
-    ${If} "$0" == "WaterfoxHTML"
+    ; Since there is a persistent handler remove FennecHTML as the default
+    ; value from both HKCU and HKLM if it set to FennecHTML.
+    ${If} "$0" == "FennecHTML"
       DeleteRegValue HKCU "Software\Classes\${FILE_TYPE}" ""
     ${EndIf}
-    ${If} "$1" == "WaterfoxHTML"
+    ${If} "$1" == "FennecHTML"
       DeleteRegValue HKLM "Software\Classes\${FILE_TYPE}" ""
     ${EndIf}
-  ${ElseIf} "$0" == "WaterfoxHTML"
-    ; Since HKCU is set to WaterfoxHTML remove WaterfoxHTML as the default value
+  ${ElseIf} "$0" == "FennecHTML"
+    ; Since HKCU is set to FennecHTML remove FennecHTML as the default value
     ; from HKCU if HKLM is set to a value other than an empty string.
     ${If} "$1" != ""
       DeleteRegValue HKCU "Software\Classes\${FILE_TYPE}" ""
@@ -812,36 +812,36 @@ FunctionEnd
   ; Only set the file and protocol handlers if the existing one under HKCR is
   ; for this install location.
 
-  ${IsHandlerForInstallDir} "WaterfoxHTML-$AppUserModelID" $R9
+  ${IsHandlerForInstallDir} "FennecHTML-$AppUserModelID" $R9
   ${If} "$R9" == "true"
-    ; An empty string is used for the 5th param because WaterfoxHTML is not a
+    ; An empty string is used for the 5th param because FennecHTML is not a
     ; protocol handler.
-    ${AddDisabledDDEHandlerValues} "WaterfoxHTML-$AppUserModelID" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
+    ${AddDisabledDDEHandlerValues} "FennecHTML-$AppUserModelID" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
                                    "${AppRegName} HTML Document" ""
   ${Else}
-    ${IsHandlerForInstallDir} "WaterfoxHTML" $R9
+    ${IsHandlerForInstallDir} "FennecHTML" $R9
     ${If} "$R9" == "true"
-      ${AddDisabledDDEHandlerValues} "WaterfoxHTML" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
+      ${AddDisabledDDEHandlerValues} "FennecHTML" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
                                      "${AppRegName} HTML Document" ""
     ${EndIf}
   ${EndIf}
 
-  ; WaterfoxPDF-* was added after WaterfoxHTML and WaterfoxURL, so we've never
-  ; supported bare "WaterfoxPDF".  But we won't have it from the installer, so we
+  ; FennecPDF-* was added after FennecHTML and FennecURL, so we've never
+  ; supported bare "FennecPDF".  But we won't have it from the installer, so we
   ; add/update it unconditionally.  `PostUpdate` is gated on `uninstall.log`
   ; being present, so the invocation here will only happen for installed
   ; directories, not unpackaged directories.
-  ${AddDisabledDDEHandlerValues} "WaterfoxPDF-$AppUserModelID" "$2" "$8,${IDI_DOCUMENT_PDF_ZERO_BASED}" \
+  ${AddDisabledDDEHandlerValues} "FennecPDF-$AppUserModelID" "$2" "$8,${IDI_DOCUMENT_PDF_ZERO_BASED}" \
                                  "${AppRegName} PDF Document" ""
 
-  ${IsHandlerForInstallDir} "WaterfoxURL-$AppUserModelID" $R9
+  ${IsHandlerForInstallDir} "FennecURL-$AppUserModelID" $R9
   ${If} "$R9" == "true"
-    ${AddDisabledDDEHandlerValues} "WaterfoxURL-$AppUserModelID" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
+    ${AddDisabledDDEHandlerValues} "FennecURL-$AppUserModelID" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
                                    "${AppRegName} URL" "true"
   ${Else}
-    ${IsHandlerForInstallDir} "WaterfoxURL" $R9
+    ${IsHandlerForInstallDir} "FennecURL" $R9
     ${If} "$R9" == "true"
-      ${AddDisabledDDEHandlerValues} "WaterfoxURL" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
+      ${AddDisabledDDEHandlerValues} "FennecURL" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
                                      "${AppRegName} URL" "true"
     ${EndIf}
   ${EndIf}

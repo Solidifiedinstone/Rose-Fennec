@@ -1,0 +1,344 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## App Menu
+
+appmenuitem-banner-update-downloading =
+    .label = { -brand-shorter-name } 업데이트 다운로드 중
+appmenuitem-banner-update-available =
+    .label = 업데이트 있음 — 지금 다운로드
+appmenuitem-banner-update-manual =
+    .label = 업데이트 있음 — 지금 다운로드
+appmenuitem-banner-update-unsupported =
+    .label = 업데이트할 수 없음 — 시스템이 호환되지 않음
+appmenuitem-banner-update-restart =
+    .label = 업데이트 있음 — 지금 다시 시작
+appmenu-nova-update-title = { -brand-short-name } 업데이트를 위해 다시 시작
+appmenu-nova-update-description = 탭이 다시 열립니다.
+appmenu-nova-fxa-sign-in = 로그인
+appmenu-nova-switch-device-promo =
+    .message = 곧 새 기기를 받게 되나요? { -brand-short-name }와 함께 하세요!
+appmenu-nova-switch-device-link = 데이터 이전 방법
+appmenuitem-new-tab =
+    .label = 새 탭
+appmenuitem-new-window =
+    .label = 새 창
+appmenuitem-new-private-window =
+    .label = 새 사생활 보호 창
+appmenuitem-history =
+    .label = 기록
+appmenuitem-tab-groups =
+    .label = 탭 그룹
+appmenuitem-downloads =
+    .label = 다운로드
+appmenuitem-passwords =
+    .label = 비밀번호
+appmenuitem-extensions-and-themes =
+    .label = 확장 기능 및 테마
+appmenuitem-extensions =
+    .label = 확장 기능
+appmenuitem-addons-and-themes =
+    .label = 부가 기능 및 테마
+appmenuitem-print =
+    .label = 인쇄…
+appmenuitem-find-in-page =
+    .label = 페이지에서 찾기…
+appmenuitem-translate =
+    .label = 페이지 번역…
+appmenuitem-zoom =
+    .value = 확대/축소
+appmenuitem-more-tools =
+    .label = 기타 도구
+appmenuitem-help =
+    .label = 도움말
+appmenuitem-exit2 =
+    .label =
+        { PLATFORM() ->
+            [linux] 종료
+           *[other] 종료
+        }
+appmenu-menu-button-closed2 =
+    .tooltiptext = 애플리케이션 메뉴 열기
+    .label = { -brand-short-name }
+appmenu-menu-button-opened2 =
+    .tooltiptext = 애플리케이션 메뉴 닫기
+    .label = { -brand-short-name }
+# Settings is now used to access the browser settings across all platforms,
+# instead of Options or Preferences.
+appmenuitem-settings =
+    .label = 설정
+
+## Zoom and Fullscreen Controls
+
+appmenuitem-zoom-enlarge =
+    .label = 확대
+appmenuitem-zoom-reduce =
+    .label = 축소
+appmenuitem-fullscreen =
+    .label = 전체 화면
+
+## Firefox Account toolbar button and Sync panel in App menu.
+
+appmenu-remote-tabs-sign-into-sync =
+    .label = Sync에 로그인…
+appmenu-remote-tabs-turn-on-sync =
+    .label = Sync 켜기…
+# This is shown after the tabs list if we can display more tabs by clicking on the button
+appmenu-remote-tabs-showmore =
+    .label = 탭 더보기
+    .tooltiptext = 이 기기의 탭 더보기
+# This is shown as the label for an element to show inactive tabs from this device.
+appmenu-remote-tabs-show-inactive-tabs =
+    .label = 비활성 탭
+    .tooltiptext = 이 기기의 비활성 탭 보기
+# This is shown beneath the name of a device when that device has no open tabs
+appmenu-remote-tabs-notabs = 열린 탭이 없음
+# This is shown when Sync is configured but syncing tabs is disabled.
+appmenu-remote-tabs-tabsnotsyncing = 다른 기기의 탭 목록을 보려면 탭 동기화를 켜세요.
+appmenu-remote-tabs-opensettings =
+    .label = 설정
+# This is shown when Sync is configured but this appears to be the only device attached to
+# the account. We also show links to download Firefox for android/ios.
+appmenu-remote-tabs-noclients = 다른 기기에서도 여기에서 열린 탭을 사용하시겠습니까?
+appmenu-remote-tabs-connectdevice =
+    .label = 다른 기기 연결
+appmenu-remote-tabs-welcome = 다른 기기의 탭 목록을 봅니다.
+appmenu-remote-tabs-unverified = 계정 확인이 필요합니다.
+appmenuitem-fxa-toolbar-sync-now2 = 지금 동기화
+appmenuitem-fxa-sign-in = { -brand-product-name }에 로그인
+appmenuitem-fxa-manage-account = 계정 관리
+appmenu-fxa-header2 = { -fxaccount-brand-name }
+appmenu-account-header = 계정
+# Variables
+# $time (string) - Localized relative time since last sync (e.g. 1 second ago,
+# 3 hours ago, etc.)
+appmenu-fxa-last-sync = { $time }에 마지막으로 동기화됨
+    .label = { $time }에 마지막으로 동기화됨
+appmenu-fxa-sync-and-save-data2 = 데이터 동기화 및 저장
+appmenu-fxa-signed-in-label = 로그인
+appmenu-fxa-setup-sync =
+    .label = 동기화 켜기…
+appmenu-fxa-setup-sync-new = 켜기
+appmenuitem-save-page =
+    .label = 페이지를 다른 이름으로 저장…
+appmenuitem-fxa-sync-off-title = 동기화 꺼짐
+appmenuitem-fxa-sync-off-description = 어디서나 북마크, 비밀번호 등을 보호하고 접근하세요.
+
+## What's New panel in App menu.
+
+whatsnew-panel-header = 새 기능
+# Checkbox displayed at the bottom of the What's New panel, allowing users to
+# enable/disable What's New notifications.
+whatsnew-panel-footer-checkbox =
+    .label = 새 기능 알림
+    .accesskey = f
+
+## The Firefox Profiler – The popup is the UI to turn on the profiler, and record
+## performance profiles. To enable it go to profiler.firefox.com and click
+## "Enable Profiler Menu Button".
+
+profiler-popup-button-idle =
+    .label = 프로파일러
+    .tooltiptext = 성능 프로파일 기록
+profiler-popup-button-recording =
+    .label = 프로파일러
+    .tooltiptext = 프로파일러가 프로파일을 기록합니다
+profiler-popup-button-capturing =
+    .label = 프로파일러
+    .tooltiptext = 프로파일러가 프로파일을 캡처합니다
+profiler-popup-header-text = { -profiler-brand-name }
+profiler-popup-reveal-description-button =
+    .aria-label = 더 많은 정보 보기
+profiler-popup-description-title =
+    .value = 기록, 분석, 공유
+profiler-popup-description = 팀과 공유할 프로필을 게시하여 성능 문제에 대해 협업합니다.
+profiler-popup-learn-more-button =
+    .label = 더 알아보기
+profiler-popup-settings =
+    .value = 설정
+# This link takes the user to about:profiling, and is only visible with the Custom preset.
+profiler-popup-edit-settings-button =
+    .label = 설정 편집…
+profiler-popup-recording-screen = 기록 중…
+profiler-popup-start-recording-button =
+    .label = 기록 시작
+profiler-popup-discard-button =
+    .label = 버리기
+profiler-popup-capture-button =
+    .label = 캡처
+profiler-popup-start-shortcut =
+    { PLATFORM() ->
+        [macos] ⌃⇧1
+       *[other] Ctrl+Shift+1
+    }
+profiler-popup-capture-shortcut =
+    { PLATFORM() ->
+        [macos] ⌃⇧2
+       *[other] Ctrl+Shift+2
+    }
+profiler-button-dropmarker =
+    .label = 프로파일러 패널 열기
+    .tooltiptext = 프로파일러 패널 열기
+
+## Profiler presets
+## They are shown in the popup's select box.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.sys.mjs
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+profiler-popup-presets-web-developer-description = 오버헤드가 낮은 대부분의 웹 앱 디버깅에 권장되는 프리셋입니다.
+profiler-popup-presets-web-developer-label =
+    .label = 웹 개발자
+profiler-popup-presets-firefox-description = { -brand-shorter-name } 프로파일링에 권장되는 프리셋입니다.
+profiler-popup-presets-firefox-label =
+    .label = { -brand-shorter-name }
+profiler-popup-presets-graphics-description = { -brand-shorter-name }의 그래픽 버그를 조사하기 위한 프리셋입니다.
+profiler-popup-presets-graphics-label =
+    .label = 그래픽
+profiler-popup-presets-media-description2 = { -brand-shorter-name }의 오디오 및 비디오 버그를 조사하기 위한 프리셋입니다.
+profiler-popup-presets-media-label =
+    .label = 미디어
+profiler-popup-presets-ml-description = { -brand-shorter-name }의 기계 학습 버그를 조사하기 위한 프리셋입니다.
+profiler-popup-presets-ml-label =
+    .label = 기계 학습
+profiler-popup-presets-networking-description = { -brand-shorter-name }의 네트워킹 버그를 조사하기 위한 프리셋입니다.
+profiler-popup-presets-networking-label =
+    .label = 네트워킹
+profiler-popup-presets-networking-with-logs-description = 네트워킹 로그를 포함하여 { -brand-shorter-name }의 네트워킹 버그를 조사하기 위한 프리셋입니다. 이러한 로그에는 방문한 URL과 같은 민감한 정보가 포함되어 있을 수 있습니다.
+profiler-popup-presets-networking-with-logs-label =
+    .label = 로그를 포함한 네트워킹
+profiler-popup-presets-power-description = 오버헤드가 낮은 { -brand-shorter-name }의 전력 사용 버그를 조사하기 위한 프리셋입니다.
+# "Power" is used in the sense of energy (electricity used by the computer).
+profiler-popup-presets-power-label =
+    .label = 전력
+profiler-popup-presets-debug-description = { -brand-shorter-name }에서 디버깅을 위한 프리셋입니다. 오버헤드가 높으므로 성능 작업에 사용하지 말고 브라우저 동작을 이해하는 데 중점을 두는 데 사용하세요.
+profiler-popup-presets-debug-label =
+    .label = 디버그
+profiler-popup-presets-web-compat-description = 웹 사이트에서 성능 추적보다 웹 호환성 문제를 디버깅하는 데 권장되는 프리셋입니다.
+profiler-popup-presets-web-compat-label =
+    .label = 웹 호환성
+profiler-popup-presets-custom-label =
+    .label = 사용자 지정
+
+## History panel
+
+appmenu-manage-history =
+    .label = 기록 관리
+appmenu-restore-session =
+    .label = 이전 세션 복원
+appmenu-clear-history =
+    .label = 최근 기록 지우기…
+appmenu-recent-history-subheader = 최근 기록
+appmenu-recently-closed-tabs =
+    .label = 최근에 닫은 탭
+appmenu-recently-closed-windows =
+    .label = 최근에 닫은 창
+# This allows to search through the browser's history.
+appmenu-search-history =
+    .label = 기록 검색
+
+## Help panel
+
+appmenu-help-header =
+    .title = { -brand-shorter-name } 도움말
+appmenu-about =
+    .label = { -brand-shorter-name } 정보
+    .accesskey = A
+appmenu-get-help =
+    .label = 도움 받기
+    .accesskey = H
+appmenu-help-more-troubleshooting-info =
+    .label = 문제 해결 정보
+    .accesskey = T
+appmenu-help-report-site-issue =
+    .label = 사이트 문제 보고…
+appmenu-help-share-ideas =
+    .label = 아이디어 및 의견 공유…
+    .accesskey = S
+appmenu-help-switch-device =
+    .label = 새 기기로 전환
+
+## appmenu-help-enter-troubleshoot-mode and appmenu-help-exit-troubleshoot-mode
+## are mutually exclusive, so it's possible to use the same accesskey for both.
+
+appmenu-help-enter-troubleshoot-mode2 =
+    .label = 문제 해결 모드…
+    .accesskey = M
+appmenu-help-exit-troubleshoot-mode =
+    .label = 문제 해결 모드 끄기
+    .accesskey = M
+
+## appmenu-help-report-deceptive-site and appmenu-help-not-deceptive
+## are mutually exclusive, so it's possible to use the same accesskey for both.
+
+appmenu-help-report-deceptive-site =
+    .label = 가짜 사이트 신고…
+    .accesskey = D
+appmenu-help-not-deceptive =
+    .label = 이 사이트는 가짜 사이트가 아닙니다…
+    .accesskey = d
+
+## More Tools
+
+appmenu-customizetoolbar =
+    .label = 도구 모음 사용자 지정…
+appmenu-abouttranslations =
+    .label = 번역…
+appmenu-edit-pdf =
+    .label = PDF 편집…
+appmenu-developer-tools-subheader = 브라우저 도구
+appmenu-developer-tools-extensions =
+    .label = 개발자용 확장 기능
+appmenuitem-report-broken-site =
+    .label = 깨진 사이트 신고
+
+## Panel for privacy and security products
+
+appmenuitem-sign-in-account = 계정에 로그인
+appmenuitem-monitor-title2 = 신원 도용 피해 미리 예방하기
+appmenuitem-monitor-description2 = 개인 정보 유출 알림 받기
+appmenuitem-monitor-title = { -monitor-brand-short-name }
+appmenuitem-monitor-description = 데이터 유출 알림 받기
+appmenuitem-relay-title = { -relay-brand-short-name }
+appmenuitem-relay-title2 = 이메일 주소 비공개로 보호하기
+appmenuitem-relay-description2 = 받은 편지함의 스팸 메일 차단 지원
+appmenuitem-relay-description = 실제 이메일과 전화를 가리세요
+appmenuitem-services-relay-description = 이메일 가리기 대시보드 실행
+appmenuitem-vpn-title2 = { -mozilla-vpn-brand-name }으로 내 위치 숨기기
+appmenuitem-vpn-description3 = 탐색 활동 추적 방지
+appmenuitem-vpn-title = { -mozilla-vpn-brand-name }
+appmenuitem-vpn-description-2 = 전체 기기 보호 받기
+appmenuitem-vpn-description = 온라인 활동을 보호하세요
+appmenu-services-header = 내 서비스
+# "Mozilla" is intentionally hardcoded to prevent forks from replacing it
+# with their own vendor name, since these tools are created and maintained by
+# Mozilla.
+appmenu-other-protection-header3 = 개인 정보 보호 도구
+# "Mozilla" is intentionally hardcoded to prevent forks from replacing it
+# with their own vendor name, since these tools are created and maintained by
+# Mozilla.
+appmenu-other-protection-header2 = BrowserWorks의 다른 보호 도구를 사용해 보세요:
+appmenu-other-protection-header = { -vendor-short-name }의 다른 보호 도구를 사용해 보세요:
+
+## Profiles panel
+
+appmenu-other-profiles = 다른 프로필
+appmenu-manage-profiles =
+    .label = 프로필 관리
+appmenu-copy-profile =
+    .label = 이 프로필 복사
+appmenu-create-profile =
+    .label = 새 프로필
+appmenu-edit-profile =
+    .aria-label = 프로필 편집
+appmenu-profiles-2 =
+    .label = 프로필

@@ -1,0 +1,47 @@
+#!/bin/sh
+# Fennec — a local build of the fork.
+#
+# Built on Fennec's own development profile rather than Mozilla's in-tree
+# automation fragments, which mach refuses outright: they assume things only
+# true of Mozilla's CI.
+#
+# The branding is edited in place in fennec/browser/branding rather than
+# added as a second branding directory: this is a fork, not a channel, so
+# there is no upstream Fennec build to keep working alongside it.
+
+case $(uname -s) in
+    Linux)
+        export MOZ_NO_PIE_COMPAT=1
+        export MOZ_STDCXX_COMPAT=1
+        if test -f "$HOME/.mozbuild/nasm/nasm"; then
+            export NASM="$HOME"/.mozbuild/nasm/nasm
+        fi
+        ac_add_options --target=x86_64-pc-linux-gnu
+        ;;
+esac
+
+wfx_dev=1
+wfx_target=
+
+. "$topsrcdir/fennec/build/mozconfig.common"
+
+# ── Debloat, at the build level ──────────────────────────────────
+# What the prefs turn off can be turned back on; these are not built at all.
+ac_add_options --disable-crashreporter
+ac_add_options --disable-parental-controls
+ac_add_options --disable-tests
+
+export MOZ_TELEMETRY_REPORTING=
+export MOZ_DATA_REPORTING=
+export MOZ_SERVICES_HEALTHREPORT=
+
+# ── Build speed, without taking the machine hostage ──────────────
+# -j$(nproc) uses every core, which makes the build fastest and the desktop
+# unusable while it runs. Two fewer jobs than cores leaves enough for the
+# session to stay responsive, and costs a few minutes on a build measured in
+# tens of them.
+jobs=$(nproc)
+if [ "$jobs" -gt 2 ]; then
+    jobs=$((jobs - 4))
+fi
+mk_add_options MOZ_MAKE_FLAGS="-j$jobs"

@@ -1,0 +1,41 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+### Strings used in about:unloads, allowing users to manage the "tab unloading"
+### feature.
+
+about-unloads-page-title = Usypianie kart
+about-unloads-intro =
+    { -brand-short-name } ma funkcję automatycznie usypiającą karty,
+    aby zapobiec awariom programu z powodu niewystarczającej pamięci,
+    kiedy na komputerze jest mało dostępnej pamięci. Następna karta
+    do uśpienia jest wybierana na podstawie kilku cech. Ta strona
+    pokazuje, jak { -brand-short-name } ustala priorytety kart i która karta
+    zostanie uśpiona po spełnieniu warunków. Można ręcznie wywołać
+    uśpienie karty klikając przycisk <em>Uśpij</em> poniżej.
+# The link points to a Firefox documentation page, only available in English,
+# with title "Tab Unloading"
+about-unloads-learn-more =
+    <a data-l10n-name="doc-link">Dokumentacja</a> zawiera więcej informacji
+    o tej funkcji i tej stronie.
+about-unloads-last-updated = Ostatnia aktualizacja: { DATETIME($date, year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric", hour12: "false") }
+about-unloads-button-unload = Uśpij
+    .title = Uśpij kartę o najwyższym priorytecie
+about-unloads-no-unloadable-tab = Nie ma kart do uśpienia.
+about-unloads-column-priority = Priorytet
+about-unloads-column-host = Host
+about-unloads-column-last-accessed = Ostatni dostęp
+about-unloads-column-weight = Waga podstawowa
+    .title = Karty są najpierw porządkowane według tej wartości, która jest pochodną pewnych specjalnych cech, takich jak odtwarzanie dźwięku, WebRTC itp.
+about-unloads-column-sortweight = Waga dodatkowa
+    .title = Jeśli dostępne, karty są porządkowane według tej wartości po uporządkowaniu według wagi podstawowej. Wartość jest pochodną użycia pamięci przez kartę i liczby procesów.
+about-unloads-column-memory = Pamięć
+    .title = Szacowane użycie pamięci przez kartę
+about-unloads-column-processes = Identyfikatory procesów
+    .title = Identyfikatory procesów zawierających treść karty
+about-unloads-last-accessed = { DATETIME($date, year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric", hour12: "false") }
+about-unloads-memory-in-mb = { NUMBER($mem, maxFractionalUnits: 2) } MB
+about-unloads-memory-in-mb-tooltip =
+    .title = { NUMBER($mem, maxFractionalUnits: 2) } MB

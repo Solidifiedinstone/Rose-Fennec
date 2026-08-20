@@ -72,7 +72,7 @@ ChromeUtils.defineESModuleGetters(lazy, {
     "resource://gre/modules/TelemetryReportingPolicy.sys.mjs",
   TRRRacer: "resource:///modules/TRRPerformance.sys.mjs",
   UpdateUtils: "resource://gre/modules/UpdateUtils.sys.mjs",
-  WaterfoxUpgradeMessage: "resource:///modules/WaterfoxUpgradeMessage.sys.mjs",
+  FennecUpgradeMessage: "resource:///modules/FennecUpgradeMessage.sys.mjs",
   WebChannel: "resource://gre/modules/WebChannel.sys.mjs",
   WebProtocolHandlerRegistrar:
     "resource:///modules/WebProtocolHandlerRegistrar.sys.mjs",
@@ -839,12 +839,12 @@ BrowserGlue.prototype = {
       if (updateChannel) {
         let uninstalledValue = lazy.WindowsRegistry.readRegKey(
           Ci.nsIWindowsRegKey.ROOT_KEY_CURRENT_USER,
-          "Software\\BrowserWorks\\Waterfox",
+          "Software\\BrowserWorks\\Fennec",
           `Uninstalled-${updateChannel}`
         );
         let removalSuccessful = lazy.WindowsRegistry.removeRegKey(
           Ci.nsIWindowsRegKey.ROOT_KEY_CURRENT_USER,
-          "Software\\BrowserWorks\\Waterfox",
+          "Software\\BrowserWorks\\Fennec",
           `Uninstalled-${updateChannel}`
         );
         if (removalSuccessful && uninstalledValue == "True") {
@@ -1554,7 +1554,7 @@ BrowserGlue.prototype = {
         "tabbrowser-confirm-session-restore-checkbox",
       ]);
 
-    // Waterfox: the quit prompt can flip session restore on the way out.
+    // Fennec: the quit prompt can flip session restore on the way out.
     const startupPref = Services.prefs.getIntPref("browser.startup.page");
     let restoreSession = { value: startupPref == 3 };
 
@@ -1616,7 +1616,7 @@ BrowserGlue.prototype = {
       win.gBrowser.removeTab(win.gBrowser.selectedTab);
     }
 
-    // Waterfox: persist the session restore choice only when actually
+    // Fennec: persist the session restore choice only when actually
     // quitting, and only when it changed.
     if (buttonPressed == 0 && restoreSession.value != (startupPref == 3)) {
       Services.prefs.setIntPref(
@@ -1649,7 +1649,7 @@ BrowserGlue.prototype = {
   },
 
   async _showUpgradeDialog() {
-    const data = await lazy.WaterfoxUpgradeMessage.getUpgradeMessage();
+    const data = await lazy.FennecUpgradeMessage.getUpgradeMessage();
     const { gBrowser } = lazy.BrowserWindowTracker.getTopWindow({
       allowFromInactiveWorkspace: true,
     });
@@ -1725,7 +1725,7 @@ BrowserGlue.prototype = {
     // request and is limited in various ways, e.g., major upgrades.
     await lazy.TelemetryReportingPolicy.ensureUserIsNotified();
 
-    const dialogVersion = lazy.WaterfoxUpgradeMessage.dialogVersion;
+    const dialogVersion = lazy.FennecUpgradeMessage.dialogVersion;
     const dialogVersionPref = "browser.startup.upgradeDialog.version";
     const dialogReason = await (async () => {
       if (!lazy.BrowserHandler.majorUpgrade) {
@@ -1748,7 +1748,7 @@ BrowserGlue.prototype = {
         return "disallow-postUpdate";
       }
 
-      const showUpgradeDialog = lazy.WaterfoxUpgradeMessage.enabled;
+      const showUpgradeDialog = lazy.FennecUpgradeMessage.enabled;
 
       return showUpgradeDialog ? "" : "disabled";
     })();

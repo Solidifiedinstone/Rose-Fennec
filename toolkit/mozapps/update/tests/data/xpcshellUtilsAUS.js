@@ -1659,7 +1659,7 @@ function getMaintSvcDir() {
   // This will return an empty string on our Win XP build systems.
   let maintSvcDir = getSpecialFolderDir(CSIDL_PROGRAM_FILESX86);
   if (maintSvcDir) {
-    maintSvcDir.append("Waterfox Maintenance Service");
+    maintSvcDir.append("Fennec Maintenance Service");
     debugDump(
       "using CSIDL_PROGRAM_FILESX86 - maintenance service install " +
         "directory path: " +
@@ -1669,7 +1669,7 @@ function getMaintSvcDir() {
   if (!maintSvcDir || !maintSvcDir.exists()) {
     maintSvcDir = getSpecialFolderDir(CSIDL_PROGRAM_FILES);
     if (maintSvcDir) {
-      maintSvcDir.append("Waterfox Maintenance Service");
+      maintSvcDir.append("Fennec Maintenance Service");
       debugDump(
         "using CSIDL_PROGRAM_FILES - maintenance service install " +
           "directory path: " +
@@ -1885,9 +1885,9 @@ function getMockUpdRootDWin(aGetOldLocation) {
   let relPathUpdates = "";
   let dataDirectory = gCommonAppDataDir.clone();
   if (aGetOldLocation) {
-    relPathUpdates += "Waterfox";
+    relPathUpdates += "Fennec";
   } else {
-    relPathUpdates += "Waterfox-1de4eec8-1241-4177-a864-e594e8d1fb38";
+    relPathUpdates += "Fennec-1de4eec8-1241-4177-a864-e594e8d1fb38";
   }
 
   relPathUpdates += "\\" + DIR_UPDATES + "\\" + gInstallDirPathHash;
@@ -2038,7 +2038,7 @@ function copyTestUpdaterToBinDir() {
     stripQuarantineBitFromPath(updater.path);
     updater.append("Contents");
     updater.append("MacOS");
-    updater.append("net.waterfox.updater");
+    updater.append("net.fennec.updater");
   }
   return updater;
 }
@@ -2581,7 +2581,7 @@ function shouldRunServiceTest() {
   }
 
   // Check to make sure the service is installed
-  let args = ["wait-for-service-stop", "WaterfoxMaintenance", "10"];
+  let args = ["wait-for-service-stop", "FennecMaintenance", "10"];
   let exitValue = runTestHelperSync(args);
   Assert.notEqual(
     exitValue,
@@ -2953,7 +2953,7 @@ function waitForServiceStop(aFailTest) {
   debugDump("waiting for the maintenance service to stop if necessary");
   // Use the helper bin to ensure the service is stopped. If not stopped, then
   // wait for the service to stop (at most 120 seconds).
-  let args = ["wait-for-service-stop", "WaterfoxMaintenance", "120"];
+  let args = ["wait-for-service-stop", "FennecMaintenance", "120"];
   let exitValue = runTestHelperSync(args);
   Assert.notEqual(exitValue, 0xee, "the maintenance service should exist");
   if (exitValue != 0) {

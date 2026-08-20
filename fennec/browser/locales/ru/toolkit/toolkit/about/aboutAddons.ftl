@@ -1,0 +1,625 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+addons-page-title = Управление дополнениями
+search-header =
+    .placeholder = Поиск на addons.mozilla.org
+    .searchbuttonlabel = Поиск
+
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+list-empty-get-extensions-message = Скачайте расширения и темы на <a data-l10n-name="get-extensions">{ $domain }</a>
+list-empty-get-dictionaries-message = Скачайте словари на <a data-l10n-name="get-extensions">{ $domain }</a>
+list-empty-get-language-packs-message = Загрузите языковые пакеты на <a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
+
+list-empty-installed =
+    .value = У вас не установлено ни одного дополнения данного типа
+list-empty-available-updates =
+    .value = Обновлений не найдено
+list-empty-recent-updates =
+    .value = В последнее время вы не обновляли никаких дополнений
+list-empty-find-updates =
+    .label = Проверить наличие обновлений
+list-empty-button =
+    .label = Узнать больше о дополнениях
+help-button = Поддержка дополнений
+sidebar-help-button-title =
+    .title = Поддержка дополнений
+addons-settings-button = Настройки { -brand-short-name }
+sidebar-settings-button-title =
+    .title = Настройки { -brand-short-name }
+show-unsigned-extensions-button =
+    .label = Некоторые расширения не могут быть проверены
+show-all-extensions-button =
+    .label = Показать все расширения
+detail-version =
+    .label = Версия
+detail-last-updated =
+    .label = Последнее обновление
+addon-detail-description-expand = Показать больше
+addon-detail-description-collapse = Показать меньше
+detail-contributions-description = Разработчик этого дополнения просит вас помочь поддержать его дальнейшее развитие, внеся небольшое пожертвование.
+detail-contributions-button = Поддержать
+    .title = Внести вклад в разработку этого дополнения
+    .accesskey = ж
+detail-update-type =
+    .value = Автоматическое обновление
+detail-update-default =
+    .label = По умолчанию
+    .tooltiptext = Автоматически устанавливать обновления только если это настройка по умолчанию
+detail-update-automatic =
+    .label = Включено
+    .tooltiptext = Устанавливать обновления автоматически
+detail-update-manual =
+    .label = Отключено
+    .tooltiptext = Не устанавливать обновления автоматически
+# Used as a description for the option to allow or block an add-on in private windows.
+detail-private-browsing-label = Запуск в приватных окнах
+# Some add-ons may elect to not run in private windows by setting incognito: not_allowed in the manifest.  This
+# cannot be overridden by the user.
+detail-private-disallowed-label = Не разрешено в приватных окнах
+detail-private-disallowed-description2 = Это расширение не работает в приватном режиме. <a data-l10n-name="learn-more">Подробнее</a>
+# Some special add-ons are privileged, run in private windows automatically, and this permission can't be revoked
+detail-private-required-label = Требует доступа к приватным окнам
+detail-private-required-description2 = Это расширение имеет доступ к вашей активности в Интернете в приватном режиме. <a data-l10n-name="learn-more">Подробнее</a>
+detail-private-browsing-on =
+    .label = Разрешить
+    .tooltiptext = Включать в приватном режиме
+detail-private-browsing-off =
+    .label = Не разрешать
+    .tooltiptext = Отключать в приватном режиме
+detail-home =
+    .label = Домашняя страница
+detail-home-value =
+    .value = { detail-home.label }
+detail-repository =
+    .label = Профиль дополнения
+detail-repository-value =
+    .value = { detail-repository.label }
+detail-check-for-updates =
+    .label = Проверить наличие обновлений
+    .accesskey = в
+    .tooltiptext = Проверить наличие обновлений для этого дополнения
+detail-show-preferences =
+    .label =
+        { PLATFORM() ->
+            [windows] Настройки
+           *[other] Настройки
+        }
+    .accesskey =
+        { PLATFORM() ->
+            [windows] с
+           *[other] с
+        }
+    .tooltiptext =
+        { PLATFORM() ->
+            [windows] Изменить настройки этого дополнения
+           *[other] Изменить настройки этого дополнения
+        }
+detail-rating =
+    .value = Рейтинг
+addon-restart-now =
+    .label = Перезапустить сейчас
+disabled-unsigned-heading =
+    .value = Некоторые дополнения были отключены
+disabled-unsigned-description = Работа следующих дополнений в { -brand-short-name } не была проверена. Вы можете <label data-l10n-name="find-addons">найти им замену</label> или попросить разработчика произвести их проверку.
+disabled-unsigned-learn-more = Узнайте больше о наших усилиях по обеспечению вашей безопасности в Интернете.
+disabled-unsigned-devinfo = Разработчики, заинтересованные в проверке своих дополнений, могут прочесть наше <label data-l10n-name="learn-more">руководство</label>.
+plugin-deprecation-description = Что-то отсутствует? { -brand-short-name } больше не поддерживает некоторые плагины. <label data-l10n-name="learn-more">Подробнее.</label>
+legacy-warning-show-legacy = Показать устаревшие расширения
+legacy-extensions =
+    .value = Устаревшие расширения
+legacy-extensions-description = Эти расширения не соответствуют текущим стандартам { -brand-short-name }, поэтому они были отключены. <label data-l10n-name="legacy-learn-more">Узнайте об изменениях в дополнениях</label>
+private-browsing-description2 =
+    { -brand-short-name } изменяет работу расширений в приватном режиме. Любые новые расширения, которые вы добавите в
+    { -brand-short-name }, не будут запускаться по умолчанию в приватных окнах. Если вы не разрешите этого в настройках,
+    расширение не будет работать в приватном режиме и не будет иметь доступа к вашей активности в Интернете.
+    Мы внесли это изменение, чтобы сделать ваш приватный режим по-настоящему приватным.
+    <label data-l10n-name="private-browsing-learn-more">Узнайте, как управлять настройками расширений.</label>
+aboutaddons-sidebar =
+    .heading = Дополнения
+addon-category-discover = Рекомендации
+addon-category-discover-title =
+    .title = Рекомендации
+addon-category-extension = Расширения
+addon-category-extension-title =
+    .title = Расширения
+addon-category-theme = Темы
+addon-category-theme-title =
+    .title = Темы
+addon-category-plugin = Плагины
+addon-category-plugin-title =
+    .title = Плагины
+addon-category-dictionary = Словари
+addon-category-dictionary-title =
+    .title = Словари
+addon-category-locale = Языки
+addon-category-locale-title =
+    .title = Языки
+addon-category-available-updates = Доступные обновления
+addon-category-available-updates-title =
+    .title = Доступные обновления
+addon-category-recent-updates = Недавние обновления
+addon-category-recent-updates-title =
+    .title = Недавние обновления
+addon-category-sitepermission = Разрешения для сайтов
+addon-category-sitepermission-title =
+    .title = Разрешения для сайтов
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string) - DNS host name for which the webextension enables permissions
+addon-sitepermission-host = Разрешения сайта для { $host }
+
+## These are global warnings
+
+extensions-warning-safe-mode = В безопасном режиме все дополнения отключены.
+extensions-warning-check-compatibility = Проверка совместимости дополнений отключена. У вас могут иметься несовместимые дополнения.
+extensions-warning-safe-mode2 =
+    .message = В безопасном режиме все дополнения отключены.
+extensions-warning-check-compatibility2 =
+    .message = Проверка совместимости дополнений отключена. У вас могут иметься несовместимые дополнения.
+extensions-warning-check-compatibility-button = Включить
+    .title = Включить проверку совместимости дополнений
+extensions-warning-update-security = Проверка безопасного обновления дополнений отключена. Обновления могут поставить вас под угрозу.
+extensions-warning-update-security2 =
+    .message = Проверка безопасного обновления дополнений отключена. Обновления могут поставить вас под угрозу.
+extensions-warning-update-security-button = Включить
+    .title = Включить проверку безопасного обновления дополнений
+extensions-warning-imported-addons2 =
+    .message = Пожалуйста, завершите установку расширений, которые были импортированы в { -brand-short-name }.
+extensions-warning-imported-addons-button = Установка расширений
+extensions-warning-safe-mode3 =
+    .message = Все дополнения были отключены Безопасным режимом.
+
+## Strings connected to add-on updates
+
+addon-updates-check-for-updates = Проверить наличие обновлений
+    .accesskey = о
+addon-updates-view-updates = Показать недавние обновления
+    .accesskey = к
+
+# This menu item is a checkbox that toggles the default global behavior for
+# add-on update checking.
+
+addon-updates-update-addons-automatically = Автоматически обновлять дополнения
+    .accesskey = в
+
+## Specific add-ons can have custom update checking behaviors ("Manually",
+## "Automatically", "Use default global behavior"). These menu items reset the
+## update checking behavior for all add-ons to the default global behavior
+## (which itself is either "Automatically" or "Manually", controlled by the
+## extensions-updates-update-addons-automatically.label menu item).
+
+addon-updates-reset-updates-to-automatic = Установить для всех дополнений режим автоматического обновления
+    .accesskey = с
+addon-updates-reset-updates-to-manual = Установить для всех дополнений режим ручного обновления
+    .accesskey = с
+
+## Status messages displayed when updating add-ons
+
+addon-updates-updating = Обновление дополнений
+addon-updates-installed = Ваши дополнения были обновлены.
+addon-updates-none-found = Обновлений не найдено
+addon-updates-manual-updates-found = Показать доступные обновления
+
+## Add-on install/debug strings for page options menu
+
+addon-install-from-file = Установить дополнение из файла…
+    .accesskey = а
+# Like `addon-install-from-file` but used when the `extensions.webextensions.prefer-update-over-install-for-existing-addon`
+# pref is set.
+addon-install-or-update-from-file = Установить или обновить дополнение из файла…
+    .accesskey = Ш
+addon-install-from-file-dialog-title = Выберите дополнение для установки
+addon-install-from-file-filter-name = Дополнения
+addon-open-about-debugging = Отладка дополнений
+    .accesskey = л
+
+## Extension shortcut management
+
+# This is displayed in the page options menu
+addon-manage-extensions-shortcuts = Управление горячими клавишами расширений
+    .accesskey = п
+shortcuts-no-addons = У вас не включено ни одного расширения.
+shortcuts-no-commands = У следующих расширений нет горячих клавиш:
+shortcuts-input =
+    .placeholder = Введите горячую клавишу
+# Accessible name for a trashcan icon button that removes an existent shortcut
+shortcuts-remove-button =
+    .aria-label = Удалить ярлык
+shortcuts-browserAction2 = Активировать кнопку панели инструментов
+shortcuts-pageAction = Активировать действие на странице
+shortcuts-sidebarAction = Показать/скрыть боковую панель
+shortcuts-modifier-mac = Добавьте Ctrl, Alt или ⌘
+shortcuts-modifier-other = Добавьте Ctrl или Alt
+shortcuts-invalid = Неверная комбинация
+shortcuts-letter = Введите букву
+shortcuts-system = Нельзя переопределить горячую клавишу { -brand-short-name }
+# String displayed in warning label when there is a duplicate shortcut
+shortcuts-duplicate = Дублирующееся сочетание клавиш
+# String displayed when a keyboard shortcut is already assigned to more than one add-on
+# Variables:
+#   $shortcut (string) - Shortcut string for the add-on
+shortcuts-duplicate-warning-message = { $shortcut } используется более одного раза. Дублирующиеся сочетания клавиш могут вызвать неожиданное поведение.
+# String displayed when a keyboard shortcut is already assigned to more than one add-on
+# Variables:
+#   $shortcut (string) - Shortcut string for the add-on
+shortcuts-duplicate-warning-message2 =
+    .message = { $shortcut } используется более одного раза. Дублирующиеся сочетания клавиш могут вызвать неожиданное поведение.
+# String displayed when a keyboard shortcut is already used by another add-on
+# Variables:
+#   $addon (string) - Name of the add-on
+shortcuts-exists = Уже используется { $addon }
+# Variables:
+#   $numberToShow (number) - Number of other elements available to show
+shortcuts-card-expand-button =
+    { $numberToShow ->
+        [one] Показать ещё { $numberToShow }
+        [few] Показать ещё { $numberToShow }
+       *[many] Показать ещё { $numberToShow }
+    }
+shortcuts-card-collapse-button = Показать меньше
+header-back-button =
+    .title = Вернуться назад
+
+## Recommended add-ons page
+
+# Explanatory introduction to the list of recommended add-ons. The action word
+# ("recommends") in the final sentence is a link to external documentation.
+discopane-intro =
+    Расширения и темы — это как приложения для вашего браузера, они позволяют вам
+    защищать пароли, скачивать видео, находить скидки, блокировать раздражающую рекламу, изменять
+    внешний вид браузера и многое другое. Эти небольшие программные продукты
+    обычно разрабатываются сторонними разработчиками. Вот подборка расширений и тем, <a data-l10n-name="learn-more-trigger">рекомендуемых</a> { -brand-product-name } за свою исключительную
+    безопасность, производительность и функциональность.
+# Notice to make user aware that the recommendations are personalized.
+discopane-notice-recommendations =
+    Некоторые из этих рекомендаций персонализированы. Они основаны на других
+    установленных вами расширениях, настройках профиля и статистике использования.
+# Notice to make user aware that the recommendations are personalized.
+discopane-notice-recommendations2 =
+    .message =
+        Некоторые из этих рекомендаций персонализированы. Они основаны на других
+        установленных вами расширениях, настройках профиля и статистике использования.
+discopane-notice-learn-more = Подробнее
+# Notice for the colorway theme removal
+colorway-removal-notice-message =
+    .heading = Ваши темы с расцветками были удалены.
+    .message = { -brand-product-name } обновил коллекцию расцветок. Старые версии удалены из списка «Сохранённые темы». Получите новые версии на сайте дополнений.
+colorway-removal-notice-learn-more = Подробнее
+colorway-removal-notice-button = Получить обновлённые темы с расцветками
+# Notice to make user aware that themes are not applied in forced colors mode.
+# This notice is only visible on Windows.
+forced-colors-theme-notice =
+    .message = Ваши настройки контраста Windows переопределяют темы { -brand-short-name }. Отключите эти настройки, чтобы использовать темы в { -brand-short-name }.
+privacy-policy = Политика приватности
+# Refers to the author of an add-on, shown below the name of the add-on.
+# Variables:
+#   $author (string) - The name of the add-on developer.
+created-by-author = от <a data-l10n-name="author">{ $author }</a>
+# Shows the number of daily users of the add-on.
+# Variables:
+#   $dailyUsers (number) - The number of daily users.
+user-count = Пользователей: { $dailyUsers }
+install-extension-button = Добавить в { -brand-product-name }
+install-theme-button = Установить тему
+# The label of the button that appears after installing an add-on. Upon click,
+# the detailed add-on view is opened, from where the add-on can be managed.
+manage-addon-button = Управление
+find-more-addons = Найти другие дополнения
+find-more-themes = Найти другие темы
+# This is a label for the button to open the "more options" menu, it is only
+# used for screen readers.
+addon-options-button =
+    .aria-label = Другие настройки
+# Explanatory introduction to the list of recommended add-ons. The action word
+# ("recommends") in the final sentence is a link to external documentation.
+# We hard code "Firefox" because we do not want to imply that a Firefox fork is
+# making this recommendation.
+discopane-intro3 =
+    Расширения и темы позволяют вам настроить { -brand-product-name }. Они могут повысить приватность,
+    повысить производительность, улучшить мультимедиа, изменить внешний вид { -brand-product-name } и
+    гораздо больше. Эти небольшие программы часто разрабатываются сторонними разработчиками. Вот
+    выбор, который Firefox <a data-l10n-name="learn-more-trigger">рекомендует</a> для
+    исключительной безопасности, производительности и функциональности.
+
+## Add-on actions
+
+report-addon-button = Пожаловаться
+remove-addon-button = Удалить
+# The link will always be shown after the other text.
+remove-addon-disabled-button = Нельзя удалить <a data-l10n-name="link">Почему?</a>
+disable-addon-button = Отключить
+enable-addon-button = Включить
+# This is used for the toggle on the extension card, it's a checkbox and this
+# is always its label.
+extension-enable-addon-button-label =
+    .aria-label = Включить
+preferences-addon-button =
+    { PLATFORM() ->
+        [windows] Настройки
+       *[other] Настройки
+    }
+details-addon-button = Подробности
+release-notes-addon-button = Примечания к выпуску
+permissions-addon-button = Разрешения
+extension-enabled-heading = Включены
+extension-disabled-heading = Отключены
+theme-enabled-heading = Включена
+theme-disabled-heading2 = Сохранённые темы
+plugin-enabled-heading = Включены
+plugin-disabled-heading = Отключены
+dictionary-enabled-heading = Включены
+dictionary-disabled-heading = Отключены
+locale-enabled-heading = Включены
+locale-disabled-heading = Отключены
+sitepermission-enabled-heading = Включены
+sitepermission-disabled-heading = Отключены
+always-activate-button = Всегда включать
+never-activate-button = Никогда не включать
+addon-detail-author-label = Автор
+addon-detail-version-label = Версия
+addon-detail-last-updated-label = Последнее обновление
+addon-detail-homepage-label = Домашняя страница
+addon-detail-rating-label = Рейтинг
+# Message for add-ons with a staged pending update.
+install-postponed-message = Это расширение будет обновлено после перезапуска { -brand-short-name }.
+# Message for add-ons with a staged pending update.
+install-postponed-message2 =
+    .message = Это расширение будет обновлено после перезапуска { -brand-short-name }.
+install-postponed-button = Обновить сейчас
+# The average rating that the add-on has received.
+# Variables:
+#   $rating (number) - A number between 0 and 5. The translation should show at most one digit after the comma.
+five-star-rating =
+    .title = Оценено на { NUMBER($rating, maximumFractionDigits: 1) } из 5
+# This string is used to show that an add-on is disabled.
+# Variables:
+#   $name (string) - The name of the add-on
+addon-name-disabled = { $name } (отключено)
+# The number of reviews that an add-on has received on AMO.
+# Variables:
+#   $numberOfReviews (number) - The number of reviews received
+addon-detail-reviews-link =
+    { $numberOfReviews ->
+        [one] { $numberOfReviews } отзыв
+        [few] { $numberOfReviews } отзыва
+       *[many] { $numberOfReviews } отзывов
+    }
+
+## Pending uninstall message bar
+
+# Variables:
+#   $addon (string) - Name of the add-on
+pending-uninstall-description = <span data-l10n-name="addon-name">{ $addon }</span> было удалено.
+# Variables:
+#   $addon (string) - Name of the add-on
+pending-uninstall-description2 =
+    .message = { $addon } было удалено.
+pending-uninstall-undo-button = Отмена
+addon-detail-updates-label = Разрешить автообновления
+addon-detail-updates-radio-default = По умолчанию
+addon-detail-updates-radio-on = Включено
+addon-detail-updates-radio-off = Отключено
+addon-detail-update-check-label = Проверить наличие обновлений
+install-update-button = Обновить
+# aria-label associated to the updates row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-updates =
+    .aria-label = { addon-detail-updates-label }
+# This is the tooltip text for the private browsing badge in about:addons. The
+# badge is the private browsing icon included next to the extension's name.
+addon-badge-private-browsing-allowed3 =
+    .title = Разрешено в приватных окнах
+# This is the tooltip text for the private browsing badge in about:addons. The
+# badge is the private browsing icon included next to the extension's name.
+addon-badge-private-browsing-allowed2 =
+    .title = Разрешено в приватных окнах
+    .aria-label = { addon-badge-private-browsing-allowed2.title }
+addon-detail-private-browsing-help = Когда разрешено, расширение будет иметь доступ к вашей активности в Интернете в приватном режиме. <a data-l10n-name="learn-more">Подробнее</a>
+addon-detail-private-browsing-allow = Разрешить
+addon-detail-private-browsing-disallow = Не разрешать
+# aria-label associated to the private browsing row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-private-browsing =
+    .aria-label = { detail-private-browsing-label }
+
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
+# Used as a description for the option to allow or block an add-on on quarantined domains.
+addon-detail-quarantined-domains-label = Запуск на сайтах с ограничениями
+# Used as help text part of the quarantined domains UI controls row.
+addon-detail-quarantined-domains-help = Если это разрешено, расширение будет иметь доступ к сайтам, ограниченным { -vendor-short-name }. Разрешайте, только если вы доверяете этому расширению.
+# Used as label and tooltip text on the radio inputs associated to the quarantined domains UI controls.
+addon-detail-quarantined-domains-allow = Разрешить
+addon-detail-quarantined-domains-disallow = Не разрешать
+# aria-label associated to the quarantined domains exempt row to help screen readers to announce the group.
+addon-detail-group-label-quarantined-domains =
+    .aria-label = { addon-detail-quarantined-domains-label }
+
+## This is the tooltip text for the recommended badges for an extension in about:addons. The
+## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
+addon-badge-recommended2 =
+    .title = { -brand-product-name } рекомендует только те расширения, которые соответствуют нашим стандартам по безопасности и производительности
+    .aria-label = { addon-badge-recommended2.title }
+# We hard code "Mozilla" in the string below because the extensions are built
+# by Mozilla and we don't want forks to display "by Fork".
+addon-badge-line3 =
+    .title = Официальное расширение, созданное BrowserWorks. Соответствует стандартам безопасности и производительности.
+    .aria-label = { addon-badge-line3.title }
+addon-badge-verified2 =
+    .title = Это расширение было проверено на соответствие нашим стандартам безопасности и производительности
+    .aria-label = { addon-badge-verified2.title }
+# We hard code "Mozilla" in the string below because the extensions are built
+# by Mozilla and we don't want forks to display "by Fork".
+addon-badge-line4 =
+    .title = Официальное расширение, созданное BrowserWorks. Соответствует стандартам безопасности и производительности.
+# This string needs to work in the context of other forks that are not Firefox
+# or built by Mozilla. In particular, we do not want to imply that an
+# organisation other than Mozilla or the Firefox team are performing the
+# security or performance reviews. As such, we avoid personalising language
+# like the words "our" or "we".
+addon-badge-verified4 =
+    .title = Это расширение было проверено на соответствие стандартам безопасности и производительности
+# This string needs to work in the context of other forks that are not Firefox
+# or built by Mozilla. In particular, we do not want to imply that an
+# organisation other than Mozilla or the Firefox team are making the
+# recommendation. As such, we hard code "Firefox" and avoid personalising
+# language like the words "our" or "we".
+addon-badge-recommended4 =
+    .title = Fennec рекомендует только те расширения, которые соответствуют стандартам безопасности и производительности
+
+##
+
+available-updates-heading = Доступные обновления
+recent-updates-heading = Недавно обновлённые
+release-notes-loading = Загрузка…
+release-notes-error = При загрузке примечаний к выпуску возникли проблемы.
+addon-permissions-heading = Разрешения
+addon-permissions-empty2 = Это расширение не требует никаких разрешений.
+addon-permissions-required-label = Требуется:
+addon-permissions-optional-label = Необязательно:
+addon-permissions-empty = Это расширение не требует дополнительных разрешений
+addon-permissions-required = Необходимые разрешения для основных функций:
+addon-permissions-optional = Необязательные разрешения для дополнительных функций:
+addon-permissions-learnmore = Узнать больше о разрешениях
+# Shown above the permissions list when one or more permissions for this
+# extension are controlled by an enterprise policy and cannot be changed by
+# the user.
+addon-permissions-managed-by-policy = Некоторыми разрешениями управляет ваша организация.
+recommended-extensions-heading = Рекомендуемые расширения
+recommended-themes-heading = Рекомендуемые темы
+# Variables:
+#   $hostname (string) - Host where the permissions are granted
+addon-sitepermissions-required = Предоставляет следующие возможности <span data-l10n-name="hostname">{ $hostname }</span>:
+# A recommendation for the Firefox Color theme shown at the bottom of the theme
+# list view. The "Firefox Color" name itself should not be translated.
+recommended-theme-1 = Чувствуете прилив вдохновения? <a data-l10n-name="link">Создайте свою тему с помощью Fennec Color.</a>
+
+## Page headings
+
+extension-heading = Управление расширениями
+theme-heading = Управление темами
+plugin-heading = Управление плагинами
+dictionary-heading = Управление моими словарями
+locale-heading = Управление моими языками
+updates-heading = Управление моими обновлениями
+sitepermission-heading = Управление моими разрешениями для сайтов
+discover-heading = Сделайте { -brand-short-name } своим
+shortcuts-heading = Управление горячими клавишами расширений
+default-heading-search-label = Найти больше дополнений
+addons-heading-search-input =
+    .placeholder = Поиск на addons.mozilla.org
+addons-heading-search-button =
+    .title = Поиск на addons.mozilla.org
+    .aria-label = Поиск на addons.mozilla.org
+addon-page-options-button =
+    .title = Инструменты для всех дополнений
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (string) - Application version.
+details-notification-incompatible = { $name } несовместимо с { -brand-short-name } { $version }.
+# Variables:
+#   $version (string) - Application version.
+details-notification-incompatible2 =
+    .message = { $name } несовместимо с { -brand-short-name } { $version }.
+details-notification-incompatible-link = Больше информации
+details-notification-unsigned-and-disabled = Работа «{ $name }» в { -brand-short-name } не была проверена, поэтому оно было отключено.
+details-notification-unsigned-and-disabled2 =
+    .message = Работа «{ $name }» в { -brand-short-name } не была проверена, поэтому оно было отключено.
+details-notification-unsigned-and-disabled-link = Подробная информация
+details-notification-unsigned = Работа { $name } в { -brand-short-name } не была проверена. Действуйте с осторожностью.
+details-notification-unsigned2 =
+    .message = Работа { $name } в { -brand-short-name } не была проверена. Действуйте с осторожностью.
+details-notification-hard-blocked-extension =
+    .message = Это расширение заблокировано за нарушение политик BrowserWorks и было отключено.
+details-notification-hard-blocked-other =
+    .message = Это дополнение заблокировано за нарушение политик BrowserWorks, и было отключено.
+details-notification-unsigned-link = Подробная информация
+details-notification-blocked = «{ $name }» было отключено из-за проблем со стабильностью или безопасностью.
+details-notification-blocked-link2 = Узнать подробнее
+details-notification-soft-blocked-extension-disabled2 =
+    .message = Это расширение ограничено и было отключено. Вы можете включить его, но это может быть рискованно.
+details-notification-soft-blocked-extension-enabled2 =
+    .message = Это расширение ограничено. Его использование может быть рискованным.
+details-notification-soft-blocked-other-disabled2 =
+    .message = Это дополнение ограничено и было отключено. Вы можете включить его, но это может быть рискованно.
+details-notification-soft-blocked-other-enabled2 =
+    .message = Это дополнение ограничено. Его использование может быть рискованным.
+details-notification-soft-blocked-extension-disabled =
+    .message = Это расширение ограничено за нарушение политик BrowserWorks и было отключено. Вы можете включить его, но это может быть рискованно.
+details-notification-soft-blocked-extension-enabled =
+    .message = Это расширение нарушает политики BrowserWorks. Его использование может быть рискованным.
+details-notification-soft-blocked-other-disabled =
+    .message = Это дополнение ограничено за нарушение политик BrowserWorks и было отключено. Вы можете включить его, но это может быть рискованно.
+details-notification-soft-blocked-other-enabled =
+    .message = Это дополнение нарушает политики BrowserWorks. Его использование может быть рискованным.
+details-notification-softblocked-link2 = Узнать подробнее
+details-notification-blocked-link = Подробная информация
+details-notification-softblocked = { $name } вызывает проблемы со стабильностью или безопасностью.
+details-notification-softblocked-link = Подробная информация
+details-notification-gmp-pending = { $name } будет скоро установлено.
+details-notification-gmp-pending2 =
+    .message = { $name } будет скоро установлено.
+
+## Gecko Media Plugins (GMPs)
+
+plugins-gmp-license-info = Информация о лицензии
+plugins-gmp-privacy-info = Информация о конфиденциальности
+plugins-openh264-name = Видеокодек OpenH264, предоставленный Cisco Systems, Inc.
+plugins-openh264-description = Плагин автоматически установлен BrowserWorks для реализации спецификации WebRTC и выполнения звонков через WebRTC на устройства, требующие использования видеокодека H.264. Посетите https://www.openh264.org/ для просмотра исходного кода кодека и получения подробной информации о его реализации.
+plugins-widevine-name = Плагин расшифровки контента Widevine, предоставленный Google Inc.
+plugins-widevine-description = Плагин включает поддержку воспроизведения зашифрованного медиа в соответствии со спецификацией Encrypted Media Extensions (EME). Зашифрованные медиа обычно используются сайтами для защиты от копирования премиум медиа-контента. Посетите https://www.w3.org/TR/encrypted-media/ для получения подробной информации об Encrypted Media Extensions (EME).
+
+## Headings for the Permissions tab in `about:addons` when the data collection
+## feature is enabled.
+
+addon-permissions-required-data-collection = Требуемый сбор данных:
+addon-permissions-optional-data-collection = Необязательный сбор данных:
+# Name of the Permissions tab in `about:addons` when the data collection feature is enabled.
+permissions-data-addon-button = Разрешения и данные
+# This is a description for extension that use this AI model
+# Variables:
+#   $extensionName (String) - Name of the extension
+mlmodel-extension-label = Используется расширением { $extensionName }
+addon-permissions-data-collection-heading = Сбор данных
+addon-permissions-data-collection-empty = Разработчик сообщает, что это расширение не требует сбора данных.
+addon-data-collection-provided = Информация предоставлена разработчиком расширения
+addon-data-collection-learnmore = Узнайте больше о сборе данных
+
+## Mapping Engine IDs from AI models to how that feature represented by the engine Id is described in the used by section in local model management
+
+mlmodel-about-inference = { -brand-short-name } использует это на about:inference
+mlmodel-link-preview = { -brand-short-name } использует это для генерации ключевых точек при предпросмотре ссылок
+mlmodel-pdfjs = { -brand-short-name } использует это для создания альтернативного текста для изображений, которые вы добавляете в PDF-файлы.
+mlmodel-smart-tab-topic-engine = { -brand-short-name } использует это, чтобы предлагать имена для ваших групп вкладок
+mlmodel-smart-tab-embedding-engine = { -brand-short-name } использует это, чтобы предлагать вкладки для ваших групп вкладок
+mlmodel-formfill-engine = { -brand-short-name } использует это, чтобы помочь заполнять формы адресов
+# AI Model will be downloaded on the users device and used locally
+addon-category-mlmodel = ИИ на устройстве
+addon-category-mlmodel-title =
+    .title = ИИ на устройстве
+mlmodel-heading = Управление моделями ИИ на устройстве
+mlmodel-description = Некоторые функции и расширения в { -brand-short-name } созданы на основе моделей ИИ, которые работают локально на вашем устройстве. Этот подход защищает вашу приватность и во многих случаях повышает производительность. <a data-l10n-name="learn-more">Подробнее</a>
+# Label for button that when clicked removed local model
+mlmodel-remove-addon-button =
+    .aria-label = Удалить
+# Label for the aggregated value of all files for a model
+mlmodel-addon-detail-totalsize-label = Размер файла
+mlmodel-addon-detail-last-used-label = Последнее использование
+# This is a section label to describe what extensions or features use a specific local AI model
+mlmodel-addon-detail-used-by-label = Используется
+# This is a section label to describe the link to the model card on the Hugging Face website
+mlmodel-addon-detail-model-card = Карточка модели
+# This is a label for the Model Card link to Hugging face
+mlmodel-addon-detail-model-card-link-label = Открыть на Hugging Face

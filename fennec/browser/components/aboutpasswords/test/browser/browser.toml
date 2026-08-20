@@ -1,0 +1,4 @@
+[DEFAULT]
+tags = "fennec_aboutpasswords"
+
+["browser_aboutpasswords.js"]

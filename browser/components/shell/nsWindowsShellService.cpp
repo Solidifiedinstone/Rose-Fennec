@@ -384,21 +384,21 @@ nsWindowsShellService::CheckAllProgIDsExist(bool* aResult) {
     nsresult rv;
     bool result = true;
 
-    // "WaterfoxURL".
+    // "FennecURL".
     rv = GetMsixProgId(L"https", extraProgID);
     if (NS_WARN_IF(NS_FAILED(rv))) {
       return rv;
     }
     result = result && CheckProgIDExists(extraProgID.get());
 
-    // "WaterfoxHTML".
+    // "FennecHTML".
     rv = GetMsixProgId(L".htm", extraProgID);
     if (NS_WARN_IF(NS_FAILED(rv))) {
       return rv;
     }
     result = result && CheckProgIDExists(extraProgID.get());
 
-    // "WaterfoxPDF".
+    // "FennecPDF".
     rv = GetMsixProgId(L".pdf", extraProgID);
     if (NS_WARN_IF(NS_FAILED(rv))) {
       return rv;
@@ -408,9 +408,9 @@ nsWindowsShellService::CheckAllProgIDsExist(bool* aResult) {
     *aResult = result;
   } else {
     *aResult =
-        CheckProgIDExists(FormatProgID(L"WaterfoxURL", aumid.get()).get()) &&
-        CheckProgIDExists(FormatProgID(L"WaterfoxHTML", aumid.get()).get()) &&
-        CheckProgIDExists(FormatProgID(L"WaterfoxPDF", aumid.get()).get());
+        CheckProgIDExists(FormatProgID(L"FennecURL", aumid.get()).get()) &&
+        CheckProgIDExists(FormatProgID(L"FennecHTML", aumid.get()).get()) &&
+        CheckProgIDExists(FormatProgID(L"FennecPDF", aumid.get()).get());
   }
 
   return NS_OK;

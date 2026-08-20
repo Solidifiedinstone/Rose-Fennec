@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-everforest@fennec"
+    }
+  },
+  "name": "Everforest",
+  "description": "The Everforest palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#2b3339",
+      "frame_inactive": "#2b3339",
+      "tab_background_text": "#859289",
+      "tab_selected": "#445055",
+      "tab_text": "#d3c6aa",
+      "tab_line": "#a7c080",
+      "tab_loading": "#a7c080",
+      "toolbar": "#323c41",
+      "toolbar_text": "#d3c6aa",
+      "toolbar_field": "#3a454a",
+      "toolbar_field_text": "#d3c6aa",
+      "toolbar_field_border": "#445055",
+      "toolbar_field_focus": "#445055",
+      "toolbar_field_text_focus": "#d3c6aa",
+      "toolbar_field_border_focus": "#a7c080",
+      "toolbar_top_separator": "#445055",
+      "toolbar_bottom_separator": "#445055",
+      "toolbar_vertical_separator": "#445055",
+      "ntp_background": "#2b3339",
+      "ntp_text": "#d3c6aa",
+      "popup": "#3a454a",
+      "popup_text": "#d3c6aa",
+      "popup_border": "#445055",
+      "popup_highlight": "#61754b",
+      "popup_highlight_text": "#d3c6aa",
+      "sidebar": "#323c41",
+      "sidebar_text": "#d3c6aa",
+      "sidebar_border": "#445055",
+      "sidebar_highlight": "#61754b",
+      "sidebar_highlight_text": "#d3c6aa",
+      "button_background_hover": "#3a454a",
+      "button_background_active": "#445055",
+      "icons": "#859289",
+      "icons_attention": "#a7c080",
+      "bookmark_text": "#d3c6aa",
+      "error_text": "#e67e80"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

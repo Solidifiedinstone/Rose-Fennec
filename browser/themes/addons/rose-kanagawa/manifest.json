@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-kanagawa@fennec"
+    }
+  },
+  "name": "Kanagawa",
+  "description": "The Kanagawa palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#1f1f28",
+      "frame_inactive": "#1f1f28",
+      "tab_background_text": "#727169",
+      "tab_selected": "#363646",
+      "tab_text": "#dcd7ba",
+      "tab_line": "#7e9cd8",
+      "tab_loading": "#7e9cd8",
+      "toolbar": "#16161d",
+      "toolbar_text": "#dcd7ba",
+      "toolbar_field": "#2a2a37",
+      "toolbar_field_text": "#dcd7ba",
+      "toolbar_field_border": "#363646",
+      "toolbar_field_focus": "#363646",
+      "toolbar_field_text_focus": "#dcd7ba",
+      "toolbar_field_border_focus": "#7e9cd8",
+      "toolbar_top_separator": "#363646",
+      "toolbar_bottom_separator": "#363646",
+      "toolbar_vertical_separator": "#363646",
+      "ntp_background": "#1f1f28",
+      "ntp_text": "#dcd7ba",
+      "popup": "#2a2a37",
+      "popup_text": "#dcd7ba",
+      "popup_border": "#363646",
+      "popup_highlight": "#4a5b80",
+      "popup_highlight_text": "#dcd7ba",
+      "sidebar": "#16161d",
+      "sidebar_text": "#dcd7ba",
+      "sidebar_border": "#363646",
+      "sidebar_highlight": "#4a5b80",
+      "sidebar_highlight_text": "#dcd7ba",
+      "button_background_hover": "#2a2a37",
+      "button_background_active": "#363646",
+      "icons": "#727169",
+      "icons_attention": "#7e9cd8",
+      "bookmark_text": "#dcd7ba",
+      "error_text": "#e82424"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

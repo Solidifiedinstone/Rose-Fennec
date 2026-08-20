@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-catppuccin-macchiato@fennec"
+    }
+  },
+  "name": "Catppuccin Macchiato",
+  "description": "The Catppuccin Macchiato palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#24273a",
+      "frame_inactive": "#24273a",
+      "tab_background_text": "#6e738d",
+      "tab_selected": "#494d64",
+      "tab_text": "#cad3f5",
+      "tab_line": "#c6a0f6",
+      "tab_loading": "#c6a0f6",
+      "toolbar": "#1e2030",
+      "toolbar_text": "#cad3f5",
+      "toolbar_field": "#363a4f",
+      "toolbar_field_text": "#cad3f5",
+      "toolbar_field_border": "#494d64",
+      "toolbar_field_focus": "#494d64",
+      "toolbar_field_text_focus": "#cad3f5",
+      "toolbar_field_border_focus": "#c6a0f6",
+      "toolbar_top_separator": "#494d64",
+      "toolbar_bottom_separator": "#494d64",
+      "toolbar_vertical_separator": "#494d64",
+      "ntp_background": "#24273a",
+      "ntp_text": "#cad3f5",
+      "popup": "#363a4f",
+      "popup_text": "#cad3f5",
+      "popup_border": "#494d64",
+      "popup_highlight": "#6e5a8c",
+      "popup_highlight_text": "#cad3f5",
+      "sidebar": "#1e2030",
+      "sidebar_text": "#cad3f5",
+      "sidebar_border": "#494d64",
+      "sidebar_highlight": "#6e5a8c",
+      "sidebar_highlight_text": "#cad3f5",
+      "button_background_hover": "#363a4f",
+      "button_background_active": "#494d64",
+      "icons": "#6e738d",
+      "icons_attention": "#c6a0f6",
+      "bookmark_text": "#cad3f5",
+      "error_text": "#ed8796"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

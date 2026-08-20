@@ -40,7 +40,7 @@ categories:
         - toolkit/components/ml
         - accessible
         - media
-        - waterfox
+        - fennec
         - code-quality
         - writing-rust-code
         - rust-components

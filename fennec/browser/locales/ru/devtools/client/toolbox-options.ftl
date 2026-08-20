@@ -1,0 +1,236 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+### Localization for Developer Tools options
+
+
+## Default Developer Tools section
+
+# The heading
+options-select-default-tools-label = Инструменты разработчика по умолчанию
+# The label for the explanation of the * marker on a tool which is currently not supported
+# for the target of the toolbox.
+options-tool-not-supported-label = * Не поддерживается для текущей цели инструмента
+# The label for the heading of group of checkboxes corresponding to the developer tools
+# added by add-ons. This heading is hidden when there is no developer tool installed by add-ons.
+options-select-additional-tools-label = Инструменты разработчика установленные дополнениями
+# The label for the heading of group of checkboxes corresponding to the default developer
+# tool buttons.
+options-select-enabled-toolbox-buttons-label = Доступные кнопки инструментов
+# The label for the heading of the radiobox corresponding to the theme
+options-select-dev-tools-theme-label = Темы
+
+## Inspector section
+
+# The heading
+options-context-inspector = Инспектор
+# The label for the checkbox option to show user agent styles
+options-show-user-agent-styles-label = Отображать стили браузера
+options-show-user-agent-styles-tooltip =
+    .title = Включение приведёт к отображению стилей по умолчанию, применяемых браузером.
+# The label for the checkbox option to show all anonymous content
+options-show-user-agent-shadow-dom-label = Показать теневую DOM браузера
+options-show-user-agent-shadow-dom-tooltip =
+    .title = Включение приведёт к отображению элементов теневого DOM, обрабатываемых браузером.
+# The label for the checkbox option to enable collapse attributes
+options-collapse-attrs-label = Обрезать атрибуты DOM
+options-collapse-attrs-tooltip =
+    .title = Обрезать в инспекторе длинные атрибуты
+# The label for the checkbox option to enable the display of comments in the Inspector
+options-show-comments-label = Показать комментарии
+options-show-comments-tooltip =
+    .title = Отображать узлы комментариев в инспекторе
+# The label for the checkbox option to enable the "drag to update" feature
+options-inspector-draggable-properties-label = Щёлкните и перетащите, чтобы изменить значения размера
+options-inspector-draggable-properties-tooltip =
+    .title = Щёлкните и перетащите, чтобы изменить значения размера в представлении правил инспектора.
+# The label for the checkbox option to enable simplified highlighting on page elements
+# within the inspector for users who enabled prefers-reduced-motion = reduce
+options-inspector-simplified-highlighters-label = Использовать более простые маркеры с prefers-reduced-motion
+options-inspector-simplified-highlighters-tooltip =
+    .title = Включает упрощённые маркеры, когда включена функция prefers-reduced-motion. Рисует линии вместо закрашенных прямоугольников вокруг выделенных элементов, чтобы избежать эффекта мерцания.
+# The label for the checkbox option to make the Enter key move the focus to the next input
+# when editing a property name or value in the Inspector rules view
+options-inspector-rules-focus-next-on-enter-label = Сфокусировать следующий ввод на <kbd>Enter</kbd>
+options-inspector-rules-focus-next-on-enter-tooltip =
+    .title = Когда включено, нажатие клавиши Enter при редактировании селектора, имени свойства или значения переместит фокус на следующий ввод.
+
+## "Default Color Unit" options for the Inspector
+
+options-default-color-unit-label = Единицы задания цвета по умолчанию
+options-default-color-unit-authored = Как в оригинале
+options-default-color-unit-hex = 16-ричные числа
+options-default-color-unit-hsl = HSL(A)
+options-default-color-unit-rgb = RGB(A)
+options-default-color-unit-hwb = HWB
+options-default-color-unit-name = Названия цветов
+
+## Web Console section
+
+# The heading
+options-webconsole-label = Веб-консоль
+# The label for the checkbox that toggle whether the Split console is enabled
+options-webconsole-split-console-label = Включить разделённую консоль
+options-webconsole-split-console-tooltip =
+    .title = Открывать разделённую консоль с помощью клавиши Esc
+
+## Network Monitor section
+
+# The heading
+options-netmonitor-label = Монитор сети
+# The label for the input defining the limit of stored request and response body size
+options-netmonitor-body-limit-label = Максимальный размер тела запроса и ответа (установите 0 для неограниченных):
+options-netmonitor-body-limit-tooltip =
+    .title = Тела запросов или ответов, размер которых превышает указанный, будут обрезаны при отображении или загрузке в Мониторе сети. Установите в 0, чтобы не устанавливать ограничения.
+# Text shown in the input when there is no limitation (instead of showing "0")
+options-netmonitor-body-limit-unlimited-label = Неограничено
+options-netmonitor-body-limit-button =
+    .title = Изменить максимальный размер тела запроса/ответа.
+options-netmonitor-body-limit-restore-default =
+    .title = Восстановить значение по умолчанию для максимального размера тела запроса/ответа.
+options-netmonitor-body-limit-set =
+    .title = Установить текущее значение ввода как максимальный размер тела запроса/ответа.
+
+## Experimental section
+
+# The heading
+options-experimental-label = Экспериментальные возможности
+# The label for the checkbox that toggles showing stylesheets in the debugger
+options-stylesheets-in-the-debugger-label = Показать таблицы стилей в отладчике
+options-stylesheets-in-the-debugger-tooltip =
+    .title = Показать и просмотреть таблицы стилей в отладчике
+# The message shown for settings that indicates that the attached setting requires the
+# toolbox to be reopened to take effect.
+options-reopen-toolbox-message = (требует повторного открытия инструментов)
+
+## Style Editor section
+
+# The heading
+options-styleeditor-label = Редактор стилей
+# The label for the checkbox that toggles autocompletion of css in the Style Editor
+options-stylesheet-autocompletion-label = Автодополнение CSS
+options-stylesheet-autocompletion-tooltip =
+    .title = Автодополнение свойств, значений и селекторов CSS в Редакторе Стилей по мере набора
+
+## Screenshot section
+
+# The heading
+options-screenshot-label = Настройки снятия скриншотов
+# Label for the checkbox that toggles screenshot to clipboard feature
+options-screenshot-clipboard-only-label = Скриншот только в буфер обмена
+options-screenshot-clipboard-tooltip2 =
+    .title = Сохранять скриншот прямо в буфер обмена
+# Label for the checkbox that toggles the camera shutter audio for screenshot tool
+options-screenshot-audio-label = Проигрывать звук затвора камеры
+options-screenshot-audio-tooltip =
+    .title = Проигрывать звук щелчка затвора камеры при снятии снимка экрана
+
+## Editor section
+
+# The heading
+options-sourceeditor-label = Настройки редактора
+options-sourceeditor-detectindentation-tooltip =
+    .title = Угадывать стиль отступов на основе содержимого исходников
+options-sourceeditor-detectindentation-label = Определять стиль отступов
+options-sourceeditor-autoclosebrackets-tooltip =
+    .title = Автоматически вставлять закрывающие скобки
+options-sourceeditor-autoclosebrackets-label = Автозакрытие скобок
+options-sourceeditor-expandtab-tooltip =
+    .title = Использовать пробелы вместо символа табуляции
+options-sourceeditor-expandtab-label = Отступ с помощью пробелов
+options-sourceeditor-tabsize-label = Ширина табуляции
+options-sourceeditor-keybinding-label = Сочетания клавиш
+options-sourceeditor-keybinding-default-label = По умолчанию
+
+## Local Mode section
+
+# The heading
+options-local-mode-label = Локальный режим
+options-local-mode-only-work-locally = Локальный режим работает только локально и отключён при отладке удалённых контекстов
+options-local-mode-behavior = Локальный режим позволяет вам загружать локальные файлы через https URL без какой-либо зависимости извне. URL-адреса могут быть загружены только из вкладок, в которых открыты Инструменты разработчика.
+options-local-mode-domain-label = Пользовательский домен:
+options-local-mode-origin-input =
+    .placeholder = Источник локального отображения
+# Errors shown when the origin input has an error
+options-local-mode-origin-conflict = Этот источник конфликтует с другим существующим отображением
+options-local-mode-origin-invalid = Этот источник недействителен
+options-local-mode-folder-label = Локальная папка:
+options-local-mode-choose-folder = Обзор…
+    .title = Выберите локальную папку для обслуживания этого отображения
+# Dialog's title when picking a folder for a mapping
+# Variables:
+#   $url (String): The url for the mapping being configured
+options-local-mode-choose-folder-picker-title = Выберите папку локального режима для: { $url }
+# Error shown when the folder is invalid
+# (can easily be triggered when using about:config and changing underlying mappings prefs)
+options-local-mode-folder-invalid = Эта папка не существует или некорректна.
+options-local-mode-toggle =
+    .title = Переключить это локальное отображение
+options-local-mode-toggle-enable = Включить
+options-local-mode-toggle-disable = Отключить
+options-local-mode-navigate-to =
+    .title = Перейти к этому URL-адресу отображения
+# Dialog message prompted when clicking on the Delete button
+# Variables:
+#   $mappingOrigin (String): The origin for the mapping
+options-local-mode-confirm-deletion = Вы хотите удалить отображение «{ $mappingOrigin }»?
+options-local-mode-new-mapping = Добавить новое локальное отображение
+
+## Advanced section
+
+# The heading (this item is also used in perftools.ftl)
+options-context-advanced-settings = Дополнительные параметры
+# The label for the checkbox that toggles the HTTP cache on or off
+options-disable-http-cache-label = Отключить HTTP-кеш (когда открыта панель инструментов)
+options-disable-http-cache-tooltip =
+    .title = Включение этой опции отключит HTTP-кеш для всех вкладок, в которых открыта панель инструментов. Эта опция не влияет на Service Worker'ы.
+# The label for checkbox that toggles JavaScript on or off
+options-disable-javascript-label-2 = Отключить JavaScript
+# The label for checkbox that toggles JavaScript on or off
+options-disable-javascript-label = Отключить JavaScript *
+options-disable-javascript-tooltip =
+    .title = Включение этой опции приведёт к отключению JavaScript для текущей вкладки. Если вкладка или панель инструментов будут закрыты, то этот параметр будет сброшен.
+# The label for checkbox that toggles chrome debugging, i.e. the devtools.chrome.enabled preference
+options-enable-chrome-label = Включить инструменты отладки browser chrome и дополнений
+options-enable-chrome-tooltip =
+    .title = Включение этого параметра позволит вам использовать различные инструменты разработчика в контексте браузера (через «Инструменты» > «Веб-разработка» > «Инструменты браузера») и отлаживать дополнения из окна управления дополнениями
+# The label for checkbox that toggles remote debugging, i.e. the devtools.debugger.remote-enabled preference
+options-enable-remote-label = Включить удалённую отладку
+options-enable-remote-tooltip2 =
+    .title = Включение этой опции позволит удалённо отлаживать этот экземпляр браузера
+# The label for checkbox that enables F12 as a shortcut to open DevTools
+options-enable-f12-label = Использовать клавишу F12, чтобы открыть или закрыть DevTools.
+options-enable-f12-tooltip =
+    .title = Включение этой фукнции привязывает клавишу F12 к открытию или закрытию панели инструментов DevTools.
+# The label for checkbox that toggles custom formatters for objects
+options-enable-custom-formatters-label = Включить собственные средства форматирования
+options-enable-custom-formatters-tooltip =
+    .title = Включение этой настройки позволит сайтам определять собственные средства форматирования для объектов DOM
+# The label for checkbox that toggles the service workers testing over HTTP on or off.
+options-enable-service-workers-http-label = Включить Service Worker'ы поверх HTTP (когда открыта панель инструментов)
+options-enable-service-workers-http-tooltip =
+    .title = Включение этой опции включит service worker'ы поверх HTTP для всех вкладок, в которых открыта панель инструментов.
+# The label for the checkbox that toggles source maps in all tools.
+options-source-maps-label = Включить карты исходников
+options-source-maps-tooltip =
+    .title = Если вы включите эту настройку, исходники будут картированы в инструментах.
+# The message shown for settings that trigger page reload and will only apply to the current session
+# This appears underneath the applicable options (e.g. options-disable-javascript-label-2).
+options-context-triggers-page-refresh-temporary = (только текущая сессия, перезагружает страницу)
+# The message shown for settings that trigger page reload and will only apply to the current session
+options-context-triggers-page-refresh = * Только текущая сессия, перезагружает страницу
+# The message shown for settings that trigger page reload
+# This appears underneath the applicable options (e.g. options-show-user-agent-shadow-dom-label).
+options-context-triggers-page-refresh-persists = (перезагружает страницу)
+# This is used to add a * marker to the label for the Options Panel tool checkbox for the
+# tool which is not supported for the current toolbox target.
+# Variables:
+#   $toolLabel (String): The name of the tool not being supported
+options-tool-not-supported-marker = { $toolLabel } *
+# Used as a label for auto theme
+options-auto-theme-label = Авто
+# This is the text that appears in the settings panel for panel that will be removed in future releases.
+# This entire text is treated as a link to an MDN page.
+options-deprecation-notice = Устарело. Узнать больше…

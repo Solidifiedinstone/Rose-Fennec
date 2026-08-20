@@ -7,7 +7,7 @@
 #
 # Environment:
 #   AUS_BASE_URL     AUS base URL for the /api/latest lookup (skip when empty)
-#   CDN_BASE_URL     optional, defaults to https://cdn.waterfox.com/waterfox
+#   CDN_BASE_URL     optional, defaults to https://cdn.waterfox.com/fennec
 #   PRE_RELEASE      true|false -> beta|release channel
 #   VERSION_DISPLAY  display version being built (the "to" version)
 #   OS_ARCH          AUS platform key, e.g. WINNT_x86_64, Darwin_x86_64-aarch64
@@ -29,7 +29,7 @@ META_ENV="${2:?${USAGE}}"
 : "${MAR_BIN:?MAR_BIN must be set}"
 : "${MBSDIFF_BIN:?MBSDIFF_BIN must be set}"
 
-CDN_BASE_URL="${CDN_BASE_URL:-https://cdn.waterfox.com/waterfox}"
+CDN_BASE_URL="${CDN_BASE_URL:-https://cdn.waterfox.com/fennec}"
 
 skip() {
   echo "::notice title=Partial MAR skipped (${META_KEY})::$1"
@@ -67,7 +67,7 @@ WORKDIR="$(mktemp -d)"
 trap 'rm -rf "$WORKDIR"' EXIT
 
 FROM_MAR="$WORKDIR/from.complete.mar"
-FROM_URL="${CDN_BASE_URL}/releases/${FROM_VERSION}/update/${OS_ARCH}/waterfox-${FROM_VERSION}.complete.mar"
+FROM_URL="${CDN_BASE_URL}/releases/${FROM_VERSION}/update/${OS_ARCH}/fennec-${FROM_VERSION}.complete.mar"
 
 HTTP_CODE=$(curl -sSL --retry 5 -w '%{http_code}' -o "$FROM_MAR" "$FROM_URL" || echo "000")
 if [[ "$HTTP_CODE" == "404" ]]; then
@@ -107,10 +107,10 @@ fi
 
 FORCE_ARGS=()
 if [[ "$MAR_ARCH" == macos* ]]; then
-  FORCE_ARGS+=(-f Contents/MacOS/waterfox)
+  FORCE_ARGS+=(-f Contents/MacOS/fennec)
 fi
 
-PARTIAL_NAME="waterfox-${FROM_VERSION}-${VERSION_DISPLAY}.partial.mar"
+PARTIAL_NAME="fennec-${FROM_VERSION}-${VERSION_DISPLAY}.partial.mar"
 
 MAR="$MAR_BIN" \
 MBSDIFF="$MBSDIFF_BIN" \

@@ -70,9 +70,9 @@ const lazy = XPCOMUtils.declareLazy({
 const TOPIC_LOCALES_CHANGE = "intl:app-locales-changed";
 const QUIT_APPLICATION_TOPIC = "quit-application";
 
-const WATERFOX_SEARCH_ENGINES_URL =
+const FENNEC_SEARCH_ENGINES_URL =
   "chrome://browser/content/search/BrowserSearchEngines.json";
-const WATERFOX_QWANT_DEFAULT_REGIONS = new Set([
+const FENNEC_QWANT_DEFAULT_REGIONS = new Set([
   "AR",
   "AT",
   "AU",
@@ -109,11 +109,11 @@ const WATERFOX_QWANT_DEFAULT_REGIONS = new Set([
   "US",
 ]);
 
-export function getWaterfoxDefaultSearchEngineId(region) {
+export function getFennecDefaultSearchEngineId(region) {
   const normalizedRegion = region?.toUpperCase();
   return normalizedRegion &&
     normalizedRegion != "UNKNOWN" &&
-    !WATERFOX_QWANT_DEFAULT_REGIONS.has(normalizedRegion)
+    !FENNEC_QWANT_DEFAULT_REGIONS.has(normalizedRegion)
     ? "ddg"
     : "qwant";
 }
@@ -2871,8 +2871,8 @@ export const SearchService = new (class SearchService {
       );
     }
 
-    const engines = await (await fetch(WATERFOX_SEARCH_ENGINES_URL)).json();
-    const defaultEngineId = getWaterfoxDefaultSearchEngineId(lazy.Region.home);
+    const engines = await (await fetch(FENNEC_SEARCH_ENGINES_URL)).json();
+    const defaultEngineId = getFennecDefaultSearchEngineId(lazy.Region.home);
 
     return {
       engines,

@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-tokyo-night@fennec"
+    }
+  },
+  "name": "Tokyo Night",
+  "description": "The Tokyo Night palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#1a1b26",
+      "frame_inactive": "#1a1b26",
+      "tab_background_text": "#565a78",
+      "tab_selected": "#292e42",
+      "tab_text": "#c0caf5",
+      "tab_line": "#7aa2f7",
+      "tab_loading": "#7aa2f7",
+      "toolbar": "#16161e",
+      "toolbar_text": "#c0caf5",
+      "toolbar_field": "#1e2030",
+      "toolbar_field_text": "#c0caf5",
+      "toolbar_field_border": "#292e42",
+      "toolbar_field_focus": "#292e42",
+      "toolbar_field_text_focus": "#c0caf5",
+      "toolbar_field_border_focus": "#7aa2f7",
+      "toolbar_top_separator": "#292e42",
+      "toolbar_bottom_separator": "#292e42",
+      "toolbar_vertical_separator": "#292e42",
+      "ntp_background": "#1a1b26",
+      "ntp_text": "#c0caf5",
+      "popup": "#1e2030",
+      "popup_text": "#c0caf5",
+      "popup_border": "#292e42",
+      "popup_highlight": "#3d5a8c",
+      "popup_highlight_text": "#c0caf5",
+      "sidebar": "#16161e",
+      "sidebar_text": "#c0caf5",
+      "sidebar_border": "#292e42",
+      "sidebar_highlight": "#3d5a8c",
+      "sidebar_highlight_text": "#c0caf5",
+      "button_background_hover": "#1e2030",
+      "button_background_active": "#292e42",
+      "icons": "#565a78",
+      "icons_attention": "#7aa2f7",
+      "bookmark_text": "#c0caf5",
+      "error_text": "#f7768e"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

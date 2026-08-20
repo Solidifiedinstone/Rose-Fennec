@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-nord@fennec"
+    }
+  },
+  "name": "Nord",
+  "description": "The Nord palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#2e3440",
+      "frame_inactive": "#2e3440",
+      "tab_background_text": "#7b88a1",
+      "tab_selected": "#4c566a",
+      "tab_text": "#eceff4",
+      "tab_line": "#88c0d0",
+      "tab_loading": "#88c0d0",
+      "toolbar": "#3b4252",
+      "toolbar_text": "#eceff4",
+      "toolbar_field": "#434c5e",
+      "toolbar_field_text": "#eceff4",
+      "toolbar_field_border": "#4c566a",
+      "toolbar_field_focus": "#4c566a",
+      "toolbar_field_text_focus": "#eceff4",
+      "toolbar_field_border_focus": "#88c0d0",
+      "toolbar_top_separator": "#4c566a",
+      "toolbar_bottom_separator": "#4c566a",
+      "toolbar_vertical_separator": "#4c566a",
+      "ntp_background": "#2e3440",
+      "ntp_text": "#eceff4",
+      "popup": "#434c5e",
+      "popup_text": "#eceff4",
+      "popup_border": "#4c566a",
+      "popup_highlight": "#4d707a",
+      "popup_highlight_text": "#eceff4",
+      "sidebar": "#3b4252",
+      "sidebar_text": "#eceff4",
+      "sidebar_border": "#4c566a",
+      "sidebar_highlight": "#4d707a",
+      "sidebar_highlight_text": "#eceff4",
+      "button_background_hover": "#434c5e",
+      "button_background_active": "#4c566a",
+      "icons": "#7b88a1",
+      "icons_attention": "#88c0d0",
+      "bookmark_text": "#eceff4",
+      "error_text": "#bf616a"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

@@ -17,7 +17,7 @@ from pathlib import Path
 DEFAULT_SERVER = "https://firefox.settings.services.mozilla.com/v1"
 FETCH_ATTEMPTS = 3
 RETRY_DELAY_SECONDS = 2.0
-POLICY_PATH = Path("services/settings/WaterfoxSettingsPolicy.sys.mjs")
+POLICY_PATH = Path("services/settings/FennecSettingsPolicy.sys.mjs")
 REGULAR_DUMP_ROOT = Path("services/settings/dumps")
 STATIC_DUMP_ROOT = Path("services/settings/static-dumps")
 ENTRY_RE = re.compile(r'\[\s*"([^"]+)"\s*,\s*"([^"]+)"\s*\]')
@@ -36,7 +36,7 @@ class DumpTarget:
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Update Waterfox's bundled Remote Settings dumps."
+        description="Update Fennec's bundled Remote Settings dumps."
     )
     parser.add_argument(
         "--server",
@@ -151,7 +151,7 @@ def fetch_json_once(url, timeout):
         url,
         headers={
             "Accept": "application/json",
-            "User-Agent": "Waterfox Remote Settings dump updater",
+            "User-Agent": "Fennec Remote Settings dump updater",
         },
     )
     with urllib.request.urlopen(request, timeout=timeout) as response:

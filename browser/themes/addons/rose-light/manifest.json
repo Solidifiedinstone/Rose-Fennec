@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-light@fennec"
+    }
+  },
+  "name": "Light",
+  "description": "The Light palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#faf9fb",
+      "frame_inactive": "#faf9fb",
+      "tab_background_text": "#6e6a76",
+      "tab_selected": "#e6e3ea",
+      "tab_text": "#1c1a20",
+      "tab_line": "#b34464",
+      "tab_loading": "#b34464",
+      "toolbar": "#ffffff",
+      "toolbar_text": "#1c1a20",
+      "toolbar_field": "#f1eff4",
+      "toolbar_field_text": "#1c1a20",
+      "toolbar_field_border": "#dcd8e0",
+      "toolbar_field_focus": "#e6e3ea",
+      "toolbar_field_text_focus": "#1c1a20",
+      "toolbar_field_border_focus": "#b34464",
+      "toolbar_top_separator": "#dcd8e0",
+      "toolbar_bottom_separator": "#dcd8e0",
+      "toolbar_vertical_separator": "#dcd8e0",
+      "ntp_background": "#faf9fb",
+      "ntp_text": "#1c1a20",
+      "popup": "#f1eff4",
+      "popup_text": "#1c1a20",
+      "popup_border": "#dcd8e0",
+      "popup_highlight": "#d99cad",
+      "popup_highlight_text": "#1c1a20",
+      "sidebar": "#ffffff",
+      "sidebar_text": "#1c1a20",
+      "sidebar_border": "#dcd8e0",
+      "sidebar_highlight": "#d99cad",
+      "sidebar_highlight_text": "#1c1a20",
+      "button_background_hover": "#f1eff4",
+      "button_background_active": "#e6e3ea",
+      "icons": "#6e6a76",
+      "icons_attention": "#b34464",
+      "bookmark_text": "#1c1a20",
+      "error_text": "#b3384a"
+    },
+    "properties": {
+      "color_scheme": "light",
+      "content_color_scheme": "light"
+    }
+  }
+}

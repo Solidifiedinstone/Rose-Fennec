@@ -1,0 +1,523 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* stylelint-disable stylelint-plugin-mozilla/use-design-tokens --
+ * The Rose palette is this browser's token system: every value here is a
+ * --rose-* variable set by rose-palettes.css and rose-shape.css, which is
+ * exactly what the rule asks for, under different names. */
+/* Built from the variables in rose-palettes.css and rose-shape.css. Scoped to
+ * chrome documents: this is registered as a user sheet, which reaches every
+ * document including web pages, and an unscoped :root rule here would restyle
+ * the web. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+@-moz-document url-prefix("chrome://")
+{
+  :root {
+    --rose-fast: 120ms;
+
+    font-family: var(--rose-font) !important;
+    font-size: var(--rose-font-size) !important;
+
+    /* Mozilla's own variables, pointed at Rose. Setting these is what themes
+       the parts this file never names — and there are a great many of them. */
+    --toolbar-bgcolor: var(--rose-panel) !important;
+    --toolbar-color: var(--rose-text) !important;
+    --toolbar-field-background-color: var(--rose-field) !important;
+    --toolbar-field-color: var(--rose-text) !important;
+    --toolbar-field-focus-background-color: var(--rose-field) !important;
+    --toolbar-field-focus-border-color: var(--rose-accent) !important;
+    --toolbar-field-border-color: var(--rose-border) !important;
+    --tab-selected-bgcolor: var(--rose-elevated) !important;
+    --tab-selected-textcolor: var(--rose-text) !important;
+    --tabpanel-background-color: var(--rose-backdrop) !important;
+    --lwt-accent-color: var(--rose-backdrop) !important;
+    --lwt-text-color: var(--rose-text) !important;
+    --lwt-tab-line-color: var(--rose-accent) !important;
+    --lwt-sidebar-background-color: var(--rose-surface) !important;
+    --lwt-sidebar-text-color: var(--rose-text) !important;
+    --sidebar-border-color: var(--rose-border) !important;
+    --arrowpanel-background: var(--rose-elevated) !important;
+    --arrowpanel-color: var(--rose-text) !important;
+    --arrowpanel-border-color: var(--rose-border) !important;
+    --panel-separator-color: var(--rose-border) !important;
+    --panel-item-hover-bgcolor: var(--rose-hover) !important;
+    --panel-item-active-bgcolor: var(--rose-accent-muted) !important;
+    --button-bgcolor: var(--rose-field) !important;
+    --button-color: var(--rose-text) !important;
+    --button-hover-bgcolor: var(--rose-hover) !important;
+    --button-active-bgcolor: var(--rose-accent-muted) !important;
+    --button-primary-bgcolor: var(--rose-accent) !important;
+    --button-primary-color: var(--rose-text-inverse) !important;
+    --toolbarbutton-icon-fill: var(--rose-text) !important;
+    --toolbarbutton-hover-background: var(--rose-hover) !important;
+    --toolbarbutton-active-background: var(--rose-accent-muted) !important;
+    --focus-outline-color: var(--rose-accent) !important;
+    --link-color: var(--rose-accent) !important;
+    --link-color-hover: var(--rose-accent-hover) !important;
+    --urlbar-box-bgcolor: var(--rose-field) !important;
+    --urlbar-box-text-color: var(--rose-text) !important;
+    --urlbar-box-hover-bgcolor: var(--rose-hover) !important;
+    --autocomplete-popup-background: var(--rose-elevated) !important;
+    --autocomplete-popup-color: var(--rose-text) !important;
+    --autocomplete-popup-highlight-background: var(--rose-accent) !important;
+    --autocomplete-popup-highlight-color: var(--rose-text-inverse) !important;
+    --in-content-page-background: var(--rose-backdrop) !important;
+    --in-content-page-color: var(--rose-text) !important;
+    --in-content-box-background: var(--rose-surface) !important;
+    --in-content-border-color: var(--rose-border) !important;
+    --in-content-accent-color: var(--rose-accent) !important;
+    --newtab-background-color: var(--rose-backdrop) !important;
+    --newtab-text-primary-color: var(--rose-text) !important;
+    --chrome-content-separator-color: var(--rose-border) !important;
+    --toolbox-border-bottom-color: var(--rose-border) !important;
+  }
+
+  #main-window,
+  #browser,
+  #tabbrowser-tabbox,
+  #appcontent {
+    background: var(--rose-fill-backdrop) !important;
+    color: var(--rose-text) !important;
+  }
+
+  #navigator-toolbox {
+    background: var(--rose-fill-panel) !important;
+    color: var(--rose-text) !important;
+    border-bottom: var(--rose-border-width) solid var(--rose-border);
+  }
+
+  #nav-bar,
+  #PersonalToolbar,
+  #TabsToolbar,
+  #toolbar-menubar {
+    background: transparent;
+    color: var(--rose-text) !important;
+    padding-inline: var(--rose-padding);
+  }
+
+  #nav-bar {
+    padding-block: var(--rose-padding);
+    border-top: none;
+    box-shadow: none;
+  }
+
+  toolbarbutton,
+  .toolbarbutton-1 {
+    color: var(--rose-text) !important;
+  }
+
+  .toolbarbutton-1 > .toolbarbutton-icon,
+  .toolbarbutton-1 > .toolbarbutton-badge-stack {
+    border-radius: var(--rose-radius);
+    transition: background-color var(--rose-fast);
+  }
+
+  toolbarbutton[disabled] {
+    color: var(--rose-text-faint);
+  }
+
+  toolbarseparator,
+  .toolbarbutton-1[disabled="true"] {
+    border-color: var(--rose-border);
+  }
+
+  .tabbrowser-tab {
+    font-size: var(--rose-font-size);
+    min-height: var(--rose-tab-height);
+  }
+
+  .tab-background {
+    border: none;
+    border-radius: var(--rose-radius) var(--rose-radius) 0 0;
+    margin-block: 2px 0;
+    background: transparent;
+    transition: background-color var(--rose-fast);
+  }
+
+  .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected]) {
+    background: var(--rose-hover);
+  }
+
+  .tabbrowser-tab[selected] > .tab-stack > .tab-background,
+  .tabbrowser-tab[multiselected] > .tab-stack > .tab-background {
+    background: var(--rose-fill-elevated) !important;
+    /* The accent line is what says "this one" on palettes where the selected
+       tab and the toolbar are close in tone — which is most of them. */
+    box-shadow: inset 0 2px 0 0 var(--rose-accent);
+  }
+
+  .tab-label {
+    color: var(--rose-text-dim) !important;
+  }
+
+  .tabbrowser-tab[selected] .tab-label,
+  .tabbrowser-tab[multiselected] .tab-label {
+    color: var(--rose-text) !important;
+  }
+
+  .tab-icon-overlay[soundplaying],
+  .tab-icon-overlay[muted] {
+    color: var(--rose-accent);
+  }
+
+  .tab-close-button {
+    border-radius: var(--rose-radius);
+  }
+
+  .tab-close-button:hover {
+    background-color: rgb(var(--rose-accent-rgb) / 0.22);
+    color: var(--rose-text) !important;
+  }
+
+  #tabbrowser-tabs {
+    --tab-loading-fill: var(--rose-accent);
+  }
+
+  #tabs-newtab-button,
+  #new-tab-button {
+    border-radius: var(--rose-radius);
+  }
+
+  #tabbrowser-arrowscrollbox-periphery > toolbarbutton:hover {
+    background-color: var(--rose-hover);
+  }
+
+  :root[uidensity] #tabbrowser-tabs[orient="vertical"] .tab-background {
+    border-radius: var(--rose-radius);
+    margin: 1px 2px;
+  }
+
+  #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected] > .tab-stack > .tab-background {
+    box-shadow: inset 2px 0 0 0 var(--rose-accent);
+  }
+
+  #urlbar,
+  #searchbar {
+    font-size: var(--rose-font-size);
+  }
+
+  #urlbar-background,
+  #searchbar {
+    background: var(--rose-field) !important;
+    border: var(--rose-border-width) solid var(--rose-border);
+    border-radius: var(--rose-radius);
+    transition:
+      border-color var(--rose-fast),
+      box-shadow var(--rose-fast);
+  }
+
+  #urlbar[focused="true"] > #urlbar-background,
+  #searchbar:focus-within {
+    border-color: var(--rose-accent);
+    box-shadow: 0 0 0 1px rgb(var(--rose-accent-rgb) / 0.45);
+  }
+
+  #urlbar-input,
+  #urlbar-scheme,
+  .searchbar-textbox {
+    color: var(--rose-text) !important;
+  }
+
+  #urlbar-input::placeholder,
+  .searchbar-textbox::placeholder {
+    color: var(--rose-text-faint);
+  }
+
+  #identity-box,
+  #tracking-protection-icon-container,
+  #page-action-buttons > .urlbar-page-action {
+    border-radius: var(--rose-radius);
+    color: var(--rose-text-dim) !important;
+  }
+
+  #identity-box:hover,
+  #tracking-protection-icon-container:hover,
+  .urlbar-page-action:hover {
+    background-color: var(--rose-hover);
+    color: var(--rose-text) !important;
+  }
+
+  #identity-icon-box[pageproxystate="valid"][issecurecontext] {
+    color: var(--rose-success);
+  }
+
+  .urlbarView {
+    background: var(--rose-fill-elevated) !important;
+    color: var(--rose-text) !important;
+    border: var(--rose-border-width) solid var(--rose-border);
+    border-top: none;
+    border-radius: 0 0 var(--rose-radius) var(--rose-radius);
+  }
+
+  .urlbarView-row {
+    border-radius: var(--rose-radius);
+    padding-block: calc(var(--rose-padding) / 2);
+  }
+
+  .urlbarView-row[selected],
+  .urlbarView-row:hover {
+    background-color: var(--rose-hover);
+    color: var(--rose-text) !important;
+  }
+
+  .urlbarView-row[selected] {
+    box-shadow: inset 2px 0 0 0 var(--rose-accent);
+  }
+
+  .urlbarView-title {
+    color: var(--rose-text) !important;
+  }
+
+  .urlbarView-url,
+  .urlbarView-title-separator {
+    color: var(--rose-accent);
+  }
+
+  .urlbarView-type-icon,
+  .urlbarView-favicon {
+    color: var(--rose-text-dim) !important;
+  }
+
+  #PersonalToolbar {
+    border-top: none;
+  }
+
+  .bookmark-item {
+    color: var(--rose-text) !important;
+    border-radius: var(--rose-radius);
+  }
+
+  .bookmark-item:hover {
+    background-color: var(--rose-hover);
+  }
+
+  menupopup,
+  panel {
+    --panel-background: var(--rose-elevated);
+    --panel-color: var(--rose-text) !important;
+    --panel-border-color: var(--rose-border);
+    --panel-border-radius: var(--rose-radius);
+    color: var(--rose-text) !important;
+  }
+
+  menupopup {
+    background: var(--rose-fill-elevated) !important;
+    border: var(--rose-border-width) solid var(--rose-border);
+    border-radius: var(--rose-radius);
+    padding-block: calc(var(--rose-padding) / 2);
+  }
+
+  menuitem,
+  menu,
+  .subviewbutton,
+  .panel-banner-item,
+  .PanelUI-subView toolbarbutton {
+    color: var(--rose-text) !important;
+    border-radius: var(--rose-radius);
+    padding-block: calc(var(--rose-padding) / 2);
+  }
+
+  menuitem[_moz-menuactive="true"],
+  menu[_moz-menuactive="true"],
+  .subviewbutton:hover,
+  .panel-banner-item:hover {
+    background-color: var(--rose-hover);
+    color: var(--rose-text) !important;
+  }
+
+  menuitem[disabled="true"],
+  menu[disabled="true"],
+  .subviewbutton[disabled="true"] {
+    color: var(--rose-text-faint);
+  }
+
+  menuseparator,
+  .panel-separator,
+  toolbarseparator {
+    border-color: var(--rose-border);
+    border-top-color: var(--rose-border);
+  }
+
+  menuitem[checked="true"]::before,
+  menuitem[selected="true"] {
+    color: var(--rose-accent);
+  }
+
+  #appMenu-popup,
+  #widget-overflow,
+  #customizationui-widget-panel {
+    --arrowpanel-background: var(--rose-elevated);
+    --arrowpanel-color: var(--rose-text) !important;
+  }
+
+  .panel-header {
+    color: var(--rose-text) !important;
+    border-bottom-color: var(--rose-border);
+  }
+
+  #sidebar-box,
+  #sidebar-header,
+  #sidebar-main {
+    background: var(--rose-fill-panel) !important;
+    color: var(--rose-text) !important;
+  }
+
+  #sidebar-box {
+    border-inline-end: var(--rose-border-width) solid var(--rose-border);
+  }
+
+  #sidebar-header {
+    border-bottom: var(--rose-border-width) solid var(--rose-border);
+    font-size: var(--rose-font-size);
+  }
+
+  findbar,
+  .findbar-container {
+    background: var(--rose-fill-panel) !important;
+    color: var(--rose-text) !important;
+    border-top: var(--rose-border-width) solid var(--rose-border);
+  }
+
+  .findbar-textbox {
+    background-color: var(--rose-field);
+    color: var(--rose-text) !important;
+    border: var(--rose-border-width) solid var(--rose-border);
+    border-radius: var(--rose-radius);
+  }
+
+  .findbar-textbox[status="notfound"] {
+    background-color: rgb(var(--rose-accent-rgb) / 0.15);
+    color: var(--rose-danger);
+  }
+
+  #statuspanel-label {
+    background: var(--rose-fill-elevated) !important;
+    color: var(--rose-text) !important;
+    border: var(--rose-border-width) solid var(--rose-border);
+    border-radius: var(--rose-radius) var(--rose-radius) 0 0;
+  }
+
+  notification-message,
+  .notification-message {
+    background: var(--rose-fill-elevated) !important;
+    color: var(--rose-text) !important;
+    border-radius: var(--rose-radius);
+  }
+
+  #downloadsPanel-mainView,
+  #downloadsListBox richlistitem {
+    color: var(--rose-text) !important;
+    border-radius: var(--rose-radius);
+  }
+
+  #downloadsListBox richlistitem[selected] {
+    background-color: var(--rose-hover);
+  }
+
+  .downloadProgress::-moz-progress-bar {
+    background-color: var(--rose-accent);
+  }
+
+  html|input:not([type="checkbox"]):not([type="radio"]),
+  html|textarea,
+  html|select,
+  xul|textbox {
+    background-color: var(--rose-field);
+    color: var(--rose-text) !important;
+    border: var(--rose-border-width) solid var(--rose-border);
+    border-radius: var(--rose-radius);
+  }
+
+  html|input:focus-visible,
+  html|textarea:focus-visible,
+  html|select:focus-visible {
+    outline: 2px solid var(--rose-accent);
+    outline-offset: 1px;
+  }
+
+  /* Off unless asked for. Frosted surfaces cost compositing on every frame and
+     look wrong on a palette with no contrast behind them, so this is a choice
+     rather than the default. The tint keeps text readable: a fully transparent
+     toolbar over a white page is unreadable whatever the palette says. */
+  @media -moz-pref("rose.appearance.glass", true) {
+    #navigator-toolbox,
+    #sidebar-box,
+    findbar,
+    menupopup,
+    .urlbarView,
+    #statuspanel-label {
+      background: var(--rose-glass-tint);
+      backdrop-filter: blur(var(--rose-glass-blur)) saturate(140%);
+    }
+
+    #navigator-toolbox {
+      border-bottom-color: rgb(var(--rose-accent-rgb) / 0.25);
+    }
+  }
+
+  /* Compact removes the breathing room rather than shrinking the text: text
+     that shrinks with density is text somebody has to lean in to read. */
+  @media -moz-pref("rose.appearance.density", "compact") {
+    :root {
+      --rose-padding: 2px;
+      --rose-tab-height: 28px;
+    }
+
+    .urlbarView-row {
+      padding-block: 2px;
+    }
+  }
+
+  @media -moz-pref("rose.appearance.density", "spacious") {
+    :root {
+      --rose-padding: 12px;
+      --rose-tab-height: 42px;
+    }
+  }
+
+  /* about:preferences, about:addons and the rest are chrome-privileged
+     documents, so this sheet reaches them — which is the only way they end up
+     matching the window they are drawn in. */
+}
+
+@-moz-document url-prefix("about:") {
+  :root {
+    --in-content-page-background: var(--rose-backdrop) !important;
+    --in-content-page-color: var(--rose-text) !important;
+    --in-content-text-color: var(--rose-text) !important;
+    --in-content-deemphasized-text: var(--rose-text-dim) !important;
+    --in-content-box-background: var(--rose-surface) !important;
+    --in-content-box-background-odd: var(--rose-panel) !important;
+    --in-content-box-border-color: var(--rose-border) !important;
+    --in-content-border-color: var(--rose-border) !important;
+    --in-content-accent-color: var(--rose-accent) !important;
+    --in-content-link-color: var(--rose-accent) !important;
+    --in-content-primary-button-background: var(--rose-accent) !important;
+    --in-content-primary-button-text-color: var(--rose-text-inverse) !important;
+    --in-content-button-background: var(--rose-panel) !important;
+    --in-content-button-text-color: var(--rose-text) !important;
+    --in-content-button-border-color: var(--rose-border) !important;
+    --in-content-table-background: var(--rose-surface) !important;
+    --newtab-background-color: var(--rose-backdrop) !important;
+    --newtab-text-primary-color: var(--rose-text) !important;
+    --link-color: var(--rose-accent) !important;
+    --border-radius-medium: var(--rose-radius) !important;
+    --button-background-color: var(--rose-panel) !important;
+    --button-text-color: var(--rose-text) !important;
+    --background-color-box: var(--rose-surface) !important;
+    --background-color-canvas: var(--rose-backdrop) !important;
+    --text-color: var(--rose-text) !important;
+
+    background-color: var(--rose-backdrop) !important;
+    color: var(--rose-text) !important;
+  }
+
+  body {
+    background-color: transparent !important;
+    color: var(--rose-text) !important;
+  }
+}

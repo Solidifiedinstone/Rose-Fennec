@@ -65,7 +65,7 @@ jq -n \
   --argjson linArmPartialSize "${LINARM_PARTIAL_SIZE:-0}" --arg linArmPartialFrom "${LINARM_PARTIAL_FROM:-}" \
   '
   def plat(marHash; marSize; installer; partial):
-    {mar: ("waterfox-" + $version + ".complete.mar"), hash: marHash, size: marSize}
+    {mar: ("fennec-" + $version + ".complete.mar"), hash: marHash, size: marSize}
     + (if partial.hash != "" then {partials: [partial]} else {} end)
     + (if $withInstallers then {installer: installer} else {} end);
   {
@@ -76,19 +76,19 @@ jq -n \
     channels: [$channel],
     platforms: {
       WINNT_x86_64: plat($winMarHash; $winMarSize;
-        {file: ("Waterfox Setup " + $version + ".exe"), hash: $winInstallerHash, size: $winInstallerSize};
+        {file: ("Fennec Setup " + $version + ".exe"), hash: $winInstallerHash, size: $winInstallerSize};
         {mar: $winPartialMar, hash: $winPartialHash, size: $winPartialSize, from: $winPartialFrom}),
       "Darwin_x86_64-aarch64": plat($macMarHash; $macMarSize;
-        {file: ("Waterfox " + $version + ".dmg"), hash: $macInstallerHash, size: $macInstallerSize};
+        {file: ("Fennec " + $version + ".dmg"), hash: $macInstallerHash, size: $macInstallerSize};
         {mar: $macPartialMar, hash: $macPartialHash, size: $macPartialSize, from: $macPartialFrom}),
       Linux_x86_64: plat($linMarHash; $linMarSize;
-        {file: ("waterfox-" + $version + ".tar.bz2"), hash: $linInstallerHash, size: $linInstallerSize};
+        {file: ("fennec-" + $version + ".tar.bz2"), hash: $linInstallerHash, size: $linInstallerSize};
         {mar: $linPartialMar, hash: $linPartialHash, size: $linPartialSize, from: $linPartialFrom}),
       WINNT_aarch64: plat($winArmMarHash; $winArmMarSize;
-        {file: ("Waterfox Setup " + $version + ".exe"), hash: $winArmInstallerHash, size: $winArmInstallerSize};
+        {file: ("Fennec Setup " + $version + ".exe"), hash: $winArmInstallerHash, size: $winArmInstallerSize};
         {mar: $winArmPartialMar, hash: $winArmPartialHash, size: $winArmPartialSize, from: $winArmPartialFrom}),
       Linux_aarch64: plat($linArmMarHash; $linArmMarSize;
-        {file: ("waterfox-" + $version + ".tar.bz2"), hash: $linArmInstallerHash, size: $linArmInstallerSize};
+        {file: ("fennec-" + $version + ".tar.bz2"), hash: $linArmInstallerHash, size: $linArmInstallerSize};
         {mar: $linArmPartialMar, hash: $linArmPartialHash, size: $linArmPartialSize, from: $linArmPartialFrom})
     },
     unsupported: [],

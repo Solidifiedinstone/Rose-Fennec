@@ -313,7 +313,7 @@ Section "-InstallStartCleanup"
   ${InitHashAppModelId} "$INSTDIR" "Software\BrowserWorks\${AppName}\TaskBarIDs"
 
   ; Clean up old maintenance service logs
-  ${CleanMaintenanceServiceLogs} "BrowserWorks\Waterfox"
+  ${CleanMaintenanceServiceLogs} "BrowserWorks\Fennec"
 
   ${RemoveDeprecatedFiles}
   ${RemovePrecompleteEntries} "false"
@@ -437,9 +437,9 @@ Section "-Application" APP_IDX
     ${RegCleanUninstall}
     ${UpdateProtocolHandlers}
 
-    ReadRegStr $0 HKLM "Software\waterfox.net\Waterfox" "CurrentVersion"
+    ReadRegStr $0 HKLM "Software\waterfox.net\Fennec" "CurrentVersion"
     ${If} "$0" != "${GREVersion}"
-      WriteRegStr HKLM "Software\waterfox.net\Waterfox" "CurrentVersion" "${GREVersion}"
+      WriteRegStr HKLM "Software\waterfox.net\Fennec" "CurrentVersion" "${GREVersion}"
     ${EndIf}
   ${EndIf}
 
@@ -462,19 +462,19 @@ Section "-Application" APP_IDX
   ; it doesn't cause problems always add them.
   ${SetUninstallKeys}
 
-  ; On install always add the WaterfoxHTML-, WaterfoxPDF-, and WaterfoxURL- keys.
-  ; An empty string is used for the 5th param because WaterfoxHTML- is not a
+  ; On install always add the FennecHTML-, FennecPDF-, and FennecURL- keys.
+  ; An empty string is used for the 5th param because FennecHTML- is not a
   ; protocol handler.
   ${GetLongPath} "$INSTDIR\${FileMainEXE}" $8
   StrCpy $2 "$\"$8$\" -osint -url $\"%1$\""
 
-  ; In Win8, the delegate execute handler picks up the value in WaterfoxURL- and
-  ; WaterfoxHTML- to launch the desktop browser when it needs to.
-  ${AddDisabledDDEHandlerValues} "WaterfoxHTML-$AppUserModelID" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
+  ; In Win8, the delegate execute handler picks up the value in FennecURL- and
+  ; FennecHTML- to launch the desktop browser when it needs to.
+  ${AddDisabledDDEHandlerValues} "FennecHTML-$AppUserModelID" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
                                  "${AppRegName} HTML Document" ""
-  ${AddDisabledDDEHandlerValues} "WaterfoxPDF-$AppUserModelID" "$2" "$8,${IDI_DOCUMENT_PDF_ZERO_BASED}" \
+  ${AddDisabledDDEHandlerValues} "FennecPDF-$AppUserModelID" "$2" "$8,${IDI_DOCUMENT_PDF_ZERO_BASED}" \
                                  "${AppRegName} PDF Document" ""
-  ${AddDisabledDDEHandlerValues} "WaterfoxURL-$AppUserModelID" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
+  ${AddDisabledDDEHandlerValues} "FennecURL-$AppUserModelID" "$2" "$8,${IDI_DOCUMENT_ZERO_BASED}" \
                                  "${AppRegName} URL" "true"
 
   ; The keys below can be set in HKCU if needed.
@@ -1067,7 +1067,7 @@ Function WriteInstallationTelemetryData
   ; Check for top-level profile directory
   ; Note: This is the same check used to set $HadExistingProfile in stub.nsi
   ${GetLocalAppDataFolder} $0
-  ${If} ${FileExists} "$0\BrowserWorks\Waterfox"
+  ${If} ${FileExists} "$0\BrowserWorks\Fennec"
     StrCpy $1 "true"
   ${Else}
     StrCpy $1 "false"
@@ -1269,7 +1269,7 @@ FunctionEnd
 !ifdef MOZ_MAINTENANCE_SERVICE
 Function preComponents
   ; If the service already exists, don't show this page
-  ServicesHelper::IsInstalled "WaterfoxMaintenance"
+  ServicesHelper::IsInstalled "FennecMaintenance"
   Pop $R9
   ${If} $R9 == 1
     ; The service already exists so don't show this page.

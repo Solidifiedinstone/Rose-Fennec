@@ -1,0 +1,103 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## These strings are used for errors when installing OpenSearch engines, e.g.
+## via "Add Search Engine" on the address bar or search bar.
+## Variables
+## $location-url (String) - the URL of the OpenSearch engine that was attempted to be installed.
+
+opensearch-error-duplicate-title = Kesalahan Pemasangan
+opensearch-error-duplicate-desc = { -brand-short-name } tidak dapat memasang plugin pencarian dari "{ $location-url }" karena mesin pencari dengan nama yang sama telah ada sebelumnya.
+opensearch-error-format-title = Format Tidak Valid
+opensearch-error-format-desc = { -brand-short-name } tidak dapat memasang mesin pencari dari: { $location-url }
+opensearch-error-download-title = Kesalahan Unduhan
+opensearch-error-download-desc = { -brand-short-name } tidak dapat mengunduh plugin pencarian dari: { $location-url }
+
+##
+
+searchbar-submit =
+    .tooltiptext = Kirim penelusuran
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Cari
+searchbar-icon =
+    .tooltiptext = Cari
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Mesin pencari baku Anda telah diubah.</strong> { $oldEngine } tidak lagi tersedia sebagai mesin pencari baku di { -brand-short-name }. Kini, { $newEngine } menjadi mesin pencari baku Anda. Untuk mengubah ke mesin pencari baku lainnya, buka pengaturan. <label data-l10n-name="remove-search-engine-article">Pelajari lebih lanjut</label>
+removed-search-engine-message2 = <strong>Mesin pencari baku Anda telah diubah.</strong> { $oldEngine } tidak lagi tersedia sebagai mesin pencari baku di { -brand-short-name }. Kini, { $newEngine } menjadi mesin pencari baku Anda. Untuk mengubah ke mesin pencari baku lainnya, buka pengaturan.
+remove-search-engine-button = Oke
+
+## Infobar shown when default search engine is reset due to an issue reading the settings file.
+## Variables
+## $newEngine (String) - the name of the new default search engine.
+
+reset-search-settings-message = Karena masalah teknis, mesin pencari baku Anda telah diubah kembali menjadi { $newEngine }. Untuk mengubah mesin pencari baku, buka pengaturan.
+reset-search-settings-button = OKE
+
+## Infobar shown when user is prompted to install search engine.
+## Variables
+## $engineName (String) - the name of the search engine to install.
+
+install-search-engine = Tambahkan { $engineName } sebagai mesin pencari?
+install-search-engine-add = Tambahkan
+install-search-engine-no = Tidak
+
+## The following strings are used as input labels.
+
+add-engine-window =
+    .title = Tambah Mesin Pencari
+    .style = min-width: 32em;
+edit-engine-window =
+    .title = Sunting Mesin Pencari
+    .style = min-width: 32em;
+add-engine-button = Tambahkan Mesin Khusus
+add-engine-name = Nama mesin pencari
+add-engine-url2 = URL dengan %s sebagai pengganti istilah pencarian
+add-engine-keyword2 = Kata kunci (opsional)
+# POST and GET refer to the HTTP methods.
+add-engine-post-data = POST data dengan %s sebagai pengganti istilah pencarian (biarkan kosong untuk GET)
+add-engine-suggest-url = URL saran dengan %s sebagai pengganti istilah pencarian (opsional)
+
+## The following placeholders are shown in the inputs when adding a new engine.
+
+add-engine-name-placeholder =
+    .placeholder = mis., BrowserWorks Developer Network
+add-engine-url-placeholder =
+    .placeholder = mis., https://developer.mozilla.com/search?q=%s
+add-engine-keyword-placeholder =
+    .placeholder = mis., @mdn
+
+## The following strings are used as error messages.
+
+add-engine-keyword-exists = Kata kunci tersebut sudah digunakan. Coba yang lain.
+add-engine-name-exists = Nama tersebut sudah digunakan. Silakan pilih yang lain.
+add-engine-no-name = Tambahkan nama.
+add-engine-no-url = Masukkan URL.
+add-engine-invalid-url = URL tersebut tampaknya salah. Silakan periksa dan coba lagi.
+add-engine-invalid-protocol = URL tersebut tampaknya salah. Gunakan URL yang diawali dengan http atau https.
+# This error is shown when the user typed URL is missing %s.
+add-engine-missing-terms-url = Coba sertakan %s sebagai pengganti istilah pencarian.
+# This error is shown when the user typed post data is missing %s.
+add-engine-missing-terms-post-data = Coba sertakan %s sebagai pengganti istilah pencarian.
+
+## The following strings are used as labels for the dialog's buttons.
+
+# buttonlabelextra1 is the label of a button to open the advanced section
+# of the dialog.
+add-engine-dialog2 =
+    .buttonlabelaccept = Tambahkan Mesin
+    .buttonaccesskeyaccept = A
+    .buttonlabelextra1 = Tingkat Lanjut
+# buttonlabelextra1 is the label of a button to open the advanced section
+# of the dialog.
+edit-engine-dialog =
+    .buttonlabelaccept = Simpan Mesin
+    .buttonaccesskeyaccept = S
+    .buttonlabelextra1 = Tingkat Lanjut

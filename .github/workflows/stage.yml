@@ -119,16 +119,16 @@ jobs:
           path: win/
       - name: Stage Windows
         run: |
-          rclone copyto "win/Waterfox Setup ${DISPLAY_VERSION}.exe" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/WINNT_x86_64/Waterfox Setup ${DISPLAY_VERSION}.exe"
-          rclone copyto "win/Waterfox Setup ${DISPLAY_VERSION}.exe.sha512" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/WINNT_x86_64/Waterfox Setup ${DISPLAY_VERSION}.exe.sha512"
-          rclone copyto "win/waterfox-${DISPLAY_VERSION}.complete.mar" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/update/WINNT_x86_64/waterfox-${DISPLAY_VERSION}.complete.mar"
+          rclone copyto "win/Fennec Setup ${DISPLAY_VERSION}.exe" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/WINNT_x86_64/Fennec Setup ${DISPLAY_VERSION}.exe"
+          rclone copyto "win/Fennec Setup ${DISPLAY_VERSION}.exe.sha512" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/WINNT_x86_64/Fennec Setup ${DISPLAY_VERSION}.exe.sha512"
+          rclone copyto "win/fennec-${DISPLAY_VERSION}.complete.mar" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/update/WINNT_x86_64/fennec-${DISPLAY_VERSION}.complete.mar"
           shopt -s nullglob
-          for f in win/waterfox-*.partial.mar; do
+          for f in win/fennec-*.partial.mar; do
             rclone copyto "$f" \
-              ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/update/WINNT_x86_64/$(basename "$f")"
+              ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/update/WINNT_x86_64/$(basename "$f")"
           done
       - name: Download macOS artifact
         uses: namespace-actions/download-artifact@7cbad919e4b0e09f17e9d6311a444ff002992b5b # v2
@@ -139,16 +139,16 @@ jobs:
           path: mac/
       - name: Stage macOS
         run: |
-          rclone copyto "mac/Waterfox ${DISPLAY_VERSION}.dmg" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/Darwin_x86_64-aarch64/Waterfox ${DISPLAY_VERSION}.dmg"
-          rclone copyto "mac/Waterfox ${DISPLAY_VERSION}.dmg.sha512" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/Darwin_x86_64-aarch64/Waterfox ${DISPLAY_VERSION}.dmg.sha512"
-          rclone copyto "mac/waterfox-${DISPLAY_VERSION}.complete.mar" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/update/Darwin_x86_64-aarch64/waterfox-${DISPLAY_VERSION}.complete.mar"
+          rclone copyto "mac/Fennec ${DISPLAY_VERSION}.dmg" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/Darwin_x86_64-aarch64/Fennec ${DISPLAY_VERSION}.dmg"
+          rclone copyto "mac/Fennec ${DISPLAY_VERSION}.dmg.sha512" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/Darwin_x86_64-aarch64/Fennec ${DISPLAY_VERSION}.dmg.sha512"
+          rclone copyto "mac/fennec-${DISPLAY_VERSION}.complete.mar" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/update/Darwin_x86_64-aarch64/fennec-${DISPLAY_VERSION}.complete.mar"
           shopt -s nullglob
-          for f in mac/waterfox-*.partial.mar; do
+          for f in mac/fennec-*.partial.mar; do
             rclone copyto "$f" \
-              ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/update/Darwin_x86_64-aarch64/$(basename "$f")"
+              ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/update/Darwin_x86_64-aarch64/$(basename "$f")"
           done
       - name: Download Linux artifact
         uses: namespace-actions/download-artifact@7cbad919e4b0e09f17e9d6311a444ff002992b5b # v2
@@ -159,16 +159,16 @@ jobs:
           path: lin/
       - name: Stage Linux
         run: |
-          rclone copyto "lin/waterfox-${DISPLAY_VERSION}.tar.bz2" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/Linux_x86_64/waterfox-${DISPLAY_VERSION}.tar.bz2"
-          rclone copyto "lin/waterfox-${DISPLAY_VERSION}.tar.bz2.sha512" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/Linux_x86_64/waterfox-${DISPLAY_VERSION}.tar.bz2.sha512"
-          rclone copyto "lin/waterfox-${DISPLAY_VERSION}.complete.mar" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/update/Linux_x86_64/waterfox-${DISPLAY_VERSION}.complete.mar"
+          rclone copyto "lin/fennec-${DISPLAY_VERSION}.tar.bz2" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/Linux_x86_64/fennec-${DISPLAY_VERSION}.tar.bz2"
+          rclone copyto "lin/fennec-${DISPLAY_VERSION}.tar.bz2.sha512" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/Linux_x86_64/fennec-${DISPLAY_VERSION}.tar.bz2.sha512"
+          rclone copyto "lin/fennec-${DISPLAY_VERSION}.complete.mar" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/update/Linux_x86_64/fennec-${DISPLAY_VERSION}.complete.mar"
           shopt -s nullglob
-          for f in lin/waterfox-*.partial.mar; do
+          for f in lin/fennec-*.partial.mar; do
             rclone copyto "$f" \
-              ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/update/Linux_x86_64/$(basename "$f")"
+              ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/update/Linux_x86_64/$(basename "$f")"
           done
       - name: Download Windows ARM64 artifact
         uses: namespace-actions/download-artifact@7cbad919e4b0e09f17e9d6311a444ff002992b5b # v2
@@ -179,16 +179,16 @@ jobs:
           path: winarm/
       - name: Stage Windows ARM64
         run: |
-          rclone copyto "winarm/Waterfox Setup ${DISPLAY_VERSION}.exe" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/WINNT_aarch64/Waterfox Setup ${DISPLAY_VERSION}.exe"
-          rclone copyto "winarm/Waterfox Setup ${DISPLAY_VERSION}.exe.sha512" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/WINNT_aarch64/Waterfox Setup ${DISPLAY_VERSION}.exe.sha512"
-          rclone copyto "winarm/waterfox-${DISPLAY_VERSION}.complete.mar" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/update/WINNT_aarch64/waterfox-${DISPLAY_VERSION}.complete.mar"
+          rclone copyto "winarm/Fennec Setup ${DISPLAY_VERSION}.exe" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/WINNT_aarch64/Fennec Setup ${DISPLAY_VERSION}.exe"
+          rclone copyto "winarm/Fennec Setup ${DISPLAY_VERSION}.exe.sha512" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/WINNT_aarch64/Fennec Setup ${DISPLAY_VERSION}.exe.sha512"
+          rclone copyto "winarm/fennec-${DISPLAY_VERSION}.complete.mar" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/update/WINNT_aarch64/fennec-${DISPLAY_VERSION}.complete.mar"
           shopt -s nullglob
-          for f in winarm/waterfox-*.partial.mar; do
+          for f in winarm/fennec-*.partial.mar; do
             rclone copyto "$f" \
-              ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/update/WINNT_aarch64/$(basename "$f")"
+              ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/update/WINNT_aarch64/$(basename "$f")"
           done
       - name: Download Linux ARM64 artifact
         uses: namespace-actions/download-artifact@7cbad919e4b0e09f17e9d6311a444ff002992b5b # v2
@@ -199,16 +199,16 @@ jobs:
           path: linarm/
       - name: Stage Linux ARM64
         run: |
-          rclone copyto "linarm/waterfox-${DISPLAY_VERSION}.tar.bz2" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/Linux_aarch64/waterfox-${DISPLAY_VERSION}.tar.bz2"
-          rclone copyto "linarm/waterfox-${DISPLAY_VERSION}.tar.bz2.sha512" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/Linux_aarch64/waterfox-${DISPLAY_VERSION}.tar.bz2.sha512"
-          rclone copyto "linarm/waterfox-${DISPLAY_VERSION}.complete.mar" \
-            ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/update/Linux_aarch64/waterfox-${DISPLAY_VERSION}.complete.mar"
+          rclone copyto "linarm/fennec-${DISPLAY_VERSION}.tar.bz2" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/Linux_aarch64/fennec-${DISPLAY_VERSION}.tar.bz2"
+          rclone copyto "linarm/fennec-${DISPLAY_VERSION}.tar.bz2.sha512" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/Linux_aarch64/fennec-${DISPLAY_VERSION}.tar.bz2.sha512"
+          rclone copyto "linarm/fennec-${DISPLAY_VERSION}.complete.mar" \
+            ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/update/Linux_aarch64/fennec-${DISPLAY_VERSION}.complete.mar"
           shopt -s nullglob
-          for f in linarm/waterfox-*.partial.mar; do
+          for f in linarm/fennec-*.partial.mar; do
             rclone copyto "$f" \
-              ":s3:cdn/waterfox/staging/${DISPLAY_VERSION}/update/Linux_aarch64/$(basename "$f")"
+              ":s3:cdn/fennec/staging/${DISPLAY_VERSION}/update/Linux_aarch64/$(basename "$f")"
           done
       - name: Download sign metadata
         uses: namespace-actions/download-artifact@7cbad919e4b0e09f17e9d6311a444ff002992b5b # v2

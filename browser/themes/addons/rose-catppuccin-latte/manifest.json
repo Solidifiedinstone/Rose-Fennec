@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-catppuccin-latte@fennec"
+    }
+  },
+  "name": "Catppuccin Latte",
+  "description": "The Catppuccin Latte palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#eff1f5",
+      "frame_inactive": "#eff1f5",
+      "tab_background_text": "#8c8fa1",
+      "tab_selected": "#dce0e8",
+      "tab_text": "#4c4f69",
+      "tab_line": "#8839ef",
+      "tab_loading": "#8839ef",
+      "toolbar": "#ffffff",
+      "toolbar_text": "#4c4f69",
+      "toolbar_field": "#e6e9ef",
+      "toolbar_field_text": "#4c4f69",
+      "toolbar_field_border": "#dce0e8",
+      "toolbar_field_focus": "#dce0e8",
+      "toolbar_field_text_focus": "#4c4f69",
+      "toolbar_field_border_focus": "#8839ef",
+      "toolbar_top_separator": "#dce0e8",
+      "toolbar_bottom_separator": "#dce0e8",
+      "toolbar_vertical_separator": "#dce0e8",
+      "ntp_background": "#eff1f5",
+      "ntp_text": "#4c4f69",
+      "popup": "#e6e9ef",
+      "popup_text": "#4c4f69",
+      "popup_border": "#dce0e8",
+      "popup_highlight": "#b8a1e0",
+      "popup_highlight_text": "#4c4f69",
+      "sidebar": "#ffffff",
+      "sidebar_text": "#4c4f69",
+      "sidebar_border": "#dce0e8",
+      "sidebar_highlight": "#b8a1e0",
+      "sidebar_highlight_text": "#4c4f69",
+      "button_background_hover": "#e6e9ef",
+      "button_background_active": "#dce0e8",
+      "icons": "#8c8fa1",
+      "icons_attention": "#8839ef",
+      "bookmark_text": "#4c4f69",
+      "error_text": "#d20f39"
+    },
+    "properties": {
+      "color_scheme": "light",
+      "content_color_scheme": "light"
+    }
+  }
+}

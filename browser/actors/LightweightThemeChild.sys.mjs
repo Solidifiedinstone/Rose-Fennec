@@ -5,7 +5,7 @@
 const lazy = {};
 
 ChromeUtils.defineESModuleGetters(lazy, {
-  WaterfoxContentTheme: "resource:///modules/WaterfoxContentTheme.sys.mjs",
+  FennecContentTheme: "resource:///modules/FennecContentTheme.sys.mjs",
 });
 
 /**
@@ -74,7 +74,7 @@ export class LightweightThemeChild extends JSWindowActorChild {
     const data = Services.cpmm.sharedData.get(
       `theme/${this._getChromeOuterWindowID()}`
     );
-    lazy.WaterfoxContentTheme.apply(this.contentWindow.document, data);
+    lazy.FennecContentTheme.apply(this.contentWindow.document, data);
 
     const event = Cu.cloneInto(
       {

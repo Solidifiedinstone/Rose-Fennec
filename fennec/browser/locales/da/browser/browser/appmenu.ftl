@@ -1,0 +1,326 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## App Menu
+
+appmenuitem-banner-update-downloading =
+    .label = Henter { -brand-shorter-name }-opdatering
+appmenuitem-banner-update-available =
+    .label = Opdatering tilgængelig — hent nu
+appmenuitem-banner-update-manual =
+    .label = Opdatering tilgængelig — hent nu
+appmenuitem-banner-update-unsupported =
+    .label = Kan ikke opdatere — system ikke kompatibelt
+appmenuitem-banner-update-restart =
+    .label = Opdatering tilgængelig — genstart nu
+appmenu-nova-fxa-sign-in = Log ind
+appmenu-nova-switch-device-promo =
+    .message = Skal du snart have en ny enhed? Tag { -brand-short-name } med dig!
+appmenuitem-new-tab =
+    .label = Nyt faneblad
+appmenuitem-new-window =
+    .label = Nyt vindue
+appmenuitem-new-private-window =
+    .label = Nyt privat vindue
+appmenuitem-history =
+    .label = Historik
+appmenuitem-tab-groups =
+    .label = Fanebladsgrupper
+appmenuitem-downloads =
+    .label = Filhentning
+appmenuitem-passwords =
+    .label = Adgangskoder
+appmenuitem-extensions-and-themes =
+    .label = Udvidelser og temaer
+appmenuitem-extensions =
+    .label = Udvidelser
+appmenuitem-addons-and-themes =
+    .label = Tilføjelser og temaer
+appmenuitem-print =
+    .label = Udskriv…
+appmenuitem-find-in-page =
+    .label = Find på side…
+appmenuitem-translate =
+    .label = Oversæt side…
+appmenuitem-zoom =
+    .value = Zoom
+appmenuitem-more-tools =
+    .label = Flere værktøjer
+appmenuitem-help =
+    .label = Hjælp
+appmenuitem-exit2 =
+    .label =
+        { PLATFORM() ->
+            [linux] Afslut
+           *[other] Afslut
+        }
+appmenu-menu-button-closed2 =
+    .tooltiptext = Åbn program-menu
+    .label = { -brand-short-name }
+appmenu-menu-button-opened2 =
+    .tooltiptext = Luk program-menu
+    .label = { -brand-short-name }
+# Settings is now used to access the browser settings across all platforms,
+# instead of Options or Preferences.
+appmenuitem-settings =
+    .label = Indstillinger
+
+## Zoom and Fullscreen Controls
+
+appmenuitem-zoom-enlarge =
+    .label = Zoom ind
+appmenuitem-zoom-reduce =
+    .label = Zoom ud
+appmenuitem-fullscreen =
+    .label = Fuld skærm
+
+## Firefox Account toolbar button and Sync panel in App menu.
+
+appmenu-remote-tabs-sign-into-sync =
+    .label = Log ind for at synkronisere…
+appmenu-remote-tabs-turn-on-sync =
+    .label = Slå synkronisering til…
+# This is shown after the tabs list if we can display more tabs by clicking on the button
+appmenu-remote-tabs-showmore =
+    .label = Vis flere faneblade
+    .tooltiptext = Vis flere faneblade fra denne enhed
+# This is shown as the label for an element to show inactive tabs from this device.
+appmenu-remote-tabs-show-inactive-tabs =
+    .label = Inaktive faneblade
+    .tooltiptext = Vis inaktive faneblade på denne enhed
+# This is shown beneath the name of a device when that device has no open tabs
+appmenu-remote-tabs-notabs = Ingen åbne faneblade
+# This is shown when Sync is configured but syncing tabs is disabled.
+appmenu-remote-tabs-tabsnotsyncing = Aktivér synkronisering af faneblade for at få vist faneblade, som er åbne på dine andre enheder.
+appmenu-remote-tabs-opensettings =
+    .label = Indstillinger
+# This is shown when Sync is configured but this appears to be the only device attached to
+# the account. We also show links to download Firefox for android/ios.
+appmenu-remote-tabs-noclients = Vil du se dine faneblade fra andre enheder her?
+appmenu-remote-tabs-connectdevice =
+    .label = Opret forbindelse til en ny enhed
+appmenu-remote-tabs-welcome = Se en liste med faneblade fra dine andre enheder.
+appmenu-remote-tabs-unverified = Din konto skal bekræftes.
+appmenuitem-fxa-toolbar-sync-now2 = Synkroniser nu
+appmenuitem-fxa-sign-in = Log ind på { -brand-product-name }
+appmenuitem-fxa-manage-account = Håndter konto
+appmenu-fxa-header2 = { -fxaccount-brand-name }
+appmenu-account-header = Konto
+# Variables
+# $time (string) - Localized relative time since last sync (e.g. 1 second ago,
+# 3 hours ago, etc.)
+appmenu-fxa-last-sync = Senest synkroniseret { $time }
+    .label = Senest synkroniseret { $time }
+appmenu-fxa-sync-and-save-data2 = Synkroniser og gem data
+appmenu-fxa-signed-in-label = Log ind
+appmenu-fxa-setup-sync =
+    .label = Slå synkronisering til…
+appmenu-fxa-setup-sync-new = Slå til
+appmenuitem-save-page =
+    .label = Gem side som…
+appmenuitem-fxa-sync-off-title = Synkronisering er slået fra
+appmenuitem-fxa-sync-off-description = Beskyt og få adgang til dine bogmærker, adgangskoder og mere fra enhver enhed.
+
+## What's New panel in App menu.
+
+whatsnew-panel-header = Nyheder
+# Checkbox displayed at the bottom of the What's New panel, allowing users to
+# enable/disable What's New notifications.
+whatsnew-panel-footer-checkbox =
+    .label = Giv besked om nye funktioner
+    .accesskey = f
+
+## The Firefox Profiler – The popup is the UI to turn on the profiler, and record
+## performance profiles. To enable it go to profiler.firefox.com and click
+## "Enable Profiler Menu Button".
+
+profiler-popup-button-idle =
+    .label = Profilering
+    .tooltiptext = Optag en ydelses-profil
+profiler-popup-button-recording =
+    .label = Profilering
+    .tooltiptext = Profilerings-værktøjet er ved at optage en profil
+profiler-popup-button-capturing =
+    .label = Profilering
+    .tooltiptext = Profilerings-værktøjet er ved at indfange en profil
+profiler-popup-header-text = { -profiler-brand-name }
+profiler-popup-reveal-description-button =
+    .aria-label = Vis mere information
+profiler-popup-description-title =
+    .value = Optag, analysér, del
+profiler-popup-description = Samarbejd om ydelses-problemer ved at dele profiler med dit hold.
+profiler-popup-learn-more-button =
+    .label = Læs mere
+profiler-popup-settings =
+    .value = Indstillinger
+# This link takes the user to about:profiling, and is only visible with the Custom preset.
+profiler-popup-edit-settings-button =
+    .label = Rediger indstillinger…
+profiler-popup-recording-screen = Optager…
+profiler-popup-start-recording-button =
+    .label = Start optagelse
+profiler-popup-discard-button =
+    .label = Kasser
+profiler-popup-capture-button =
+    .label = Indfang
+profiler-popup-start-shortcut =
+    { PLATFORM() ->
+        [macos] ⌃⇧1
+       *[other] Ctrl+Skift+1
+    }
+profiler-popup-capture-shortcut =
+    { PLATFORM() ->
+        [macos] ⌃⇧2
+       *[other] Ctrl+Skift+2
+    }
+profiler-button-dropmarker =
+    .label = Åbn profilerings-panelet
+    .tooltiptext = Åbn profilerings-panelet
+
+## Profiler presets
+## They are shown in the popup's select box.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.sys.mjs
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+profiler-popup-presets-web-developer-description = Anbefalet forhåndsindstilling med lavt overhead for generel debugging af web-apps.
+profiler-popup-presets-web-developer-label =
+    .label = Webudvikler
+profiler-popup-presets-firefox-description = Anbefalet forhåndsindstilling for profilering af { -brand-shorter-name }.
+profiler-popup-presets-firefox-label =
+    .label = { -brand-shorter-name }
+profiler-popup-presets-graphics-description = Forhåndsindstilling for at undersøge grafik-problemer i { -brand-shorter-name }.
+profiler-popup-presets-graphics-label =
+    .label = Grafik
+profiler-popup-presets-media-description2 = Forhåndsindstilling for at undersøge lyd- og video-problemer i { -brand-shorter-name }.
+profiler-popup-presets-media-label =
+    .label = Medieindhold
+profiler-popup-presets-ml-description = Forhåndsindstilling for at undersøge problemer med maskinlæring i { -brand-shorter-name }.
+profiler-popup-presets-ml-label =
+    .label = Maskinlæring
+profiler-popup-presets-networking-description = Forhåndsindstilling for at undersøge netværksproblemer i { -brand-shorter-name }.
+profiler-popup-presets-networking-label =
+    .label = Netværk
+profiler-popup-presets-power-description = Forhåndsindstilling for at undersøge strømproblemer i { -brand-shorter-name }, med lavt overhead.
+# "Power" is used in the sense of energy (electricity used by the computer).
+profiler-popup-presets-power-label =
+    .label = Energi
+profiler-popup-presets-debug-description = Forhåndsindstilling for debugging i { -brand-shorter-name }. Tungt at køre, så benyt det ikke til opgaver fokuseret på ydelse, men til at fokusere på at forstå browseradfærd.
+profiler-popup-presets-debug-label =
+    .label = Debug
+profiler-popup-presets-web-compat-description = Anbefalet forhåndsindstilling for at fejlsøge problemer med web-kompatibilitet frem for at spore ydelse.
+profiler-popup-presets-web-compat-label =
+    .label = Web-kompatibilitet
+profiler-popup-presets-custom-label =
+    .label = Tilpasset
+
+## History panel
+
+appmenu-manage-history =
+    .label = Håndter historik
+appmenu-restore-session =
+    .label = Gendan forrige session
+appmenu-clear-history =
+    .label = Ryd seneste historik…
+appmenu-recent-history-subheader = Seneste historik
+appmenu-recently-closed-tabs =
+    .label = Senest lukkede faneblade
+appmenu-recently-closed-windows =
+    .label = Senest lukkede vinduer
+# This allows to search through the browser's history.
+appmenu-search-history =
+    .label = Søg i historik
+
+## Help panel
+
+appmenu-help-header =
+    .title = Hjælp til { -brand-shorter-name }
+appmenu-about =
+    .label = Om { -brand-shorter-name }
+    .accesskey = O
+appmenu-get-help =
+    .label = Få hjælp
+    .accesskey = h
+appmenu-help-more-troubleshooting-info =
+    .label = Mere teknisk information
+    .accesskey = t
+appmenu-help-report-site-issue =
+    .label = Rapportér problem med websted…
+appmenu-help-share-ideas =
+    .label = Del ideer og feedback…
+    .accesskey = D
+appmenu-help-switch-device =
+    .label = Skifte til en ny enhed
+
+## appmenu-help-enter-troubleshoot-mode and appmenu-help-exit-troubleshoot-mode
+## are mutually exclusive, so it's possible to use the same accesskey for both.
+
+appmenu-help-enter-troubleshoot-mode2 =
+    .label = Fejlsøgnings-tilstand…
+    .accesskey = F
+appmenu-help-exit-troubleshoot-mode =
+    .label = Slå fejlsøgnings-tilstand fra
+    .accesskey = f
+
+## appmenu-help-report-deceptive-site and appmenu-help-not-deceptive
+## are mutually exclusive, so it's possible to use the same accesskey for both.
+
+appmenu-help-report-deceptive-site =
+    .label = Anmeld vildledende websted…
+    .accesskey = A
+appmenu-help-not-deceptive =
+    .label = Dette er ikke et vildledende websted…
+    .accesskey = v
+
+## More Tools
+
+appmenu-customizetoolbar =
+    .label = Tilpas værktøjslinje…
+appmenu-abouttranslations =
+    .label = Oversæt…
+appmenu-developer-tools-subheader = Browser-værktøj
+appmenu-developer-tools-extensions =
+    .label = Udvidelser til udviklere
+appmenuitem-report-broken-site =
+    .label = Rapporter problem med websted
+
+## Panel for privacy and security products
+
+appmenuitem-sign-in-account = Log in på din konto
+appmenuitem-monitor-title = { -monitor-brand-short-name }
+appmenuitem-monitor-description = Få advarsler om datalæk
+appmenuitem-relay-title = { -relay-brand-short-name }
+appmenuitem-relay-description = Skjul din rigtige mailadresse og dit telefonnummer
+appmenuitem-services-relay-description = Vis oversigt over mail-masker
+appmenuitem-vpn-title = { -mozilla-vpn-brand-name }
+appmenuitem-vpn-description-2 = Få beskyttelse af hele din enhed
+appmenuitem-vpn-description = Beskyt din aktivitet på nettet
+appmenu-services-header = Mine tjenester
+# "Mozilla" is intentionally hardcoded to prevent forks from replacing it
+# with their own vendor name, since these tools are created and maintained by
+# Mozilla.
+appmenu-other-protection-header2 = Prøv andre beskyttelses-værktøjer fra BrowserWorks:
+appmenu-other-protection-header = Prøv andre beskyttelses-værktøjer fra { -vendor-short-name }:
+
+## Profiles panel
+
+appmenu-other-profiles = Andre profiler
+appmenu-manage-profiles =
+    .label = Håndter profiler
+appmenu-copy-profile =
+    .label = Kopier denne profil
+appmenu-create-profile =
+    .label = Ny profil
+appmenu-edit-profile =
+    .aria-label = Rediger profil
+appmenu-profiles-2 =
+    .label = Profiler

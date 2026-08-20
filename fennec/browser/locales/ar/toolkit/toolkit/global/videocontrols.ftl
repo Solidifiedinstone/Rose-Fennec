@@ -1,0 +1,69 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# This label is used by screenreaders and other assistive technology to indicate
+# to users how much of the video has been loaded from the network. It will be
+# followed by the percentage of the video that has loaded (e.g. "Loading: 13%").
+videocontrols-buffer-bar-label = يُحمّل:
+videocontrols-volume-control =
+    .aria-label = مستوى الصوت
+videocontrols-closed-caption-button =
+    .aria-label = نصوص توضيحية مُغلقة
+videocontrols-play-button =
+    .aria-label = شغّل
+videocontrols-pause-button =
+    .aria-label = ألبِث
+videocontrols-mute-button =
+    .aria-label = اكتم الصوت
+videocontrols-unmute-button =
+    .aria-label = أطلِق الصوت
+videocontrols-enterfullscreen-button =
+    .aria-label = ملء الشاشة
+videocontrols-exitfullscreen-button =
+    .aria-label = غادر ملء الشاشة
+videocontrols-casting-button-label =
+    .aria-label = اعرض على الشاشة
+# .offlabel is processed by the video control custom element to be used
+# as a text-track label
+videocontrols-closed-caption-off =
+    .offlabel = بدون
+# This string is used as part of the Picture-in-Picture video toggle button when
+# the mouse is hovering it.
+videocontrols-picture-in-picture-label = فديو معترِض
+# This string is used as the label for a variation of the Picture-in-Picture video
+# toggle button when the mouse is hovering over the video.
+videocontrols-picture-in-picture-toggle-label2 = أخرج هذا الفيديو
+# This string is used as part of a variation of the Picture-in-Picture video toggle
+# button. When using this variation, this string appears below the toggle when the
+# mouse hovers the toggle.
+videocontrols-picture-in-picture-explainer3 = كلما زاد عدد الشاشات، زادت المتعة. شغّل هذا الفيديو أثناء قيامك بأشياء أخرى.
+videocontrols-error-aborted = توقف تحميل الفديو.
+videocontrols-error-network = توقف تشغيل الفديو بسبب عُطل شبكي.
+videocontrols-error-decode = تعذّر تشغيل الفديو لعطب في الملف.
+videocontrols-error-src-not-supported = نسق أو نوع MIME الفديو غير مدعوم.
+videocontrols-error-no-source = لم يُعثر على فديو بنسق أو نوع MIME مدعوم.
+videocontrols-error-generic = توقف تشغيل الفديو بسبب عُطل غير معروف.
+videocontrols-status-picture-in-picture = يعمل هذا الفديو في وضع الفديوهات المعترِضة.
+# This message shows the current position and total video duration
+#
+# Variables:
+#   $position (String): The current media position
+#   $duration (String): The total video duration
+#
+# For example, when at the 5 minute mark in a 6 hour long video,
+# $position would be "5:00" and $duration would be "6:00:00", result
+# string would be "5:00 / 6:00:00". Note that $duration is not always
+# available. For example, when at the 5 minute mark in an unknown
+# duration video, $position would be "5:00" and the string which is
+# surrounded by <span> would be deleted, result string would be "5:00".
+videocontrols-position-and-duration-labels = { $position }‏<span data-l10n-name="position-duration-format"> \‏ { $duration }</span>
+# This is a plain text version of the videocontrols-position-and-duration-labels
+# string, used by screenreaders.
+#
+# Variables:
+#   $position (String): The current media position
+#   $duration (String): The total video duration
+videocontrols-scrubber-position-and-duration =
+    .aria-label = المكان
+    .aria-valuetext = { $position }‏ \‏ { $duration }

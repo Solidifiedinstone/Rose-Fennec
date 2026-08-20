@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-monokai@fennec"
+    }
+  },
+  "name": "Monokai",
+  "description": "The Monokai palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#272822",
+      "frame_inactive": "#272822",
+      "tab_background_text": "#75715e",
+      "tab_selected": "#49483e",
+      "tab_text": "#f8f8f2",
+      "tab_line": "#a6e22e",
+      "tab_loading": "#a6e22e",
+      "toolbar": "#1e1f1c",
+      "toolbar_text": "#f8f8f2",
+      "toolbar_field": "#333429",
+      "toolbar_field_text": "#f8f8f2",
+      "toolbar_field_border": "#49483e",
+      "toolbar_field_focus": "#49483e",
+      "toolbar_field_text_focus": "#f8f8f2",
+      "toolbar_field_border_focus": "#a6e22e",
+      "toolbar_top_separator": "#49483e",
+      "toolbar_bottom_separator": "#49483e",
+      "toolbar_vertical_separator": "#49483e",
+      "ntp_background": "#272822",
+      "ntp_text": "#f8f8f2",
+      "popup": "#333429",
+      "popup_text": "#f8f8f2",
+      "popup_border": "#49483e",
+      "popup_highlight": "#5f7d20",
+      "popup_highlight_text": "#f8f8f2",
+      "sidebar": "#1e1f1c",
+      "sidebar_text": "#f8f8f2",
+      "sidebar_border": "#49483e",
+      "sidebar_highlight": "#5f7d20",
+      "sidebar_highlight_text": "#f8f8f2",
+      "button_background_hover": "#333429",
+      "button_background_active": "#49483e",
+      "icons": "#75715e",
+      "icons_attention": "#a6e22e",
+      "bookmark_text": "#f8f8f2",
+      "error_text": "#f92672"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

@@ -50,7 +50,7 @@ Var BrandFullName
 !include defines.nsi
 ; We keep defines.nsi defined so that we get other things like
 ; the version number, but we redefine BrandFullName
-!define MaintFullName "Waterfox Maintenance Service"
+!define MaintFullName "Fennec Maintenance Service"
 !ifdef BrandFullName
 !undef BrandFullName
 !endif
@@ -73,7 +73,7 @@ SetOverwrite on
 ; serviceinstall.cpp also uses this key, in case the path is changed, update
 ; there too.
 !define MaintUninstallKey \
- "Software\Microsoft\Windows\CurrentVersion\Uninstall\WaterfoxMaintenanceService"
+ "Software\Microsoft\Windows\CurrentVersion\Uninstall\FennecMaintenanceService"
 
 ; Always install into the 32-bit location even if we have a 64-bit build.
 ; This is because we use only 1 service for all Firefox channels.

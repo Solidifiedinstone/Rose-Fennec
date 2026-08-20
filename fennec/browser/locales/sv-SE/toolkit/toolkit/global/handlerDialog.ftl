@@ -1,0 +1,101 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+## Permission Dialog
+## Variables:
+##  $host (string) - The hostname that is initiating the request
+##  $scheme (string) - The type of link that's being opened.
+##  $appName (string) - Name of the application that will be opened.
+##  $extension (string) - Name of extension that initiated the request
+
+permission-dialog-description = Tillåt att den här webbplatsen öppnar länken { $scheme }?
+permission-dialog-description-file = Tillåt den här filen att öppna länken { $scheme }?
+permission-dialog-description-host = Tillåt { $host } att öppna länken { $scheme }?
+permission-dialog-description-extension = Tillåt tillägget { $extension } att öppna { $scheme }-länken?
+permission-dialog-description-app = Tillåt den här webbplatsen att öppna länken { $scheme } med { $appName }?
+permission-dialog-description-host-app = Tillåt { $host } att öppna länken { $scheme } med { $appName }?
+permission-dialog-description-file-app = Tillåt att den här filen öppnar länken { $scheme } med { $appName }?
+permission-dialog-description-extension-app = Tillåt tillägget { $extension } att öppna { $scheme }-länken med { $appName }?
+permission-dialog-description-system-app = Öppna länken { $scheme } med { $appName }?
+permission-dialog-description-system-noapp = Öppna länken { $scheme }?
+# Header on a permission prompt, asking the user if they should allow the website to continue.
+wallet-custom-scheme-warning-heading =
+    .heading = Tillåt den här sidan att öppna din digitala plånbok?
+# Warning given to the user that the current page is trying to open their digital wallet app
+wallet-custom-scheme-warning-host-app = Genom att öppna en <strong>{ $scheme }</strong>-länk kan <strong>{ $host }</strong> begära din riktiga identitet med <strong>{ $appName }</strong>. Fortsätt bara om du litar på den här sidan.
+# Warning given to the user that the current page is trying to open their digital wallet app
+wallet-custom-scheme-warning-app = Genom att öppna en <strong>{ $scheme }</strong>-länk kan den här webbplatsen begära din riktiga identitet med <strong>{ $appName }</strong>. Fortsätt bara om du litar på den här sidan.
+# Warning given to the user that the current page is trying to open their digital wallet app
+wallet-custom-scheme-warning-host = Att öppna en <strong>{ $scheme }</strong>-länk gör att <strong>{ $host }</strong> kan begära din riktiga identitet från din digitala plånbok. Fortsätt bara om du litar på den här sidan.
+# Warning given to the user that the current page is trying to open their digital wallet app
+wallet-custom-scheme-warning = Att öppna en <strong>{ $scheme }</strong>-länk gör att den här webbplatsen kan begära din riktiga identitet från din digitala plånbok. Fortsätt bara om du litar på den här sidan.
+
+## Please keep the emphasis around the hostname and scheme (ie the
+## `<strong>` HTML tags). Please also keep the hostname as close to the start
+## of the sentence as your language's grammar allows.
+## Variables:
+##  $host (string) - The hostname that is initiating the request
+##  $scheme (string) - The type of link that's being opened.
+
+permission-dialog-remember = Tillåt alltid <strong>{ $host }</strong> att öppna <strong>{ $scheme }</strong>-länkar
+permission-dialog-remember-file = Tillåt alltid den här filen att öppna <strong>{ $scheme }</strong>-länkar
+permission-dialog-remember-extension = Tillåt alltid detta tillägg att öppna <strong>{ $scheme }</strong>-länkar
+
+##
+
+permission-dialog-btn-open-link =
+    .label = Öppna länk
+    .accessKey = n
+permission-dialog-btn-choose-app =
+    .label = Välj applikation
+    .accessKey = V
+permission-dialog-unset-description = Du måste välja en applikation.
+permission-dialog-set-change-app-link = Välj en annan applikation.
+
+## Chooser dialog
+## Variables:
+##  $scheme (string) - The type of link that's being opened.
+
+chooser-window =
+    .title = Välj Applikation
+    .style = min-width: 26em; min-height: 26em;
+chooser-dialog =
+    .buttonlabelaccept = Öppna länk
+    .buttonaccesskeyaccept = n
+chooser-dialog-description = Välj en applikation för att öppna länken { $scheme }.
+# Please keep the emphasis around the scheme (ie the `<strong>` HTML tags).
+chooser-dialog-remember = Använd alltid den här applikationen för att öppna <strong>{ $scheme }</strong>-länkar
+chooser-dialog-remember-extra =
+    { PLATFORM() ->
+        [windows] Detta kan ändras i inställningarna för { -brand-short-name }.
+       *[other] Detta kan ändras i inställningarna för { -brand-short-name }.
+    }
+choose-other-app-description = Välj andra program
+choose-app-btn =
+    .label = Välj…
+    .accessKey = V
+choose-other-app-window-title = Annat program…
+# Displayed under the name of a protocol handler in the Launch Application dialog.
+choose-dialog-privatebrowsing-disabled = Inaktiverad i privata fönster
+
+## Mailto handler picker
+## Shown when the user clicks a mailto: link and lets them pick which configured
+## web mail service (or the OS default app) should handle email links.
+
+mailto-handler-picker-window =
+    .title = Välj din e-postapp
+    .style = min-width: 26em; min-height: 26em;
+mailto-handler-picker-subtitle = Välj den app du vill använda för e-postlänkar. Du kan ändra detta senare i inställningarna.
+# Checkbox letting the user keep being prompted with this picker each time they
+# click an email link, instead of remembering the chosen handler.
+mailto-handler-picker-always-ask = Fråga alltid när jag klickar på en mejllänk
+# Confirms the picker: sets the selected app as the handler for email links.
+mailto-handler-picker-set-default =
+    .label = Ange som standard
+    .accesskey = A
+# Dismisses the picker without choosing an email app for now.
+mailto-handler-picker-not-now =
+    .label = Inte nu
+    .accesskey = I

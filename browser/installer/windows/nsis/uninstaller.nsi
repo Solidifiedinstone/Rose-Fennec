@@ -41,7 +41,7 @@ ManifestDPIAware true
 !define NO_LOG
 
 !define MaintUninstallKey \
- "Software\Microsoft\Windows\CurrentVersion\Uninstall\WaterfoxMaintenanceService"
+ "Software\Microsoft\Windows\CurrentVersion\Uninstall\FennecMaintenanceService"
 
 Var TmpVal
 Var MaintCertKey
@@ -153,7 +153,7 @@ ShowUnInstDetails nevershow
 !define URLUninstallSurvey "https://qsurvey.mozilla.com/s3/FF-Desktop-Post-Uninstall?channel=${UpdateChannel}&version=${AppVersion}&osversion="
 
 ; Support for the profile refresh feature
-!define URLProfileRefreshHelp "https://www.waterfox.com/support/refresh-waterfox-reset-add-ons-and-settings/"
+!define URLProfileRefreshHelp "https://www.waterfox.com/support/refresh-fennec-reset-add-ons-and-settings/"
 
 ; Arguments to add to the command line when launching FileMainEXE for profile refresh
 !define ArgsProfileRefresh "-reset-profile -migration -uninstaller-profile-refresh"
@@ -199,7 +199,7 @@ UninstPage custom un.preConfirm
 !insertmacro MUI_UNPAGE_INSTFILES
 
 ; Finish Page
-; The post uninstall survey checkbox is disabled for Waterfox; without
+; The post uninstall survey checkbox is disabled for Fennec; without
 ; MUI_FINISHPAGE_SHOWREADME the other SHOWREADME defines are inert.
 !define MUI_FINISHPAGE_SHOWREADME_NOTCHECKED
 !define MUI_FINISHPAGE_SHOWREADME_TEXT $(UN_SURVEY_CHECKBOX_LABEL)
@@ -480,7 +480,7 @@ Section "Uninstall"
   ${EndIf}
 
   ; Clean up old maintenance service logs
-  ${un.CleanMaintenanceServiceLogs} "BrowserWorks\Waterfox"
+  ${un.CleanMaintenanceServiceLogs} "BrowserWorks\Fennec"
 
   ; Remove any app model id's stored in the registry for this install path
   DeleteRegValue HKCU "Software\BrowserWorks\${AppName}\TaskBarIDs" "$INSTDIR"
@@ -501,27 +501,27 @@ Section "Uninstall"
     ${un.SetAppLSPCategories}
   ${EndIf}
 
-  ${un.RegCleanAppHandler} "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanAppHandler} "WaterfoxPDF-$AppUserModelID"
-  ${un.RegCleanAppHandler} "WaterfoxURL-$AppUserModelID"
+  ${un.RegCleanAppHandler} "FennecHTML-$AppUserModelID"
+  ${un.RegCleanAppHandler} "FennecPDF-$AppUserModelID"
+  ${un.RegCleanAppHandler} "FennecURL-$AppUserModelID"
   ${un.RegCleanProtocolHandler} "http"
   ${un.RegCleanProtocolHandler} "https"
   ${un.RegCleanProtocolHandler} "mailto"
-  ${un.RegCleanFileHandler}  ".htm"   "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".html"  "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".shtml" "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".xht"   "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".xhtml" "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".oga"   "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".ogg"   "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".ogv"   "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".webm"  "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".svg"   "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".webp"  "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".avif"  "WaterfoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".jxl"   "WaterfoxHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".htm"   "FennecHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".html"  "FennecHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".shtml" "FennecHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".xht"   "FennecHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".xhtml" "FennecHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".oga"   "FennecHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".ogg"   "FennecHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".ogv"   "FennecHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".webm"  "FennecHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".svg"   "FennecHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".webp"  "FennecHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".avif"  "FennecHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".jxl"   "FennecHTML-$AppUserModelID"
 
-  ${un.RegCleanFileHandler}  ".pdf"   "WaterfoxPDF-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".pdf"   "FennecPDF-$AppUserModelID"
 
   SetShellVarContext all  ; Set SHCTX to HKLM
   ${un.GetSecondInstallPath} "Software\BrowserWorks" $R9
@@ -548,22 +548,22 @@ Section "Uninstall"
 
   ; Remove old protocol handler and StartMenuInternet keys without install path
   ; hashes, but only if they're for this installation.  We've never supported
-  ; bare WaterfoxPDF.
-  ReadRegStr $0 HKLM "Software\Classes\WaterfoxHTML\DefaultIcon" ""
+  ; bare FennecPDF.
+  ReadRegStr $0 HKLM "Software\Classes\FennecHTML\DefaultIcon" ""
   StrCpy $0 $0 -2
   ${If} $0 == "$INSTDIR\${FileMainEXE}"
-    DeleteRegKey HKLM "Software\Classes\WaterfoxHTML"
-    DeleteRegKey HKLM "Software\Classes\WaterfoxURL"
+    DeleteRegKey HKLM "Software\Classes\FennecHTML"
+    DeleteRegKey HKLM "Software\Classes\FennecURL"
     ${StrFilter} "${FileMainEXE}" "+" "" "" $R9
     DeleteRegKey HKLM "Software\Clients\StartMenuInternet\$R9"
     DeleteRegValue HKLM "Software\RegisteredApplications" "$R9"
     DeleteRegValue HKLM "Software\RegisteredApplications" "${AppRegName}"
   ${EndIf}
-  ReadRegStr $0 HKCU "Software\Classes\WaterfoxHTML\DefaultIcon" ""
+  ReadRegStr $0 HKCU "Software\Classes\FennecHTML\DefaultIcon" ""
   StrCpy $0 $0 -2
   ${If} $0 == "$INSTDIR\${FileMainEXE}"
-    DeleteRegKey HKCU "Software\Classes\WaterfoxHTML"
-    DeleteRegKey HKCU "Software\Classes\WaterfoxURL"
+    DeleteRegKey HKCU "Software\Classes\FennecHTML"
+    DeleteRegKey HKCU "Software\Classes\FennecURL"
     ${StrFilter} "${FileMainEXE}" "+" "" "" $R9
     DeleteRegKey HKCU "Software\Clients\StartMenuInternet\$R9"
     DeleteRegValue HKCU "Software\RegisteredApplications" "$R9"
@@ -739,7 +739,7 @@ Section "Uninstall"
   ; subsequently deleted after checking. If the value is found during startup
   ; the browser will offer to Reset Firefox. We use the UpdateChannel to match
   ; uninstalls of Firefox-release with reinstalls of Firefox-release, for example.
-  WriteRegStr HKCU "Software\BrowserWorks\Waterfox" "Uninstalled-${UpdateChannel}" "True"
+  WriteRegStr HKCU "Software\BrowserWorks\Fennec" "Uninstalled-${UpdateChannel}" "True"
 
 !ifdef MOZ_MAINTENANCE_SERVICE
   ; Get the path the allowed cert is at and remove it
@@ -762,7 +762,7 @@ Section "Uninstall"
 !endif
 
 !ifdef MOZ_BITS_DOWNLOAD
-  BitsUtils::CancelBitsJobsByName "WaterfoxUpdate $AppUserModelID"
+  BitsUtils::CancelBitsJobsByName "FennecUpdate $AppUserModelID"
   Pop $0
 !endif
 

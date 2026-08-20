@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-oxocarbon@fennec"
+    }
+  },
+  "name": "Oxocarbon",
+  "description": "The Oxocarbon palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#161616",
+      "frame_inactive": "#161616",
+      "tab_background_text": "#7b7c7e",
+      "tab_selected": "#393939",
+      "tab_text": "#f2f4f8",
+      "tab_line": "#be95ff",
+      "tab_loading": "#be95ff",
+      "toolbar": "#0f0f0f",
+      "toolbar_text": "#f2f4f8",
+      "toolbar_field": "#262626",
+      "toolbar_field_text": "#f2f4f8",
+      "toolbar_field_border": "#393939",
+      "toolbar_field_focus": "#393939",
+      "toolbar_field_text_focus": "#f2f4f8",
+      "toolbar_field_border_focus": "#be95ff",
+      "toolbar_top_separator": "#393939",
+      "toolbar_bottom_separator": "#393939",
+      "toolbar_vertical_separator": "#393939",
+      "ntp_background": "#161616",
+      "ntp_text": "#f2f4f8",
+      "popup": "#262626",
+      "popup_text": "#f2f4f8",
+      "popup_border": "#393939",
+      "popup_highlight": "#6b52a1",
+      "popup_highlight_text": "#f2f4f8",
+      "sidebar": "#0f0f0f",
+      "sidebar_text": "#f2f4f8",
+      "sidebar_border": "#393939",
+      "sidebar_highlight": "#6b52a1",
+      "sidebar_highlight_text": "#f2f4f8",
+      "button_background_hover": "#262626",
+      "button_background_active": "#393939",
+      "icons": "#7b7c7e",
+      "icons_attention": "#be95ff",
+      "bookmark_text": "#f2f4f8",
+      "error_text": "#ee5396"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-high-contrast-light@fennec"
+    }
+  },
+  "name": "High Contrast Light",
+  "description": "The High Contrast Light palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#ffffff",
+      "frame_inactive": "#ffffff",
+      "tab_background_text": "#333333",
+      "tab_selected": "#e0e0e0",
+      "tab_text": "#000000",
+      "tab_line": "#0033cc",
+      "tab_loading": "#0033cc",
+      "toolbar": "#ffffff",
+      "toolbar_text": "#000000",
+      "toolbar_field": "#f0f0f0",
+      "toolbar_field_text": "#000000",
+      "toolbar_field_border": "#000000",
+      "toolbar_field_focus": "#e0e0e0",
+      "toolbar_field_text_focus": "#000000",
+      "toolbar_field_border_focus": "#0033cc",
+      "toolbar_top_separator": "#000000",
+      "toolbar_bottom_separator": "#000000",
+      "toolbar_vertical_separator": "#000000",
+      "ntp_background": "#ffffff",
+      "ntp_text": "#000000",
+      "popup": "#f0f0f0",
+      "popup_text": "#000000",
+      "popup_border": "#000000",
+      "popup_highlight": "#7a92d9",
+      "popup_highlight_text": "#000000",
+      "sidebar": "#ffffff",
+      "sidebar_text": "#000000",
+      "sidebar_border": "#000000",
+      "sidebar_highlight": "#7a92d9",
+      "sidebar_highlight_text": "#000000",
+      "button_background_hover": "#f0f0f0",
+      "button_background_active": "#e0e0e0",
+      "icons": "#333333",
+      "icons_attention": "#0033cc",
+      "bookmark_text": "#000000",
+      "error_text": "#a80000"
+    },
+    "properties": {
+      "color_scheme": "light",
+      "content_color_scheme": "light"
+    }
+  }
+}

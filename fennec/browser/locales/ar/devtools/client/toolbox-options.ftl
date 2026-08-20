@@ -1,0 +1,136 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+### Localization for Developer Tools options
+
+
+## Default Developer Tools section
+
+# The heading
+options-select-default-tools-label = أدوات المطورين المبدئية
+# The label for the explanation of the * marker on a tool which is currently not supported
+# for the target of the toolbox.
+options-tool-not-supported-label = * ليس مدعوما لهدف صندوق الأدوات الحالي
+# The label for the heading of group of checkboxes corresponding to the developer tools
+# added by add-ons. This heading is hidden when there is no developer tool installed by add-ons.
+options-select-additional-tools-label = أدوات المطورين المثبتة عن طريق الإضافات
+# The label for the heading of group of checkboxes corresponding to the default developer
+# tool buttons.
+options-select-enabled-toolbox-buttons-label = أزرار شريط الأدوات المتوفرة
+# The label for the heading of the radiobox corresponding to the theme
+options-select-dev-tools-theme-label = السِمات
+
+## Inspector section
+
+# The heading
+options-context-inspector = الفاحص
+# The label for the checkbox option to show user agent styles
+options-show-user-agent-styles-label = أظهر طُرز المتصفح
+options-show-user-agent-styles-tooltip =
+    .title = سيؤدّي تفعيل هذا الخيار إلى عرض الأنماط المبدئية التي حمّلها المتصفح.
+# The label for the checkbox option to enable collapse attributes
+options-collapse-attrs-label = ابتِر صفات DOM
+options-collapse-attrs-tooltip =
+    .title = ابتِر الصفات الطويلة في الفاحِص
+
+## "Default Color Unit" options for the Inspector
+
+options-default-color-unit-label = وحدة الألوان المبدئية
+options-default-color-unit-name = أسماء الألوان
+
+## Network Monitor section
+
+# The heading
+options-netmonitor-label = مراقب الشبكة
+# Text shown in the input when there is no limitation (instead of showing "0")
+options-netmonitor-body-limit-unlimited-label = غير محدود
+
+## Experimental section
+
+# The heading
+options-experimental-label = ميزات التجريبية
+
+## Style Editor section
+
+# The heading
+options-styleeditor-label = محرر الطُرز
+# The label for the checkbox that toggles autocompletion of css in the Style Editor
+options-stylesheet-autocompletion-label = أكِل CSS تلقائيا
+options-stylesheet-autocompletion-tooltip =
+    .title = أكمِل خصائص CSS وقيمها ومُحدِّداتها في محرر الأنماط تلقائيا وأنت تكتبها
+
+## Screenshot section
+
+# The heading
+options-screenshot-label = سلوك اللقطات
+options-screenshot-clipboard-tooltip2 =
+    .title = يحفظ لقطة الشاشة مباشرةً في الحافظة
+# Label for the checkbox that toggles the camera shutter audio for screenshot tool
+options-screenshot-audio-label = شغّل صوت غالِق الكمرة
+options-screenshot-audio-tooltip =
+    .title = فعّل إصدار صوت الكمرة أثناء أخذ اللقطات
+
+## Editor section
+
+# The heading
+options-sourceeditor-label = تفضيلات المحرر
+options-sourceeditor-detectindentation-tooltip =
+    .title = خمِّن الإزاحة حسب محتوى المصدر
+options-sourceeditor-detectindentation-label = اكتشف الإزاحة
+options-sourceeditor-autoclosebrackets-tooltip =
+    .title = أدرِج أقواسا غالِقة تلقائيا
+options-sourceeditor-autoclosebrackets-label = أغلِق الأقواس تلقائيا
+options-sourceeditor-expandtab-tooltip =
+    .title = استخدم المسافات بدل محرف الجدولة
+options-sourceeditor-expandtab-label = أزِح مستخدما المسافات
+options-sourceeditor-tabsize-label = حجم اللسان
+options-sourceeditor-keybinding-label = ربطات المفاتيح
+options-sourceeditor-keybinding-default-label = المبدئي
+
+## Local Mode section
+
+# The heading
+options-local-mode-label = الوضع المحلي
+options-local-mode-only-work-locally = يعمل الوضع المحلي محليًا فقط ويُعطَّل عند تصحيح سياقات بعيدة
+options-local-mode-domain-label = نطاق مخصص:
+options-local-mode-folder-label = مجلد المحلي:
+options-local-mode-choose-folder = تصفّح…
+    .title = اختر مجلدًا محليًا لاستخدامه في هذا التعيين
+# Dialog's title when picking a folder for a mapping
+# Variables:
+#   $url (String): The url for the mapping being configured
+options-local-mode-choose-folder-picker-title = اختر مجلد الوضع المحلي لـ: { $url }
+# Error shown when the folder is invalid
+# (can easily be triggered when using about:config and changing underlying mappings prefs)
+options-local-mode-folder-invalid = هذا المجلد غير موجود، أو غير صالح.
+options-local-mode-toggle =
+    .title = بدّل هذا التعيين المحلي
+options-local-mode-toggle-enable = فعّل
+options-local-mode-toggle-disable = عطّل
+
+## Advanced section
+
+# The heading (this item is also used in perftools.ftl)
+options-context-advanced-settings = إعدادات متقدّمة
+# The label for the checkbox that toggles the HTTP cache on or off
+options-disable-http-cache-label = عطّل خبيئة HTTP (عندما يكون صندوق الأدوات مفتوحًا)
+# The label for checkbox that toggles JavaScript on or off
+options-disable-javascript-label = عطّل جافاسكربت *
+options-disable-javascript-tooltip =
+    .title = سيؤدي تشغيل هذا الخيار إلى تعطيل JavaScript للسان الحالي. إذا أُغلِق اللسان أو صندوق الأدوات، فسيتم نسيان هذا الإعداد.
+# The label for checkbox that toggles remote debugging, i.e. the devtools.debugger.remote-enabled preference
+options-enable-remote-label = فعِّل التنقيح البعيد
+# The label for checkbox that toggles the service workers testing over HTTP on or off.
+options-enable-service-workers-http-label = فعّل عمّال الخدمة عبر HTTP (عندما يكون صندوق الأدوات مفتوحا)
+# The message shown for settings that trigger page reload and will only apply to the current session
+options-context-triggers-page-refresh = * في الجلسة الحالية فقط، تُعيد تحميل الصفحة
+# This is used to add a * marker to the label for the Options Panel tool checkbox for the
+# tool which is not supported for the current toolbox target.
+# Variables:
+#   $toolLabel (String): The name of the tool not being supported
+options-tool-not-supported-marker = { $toolLabel } *
+# This is the text that appears in the settings panel for panel that will be removed in future releases.
+# This entire text is treated as a link to an MDN page.
+options-deprecation-notice = بائد. اطّلع على المزيد…

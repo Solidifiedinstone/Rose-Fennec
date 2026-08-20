@@ -25,7 +25,7 @@
 // This uninstall key is defined originally in maintenanceservice_installer.nsi
 #define MAINT_UNINSTALL_KEY                                    \
   L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\" \
-  L"WaterfoxMaintenanceService"
+  L"FennecMaintenanceService"
 
 static BOOL UpdateUninstallerVersionString(LPWSTR versionString) {
   HKEY uninstallKey;
@@ -53,7 +53,7 @@ static int ReadMaintenanceServiceStrings(
     LPCWSTR path, MaintenanceServiceStringTable* results) {
   // Read in the maintenance service description string if specified.
   const unsigned int kNumStrings = 1;
-  const char* kServiceKeys = "WaterfoxMaintenanceDescription\0";
+  const char* kServiceKeys = "FennecMaintenanceDescription\0";
   mozilla::UniquePtr<char[]> serviceString;
   int result = ReadStrings(path, kServiceKeys, kNumStrings, &serviceString);
   if (result != OK) {
@@ -205,12 +205,12 @@ BOOL FixServicePath(SC_HANDLE service, LPCWSTR currentServicePath,
       currentServicePath[currentServicePathLen - 1] == L'\"';
 
   if (doesServiceHaveCorrectPath) {
-    LOG(("The WaterfoxMaintenance service path is correct."));
+    LOG(("The FennecMaintenance service path is correct."));
     servicePathWasWrong = FALSE;
     return TRUE;
   }
   // This is a recoverable situation so not logging as a warning
-  LOG(("The WaterfoxMaintenance path is NOT correct. It was: %ls",
+  LOG(("The FennecMaintenance path is NOT correct. It was: %ls",
        currentServicePath));
 
   servicePathWasWrong = TRUE;

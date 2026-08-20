@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-synthwave@fennec"
+    }
+  },
+  "name": "Synthwave",
+  "description": "The Synthwave palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#241b2f",
+      "frame_inactive": "#241b2f",
+      "tab_background_text": "#8b7fa6",
+      "tab_selected": "#3b2d52",
+      "tab_text": "#f4eee4",
+      "tab_line": "#ff7edb",
+      "tab_loading": "#ff7edb",
+      "toolbar": "#1a1425",
+      "toolbar_text": "#f4eee4",
+      "toolbar_field": "#2d2140",
+      "toolbar_field_text": "#f4eee4",
+      "toolbar_field_border": "#3b2d52",
+      "toolbar_field_focus": "#3b2d52",
+      "toolbar_field_text_focus": "#f4eee4",
+      "toolbar_field_border_focus": "#ff7edb",
+      "toolbar_top_separator": "#3b2d52",
+      "toolbar_bottom_separator": "#3b2d52",
+      "toolbar_vertical_separator": "#3b2d52",
+      "ntp_background": "#241b2f",
+      "ntp_text": "#f4eee4",
+      "popup": "#2d2140",
+      "popup_text": "#f4eee4",
+      "popup_border": "#3b2d52",
+      "popup_highlight": "#8c4478",
+      "popup_highlight_text": "#f4eee4",
+      "sidebar": "#1a1425",
+      "sidebar_text": "#f4eee4",
+      "sidebar_border": "#3b2d52",
+      "sidebar_highlight": "#8c4478",
+      "sidebar_highlight_text": "#f4eee4",
+      "button_background_hover": "#2d2140",
+      "button_background_active": "#3b2d52",
+      "icons": "#8b7fa6",
+      "icons_attention": "#ff7edb",
+      "bookmark_text": "#f4eee4",
+      "error_text": "#fe4450"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

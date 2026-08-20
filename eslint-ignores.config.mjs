@@ -50,10 +50,10 @@ export default [
   // browser/ exclusions
   "browser/app/",
   "browser/branding/**/firefox-branding.js",
-  "waterfox/browser/branding/**/firefox-branding.js",
+  "fennec/browser/branding/**/firefox-branding.js",
   // Pre-processed default pref files
-  "waterfox/browser/app/profile/",
-  "waterfox/browser/themes/lepton/prefs-lepton.js",
+  "fennec/browser/app/profile/",
+  "fennec/browser/themes/lepton/prefs-lepton.js",
   // Gzipped test file.
   "browser/base/content/test/general/gZipOfflineChild.html",
   "browser/base/content/test/urlbar/file_blank_but_not_blank.html",
@@ -72,7 +72,7 @@ export default [
   // The only file in browser/locales/ is pre-processed.
   "browser/locales/",
   // The nested localization repository contains legacy .js property files.
-  "waterfox/browser/locales/",
+  "fennec/browser/locales/",
   // Generated data files
   "browser/extensions/formautofill/phonenumberutils/PhoneNumberMetaData.sys.mjs",
 

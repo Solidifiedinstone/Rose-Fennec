@@ -324,15 +324,15 @@ export const CustomizableWidgets = [
     },
   },
   {
-    id: "waterfox-blocker-toolbar-button",
-    l10nId: "waterfox-blocker-toolbar-button",
+    id: "fennec-blocker-toolbar-button",
+    l10nId: "fennec-blocker-toolbar-button",
     defaultArea: "nav-bar",
     introducedInVersion: 25,
     onCreated(aNode) {
       aNode.setAttribute("badged", "true");
-      // Match the default of the lazy getter in WaterfoxBlockerPanel.
+      // Match the default of the lazy getter in FennecBlockerPanel.
       aNode.hidden = !Services.prefs.getBoolPref(
-        "waterfox.blocker.ui.enabled",
+        "fennec.blocker.ui.enabled",
         false
       );
     },
@@ -341,10 +341,10 @@ export const CustomizableWidgets = [
       if (!win?.gBrowser) {
         return;
       }
-      const { WaterfoxBlockerPanel } = ChromeUtils.importESModule(
-        "resource:///modules/WaterfoxBlockerPanel.sys.mjs"
+      const { FennecBlockerPanel } = ChromeUtils.importESModule(
+        "resource:///modules/FennecBlockerPanel.sys.mjs"
       );
-      WaterfoxBlockerPanel._openToolbarPanel(win, aEvent);
+      FennecBlockerPanel._openToolbarPanel(win, aEvent);
     },
   },
   {

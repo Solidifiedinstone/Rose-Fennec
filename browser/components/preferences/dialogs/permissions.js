@@ -24,9 +24,9 @@ const permissionExceptionsL10n = {
     window: "permissions-exceptions-etp-window2",
     description: "permissions-exceptions-manage-etp-desc",
   },
-  "waterfox-blocker": {
-    window: "permissions-exceptions-waterfox-blocker-window2",
-    description: "permissions-exceptions-manage-waterfox-blocker-desc",
+  "fennec-blocker": {
+    window: "permissions-exceptions-fennec-blocker-window2",
+    description: "permissions-exceptions-manage-fennec-blocker-desc",
   },
   cookie: {
     window: "permissions-exceptions-cookie-window2",
@@ -448,12 +448,12 @@ var gPermissionManager = {
         });
       return;
     }
-    // In case of an ETP or Waterfox blocker exception we compute the
+    // In case of an ETP or Fennec blocker exception we compute the
     // contentBlockingAllowList principal to align with the allow list behavior
     // triggered by the protections panel.
     if (
       this._type == "trackingprotection" ||
-      this._type == "waterfox-blocker"
+      this._type == "fennec-blocker"
     ) {
       principals = principals.map(
         lazy.contentBlockingAllowList.computeContentBlockingAllowListPrincipal

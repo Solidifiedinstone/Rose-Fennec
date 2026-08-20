@@ -1,0 +1,4 @@
+[DEFAULT]
+tags = "fennec_statusbar"
+
+["browser_statusbar.js"]

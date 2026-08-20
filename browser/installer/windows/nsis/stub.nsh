@@ -481,7 +481,7 @@ FunctionEnd
 
 Function GetHadExistingProfile
   ${GetLocalAppDataFolder} $0
-  ${If} ${FileExists} "$0\BrowserWorks\Waterfox"
+  ${If} ${FileExists} "$0\BrowserWorks\Fennec"
     Push 1
   ${Else}
     Push 0
@@ -1091,21 +1091,21 @@ Function ShouldPromptForProfileCleanup
     ${Do}
       ClearErrors
       ; Check if the section exists by reading a value that must be present.
-      ReadINIStr $1 "$APPDATA\Waterfox\profiles.ini" "Profile$0" "Path"
+      ReadINIStr $1 "$APPDATA\Fennec\profiles.ini" "Profile$0" "Path"
       ${If} ${Errors}
         ; We've run out of profile sections.
         ${Break}
       ${EndIf}
 
       ClearErrors
-      ReadINIStr $1 "$APPDATA\Waterfox\profiles.ini" "Profile$0" "Default"
+      ReadINIStr $1 "$APPDATA\Fennec\profiles.ini" "Profile$0" "Default"
       ${IfNot} ${Errors}
       ${AndIf} $1 == "1"
         ; We've found the default profile
-        ReadINIStr $1 "$APPDATA\Waterfox\profiles.ini" "Profile$0" "Path"
-        ReadINIStr $2 "$APPDATA\Waterfox\profiles.ini" "Profile$0" "IsRelative"
+        ReadINIStr $1 "$APPDATA\Fennec\profiles.ini" "Profile$0" "Path"
+        ReadINIStr $2 "$APPDATA\Fennec\profiles.ini" "Profile$0" "IsRelative"
         ${If} $2 == "1"
-          StrCpy $R0 "$APPDATA\Waterfox\$1"
+          StrCpy $R0 "$APPDATA\Fennec\$1"
         ${Else}
           StrCpy $R0 "$1"
         ${EndIf}
@@ -1125,7 +1125,7 @@ Function ShouldPromptForProfileCleanup
 
   ; We have at least one profile present. If we don't have any installations,
   ; then we need to show the re-install prompt. We'll say there's an
-  ; installation present if HKCR\WaterfoxURL* exists and points to a real path.
+  ; installation present if HKCR\FennecURL* exists and points to a real path.
   StrCpy $0 0
   StrCpy $R9 ""
   ${Do}
@@ -1136,7 +1136,7 @@ Function ShouldPromptForProfileCleanup
       ${Break}
     ${EndIf}
     ${WordFind} "$1" "-" "+1{" $2
-    ${If} $2 == "WaterfoxURL"
+    ${If} $2 == "FennecURL"
       ClearErrors
       ReadRegStr $2 HKCR "$1\DefaultIcon" ""
       ${IfNot} ${Errors}

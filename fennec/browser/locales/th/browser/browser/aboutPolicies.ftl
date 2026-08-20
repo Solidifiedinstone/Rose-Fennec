@@ -1,0 +1,24 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+about-policies-title = นโยบายองค์กร
+aboutpolicies-page-heading =
+    .heading = เกี่ยวกับนโยบาย
+# 'Active' is used to describe the policies that are currently active
+active-policies-tab = ใช้งานอยู่
+errors-tab = ข้อผิดพลาด
+documentation-tab = เอกสารประกอบ
+# These title attributes label the navigation buttons when the moz-page-nav
+# sidebar is collapsed and the visible button text is hidden.
+active-policies-tab-title =
+    .title = ใช้งานอยู่
+errors-tab-title =
+    .title = ข้อผิดพลาด
+documentation-tab-title =
+    .title = เอกสารประกอบ
+no-specified-policies-message = บริการนโยบายองค์กรทำงานอยู่ แต่ไม่มีนโยบายใดที่เปิดใช้งาน
+inactive-message = บริการนโยบายองค์กรไม่ได้ใช้งานอยู่
+policy-name = ชื่อนโยบาย
+policy-value = ค่านโยบาย
+policy-errors = ข้อผิดพลาดนโยบาย

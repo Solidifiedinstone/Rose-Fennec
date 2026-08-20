@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-nord-light@fennec"
+    }
+  },
+  "name": "Nord Light",
+  "description": "The Nord Light palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#eceff4",
+      "frame_inactive": "#eceff4",
+      "tab_background_text": "#616e88",
+      "tab_selected": "#d8dee9",
+      "tab_text": "#2e3440",
+      "tab_line": "#5e81ac",
+      "tab_loading": "#5e81ac",
+      "toolbar": "#ffffff",
+      "toolbar_text": "#2e3440",
+      "toolbar_field": "#e5e9f0",
+      "toolbar_field_text": "#2e3440",
+      "toolbar_field_border": "#d8dee9",
+      "toolbar_field_focus": "#d8dee9",
+      "toolbar_field_text_focus": "#2e3440",
+      "toolbar_field_border_focus": "#5e81ac",
+      "toolbar_top_separator": "#d8dee9",
+      "toolbar_bottom_separator": "#d8dee9",
+      "toolbar_vertical_separator": "#d8dee9",
+      "ntp_background": "#eceff4",
+      "ntp_text": "#2e3440",
+      "popup": "#e5e9f0",
+      "popup_text": "#2e3440",
+      "popup_border": "#d8dee9",
+      "popup_highlight": "#a3b8d0",
+      "popup_highlight_text": "#2e3440",
+      "sidebar": "#ffffff",
+      "sidebar_text": "#2e3440",
+      "sidebar_border": "#d8dee9",
+      "sidebar_highlight": "#a3b8d0",
+      "sidebar_highlight_text": "#2e3440",
+      "button_background_hover": "#e5e9f0",
+      "button_background_active": "#d8dee9",
+      "icons": "#616e88",
+      "icons_attention": "#5e81ac",
+      "bookmark_text": "#2e3440",
+      "error_text": "#bf616a"
+    },
+    "properties": {
+      "color_scheme": "light",
+      "content_color_scheme": "light"
+    }
+  }
+}

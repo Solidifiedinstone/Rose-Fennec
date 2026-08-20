@@ -1,0 +1,4 @@
+[DEFAULT]
+tags = "fennec_tabfeatures"
+
+["browser_tabfeatures.js"]

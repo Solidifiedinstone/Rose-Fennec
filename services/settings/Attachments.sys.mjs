@@ -8,8 +8,8 @@ ChromeUtils.defineESModuleGetters(lazy, {
   RemoteSettingsWorker:
     "resource://services-settings/RemoteSettingsWorker.sys.mjs",
   Utils: "resource://services-settings/Utils.sys.mjs",
-  WaterfoxSettingsPolicy:
-    "resource://services-settings/WaterfoxSettingsPolicy.sys.mjs",
+  FennecSettingsPolicy:
+    "resource://services-settings/FennecSettingsPolicy.sys.mjs",
 });
 
 ChromeUtils.defineLazyGetter(lazy, "console", () => lazy.Utils.log);
@@ -363,7 +363,7 @@ export class Downloader {
 
     if (
       !avoidDownload &&
-      !lazy.WaterfoxSettingsPolicy.canDownloadAttachments(
+      !lazy.FennecSettingsPolicy.canDownloadAttachments(
         this.bucketName,
         this.collectionName
       )

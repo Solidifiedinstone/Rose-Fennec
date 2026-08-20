@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-nightfox@fennec"
+    }
+  },
+  "name": "Nightfox",
+  "description": "The Nightfox palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#192330",
+      "frame_inactive": "#192330",
+      "tab_background_text": "#71839b",
+      "tab_selected": "#29394f",
+      "tab_text": "#cdcecf",
+      "tab_line": "#719cd6",
+      "tab_loading": "#719cd6",
+      "toolbar": "#131a24",
+      "toolbar_text": "#cdcecf",
+      "toolbar_field": "#212e3f",
+      "toolbar_field_text": "#cdcecf",
+      "toolbar_field_border": "#29394f",
+      "toolbar_field_focus": "#29394f",
+      "toolbar_field_text_focus": "#cdcecf",
+      "toolbar_field_border_focus": "#719cd6",
+      "toolbar_top_separator": "#29394f",
+      "toolbar_bottom_separator": "#29394f",
+      "toolbar_vertical_separator": "#29394f",
+      "ntp_background": "#192330",
+      "ntp_text": "#cdcecf",
+      "popup": "#212e3f",
+      "popup_text": "#cdcecf",
+      "popup_border": "#29394f",
+      "popup_highlight": "#3d5878",
+      "popup_highlight_text": "#cdcecf",
+      "sidebar": "#131a24",
+      "sidebar_text": "#cdcecf",
+      "sidebar_border": "#29394f",
+      "sidebar_highlight": "#3d5878",
+      "sidebar_highlight_text": "#cdcecf",
+      "button_background_hover": "#212e3f",
+      "button_background_active": "#29394f",
+      "icons": "#71839b",
+      "icons_attention": "#719cd6",
+      "bookmark_text": "#cdcecf",
+      "error_text": "#c94f6d"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

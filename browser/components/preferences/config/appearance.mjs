@@ -4,6 +4,9 @@
 
 import { Preferences } from "chrome://global/content/preferences/Preferences.mjs";
 import { SettingGroupManager } from "chrome://browser/content/preferences/config/SettingGroupManager.mjs";
+// The Rose appearance groups. A pane loads one config module, and these
+// belong on this pane.
+import { registerRoseGroups } from "chrome://browser/content/preferences/config/rose.mjs";
 
 const FORCED_COLORS_QUERY = matchMedia("(forced-colors)");
 
@@ -198,3 +201,5 @@ SettingGroupManager.registerGroups({
     ],
   },
 });
+
+registerRoseGroups();

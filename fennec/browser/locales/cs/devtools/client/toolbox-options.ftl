@@ -1,0 +1,236 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+### Localization for Developer Tools options
+
+
+## Default Developer Tools section
+
+# The heading
+options-select-default-tools-label = Výchozí nástroje pro vývojáře
+# The label for the explanation of the * marker on a tool which is currently not supported
+# for the target of the toolbox.
+options-tool-not-supported-label = * Není podporován pro aktuální kontext
+# The label for the heading of group of checkboxes corresponding to the developer tools
+# added by add-ons. This heading is hidden when there is no developer tool installed by add-ons.
+options-select-additional-tools-label = Nástroje pro vývojáře instalované doplňkem
+# The label for the heading of group of checkboxes corresponding to the default developer
+# tool buttons.
+options-select-enabled-toolbox-buttons-label = Dostupná tlačítka nástrojů
+# The label for the heading of the radiobox corresponding to the theme
+options-select-dev-tools-theme-label = Motivy vzhledu
+
+## Inspector section
+
+# The heading
+options-context-inspector = Průzkumník
+# The label for the checkbox option to show user agent styles
+options-show-user-agent-styles-label = Zobrazit styly prohlížeče
+options-show-user-agent-styles-tooltip =
+    .title = Zapnutím zobrazíte výchozí styly, které jsou načítány prohlížečem.
+# The label for the checkbox option to show all anonymous content
+options-show-user-agent-shadow-dom-label = Zobrazit stínový prohlížeč DOM
+options-show-user-agent-shadow-dom-tooltip =
+    .title = Zapnutím této funkce se zobrazí prvky stínového DOM zpracovávané prohlížečem.
+# The label for the checkbox option to enable collapse attributes
+options-collapse-attrs-label = Zkrátit DOM atributy
+options-collapse-attrs-tooltip =
+    .title = Zkrátit dlouhé atributy v průzkumníku
+# The label for the checkbox option to enable the display of comments in the Inspector
+options-show-comments-label = Zobrazovat komentáře
+options-show-comments-tooltip =
+    .title = Zobrazovat uzly komentářů v průzkumníkovi.
+# The label for the checkbox option to enable the "drag to update" feature
+options-inspector-draggable-properties-label = Klepnutím a tažením upravit hodnoty velikosti
+options-inspector-draggable-properties-tooltip =
+    .title = Klepnutím a tažením upraví hodnoty velikosti v zobrazení pravidel průzkumníka
+# The label for the checkbox option to enable simplified highlighting on page elements
+# within the inspector for users who enabled prefers-reduced-motion = reduce
+options-inspector-simplified-highlighters-label = Použít jednodušší zvýrazňovače, pokud je použita vlastnost 'prefers-reduced-motion'
+options-inspector-simplified-highlighters-tooltip =
+    .title = Povolí zjednodušené zvýrazňovače, pokud je povolena funkce prefers-reduced-motion. Kreslí čáry místo vyplněných obdélníků kolem zvýrazněných prvků, aby se zabránilo efektům blikání.
+# The label for the checkbox option to make the Enter key move the focus to the next input
+# when editing a property name or value in the Inspector rules view
+options-inspector-rules-focus-next-on-enter-label = Přepnout na další vstup pomocí klávesy <kbd>Enter</kbd>
+options-inspector-rules-focus-next-on-enter-tooltip =
+    .title = Pokud je tato funkce povolena, stisknutí klávesy Enter při úpravě selektoru, názvu vlastnosti nebo hodnoty přesune fokus na další vstup.
+
+## "Default Color Unit" options for the Inspector
+
+options-default-color-unit-label = Výchozí jednotka pro barvy
+options-default-color-unit-authored = Jak je napsáno
+options-default-color-unit-hex = Hex
+options-default-color-unit-hsl = HSL(A)
+options-default-color-unit-rgb = RGB(A)
+options-default-color-unit-hwb = HWB
+options-default-color-unit-name = Názvy barev
+
+## Web Console section
+
+# The heading
+options-webconsole-label = Webová konzole
+# The label for the checkbox that toggle whether the Split console is enabled
+options-webconsole-split-console-label = Povolit rozdělení konzole
+options-webconsole-split-console-tooltip =
+    .title = Pomocí klávesy Escape otevírat rozdělenou konzoli
+
+## Network Monitor section
+
+# The heading
+options-netmonitor-label = Monitor síťové aktivity
+# The label for the input defining the limit of stored request and response body size
+options-netmonitor-body-limit-label = Maximální velikost požadavku a odpovědi (pro neomezeno nastavit na 0):
+options-netmonitor-body-limit-tooltip =
+    .title = Těla požadavku nebo odpovědi, které překročí zadanou velikost, budou při zobrazení nebo stažení v nástroji Monitor síťové aktivity zkrácena. Nastavte na 0 pro bez omezení.
+# Text shown in the input when there is no limitation (instead of showing "0")
+options-netmonitor-body-limit-unlimited-label = Neomezené
+options-netmonitor-body-limit-button =
+    .title = Upravit maximální velikost požadavku/odpovědi.
+options-netmonitor-body-limit-restore-default =
+    .title = Obnovit výchozí hodnotu maximální velikosti těla požadavku/odpovědi.
+options-netmonitor-body-limit-set =
+    .title = Nastavení aktuální vstupní hodnotu jako maximální velikost těla požadavku/odpovědi.
+
+## Experimental section
+
+# The heading
+options-experimental-label = Experimentální funkce
+# The label for the checkbox that toggles showing stylesheets in the debugger
+options-stylesheets-in-the-debugger-label = Zobrazit kaskádové styly v debuggeru
+options-stylesheets-in-the-debugger-tooltip =
+    .title = Zobrazení seznamu a detailu kaskádových listů v debuggeru
+# The message shown for settings that indicates that the attached setting requires the
+# toolbox to be reopened to take effect.
+options-reopen-toolbox-message = (vyžaduje opětovné otevření nástrojů)
+
+## Style Editor section
+
+# The heading
+options-styleeditor-label = Editor stylů
+# The label for the checkbox that toggles autocompletion of css in the Style Editor
+options-stylesheet-autocompletion-label = Automatické doplňování CSS
+options-stylesheet-autocompletion-tooltip =
+    .title = Automatické doplňování při psaní vlastností CSS, hodnot a selektorů v Editoru stylů
+
+## Screenshot section
+
+# The heading
+options-screenshot-label = Chování snímku obrazovky
+# Label for the checkbox that toggles screenshot to clipboard feature
+options-screenshot-clipboard-only-label = Snímek obrazovky pouze do schránky
+options-screenshot-clipboard-tooltip2 =
+    .title = Uloží snímek obrazovky rovnou do schránky
+# Label for the checkbox that toggles the camera shutter audio for screenshot tool
+options-screenshot-audio-label = Přehrát zvuk spouště fotoaparátu
+options-screenshot-audio-tooltip =
+    .title = Umožňuje zvuk fotoaparátu při pořizování snímku obrazovky
+
+## Editor section
+
+# The heading
+options-sourceeditor-label = Předvolby editoru
+options-sourceeditor-detectindentation-tooltip =
+    .title = Rozpozná odsazení na základě obsahu zdrojového kódu
+options-sourceeditor-detectindentation-label = Automatické odsazování
+options-sourceeditor-autoclosebrackets-tooltip =
+    .title = Zajistí automatické vkládání ukončovacích závorek
+options-sourceeditor-autoclosebrackets-label = Automaticky uzavírat závorky
+options-sourceeditor-expandtab-tooltip =
+    .title = Použije mezery namísto tabulátorů
+options-sourceeditor-expandtab-label = Odsazení pomocí mezer
+options-sourceeditor-tabsize-label = Velikost tabulátoru
+options-sourceeditor-keybinding-label = Klávesové zkratky
+options-sourceeditor-keybinding-default-label = Výchozí
+
+## Local Mode section
+
+# The heading
+options-local-mode-label = Lokální režim
+options-local-mode-only-work-locally = Lokální režim funguje pouze lokálně a je zakázán při ladění vzdálených kontextů
+options-local-mode-behavior = Místní režim umožňuje načítat místní soubory přes https URL bez jakékoliv externí závislosti. URL adresy lze načítat pouze z panelů s otevřenými nástroji pro vývojáře.
+options-local-mode-domain-label = Vlastní doména:
+options-local-mode-origin-input =
+    .placeholder = Zdroj pro místní mapování
+# Errors shown when the origin input has an error
+options-local-mode-origin-conflict = Tento zdroj je v konfliktu s jiným existujícím mapováním
+options-local-mode-origin-invalid = Tento zdroj není platný
+options-local-mode-folder-label = Místní složka:
+options-local-mode-choose-folder = Procházet…
+    .title = Vyberte místní složku, ze které se má toto mapování poskytovat
+# Dialog's title when picking a folder for a mapping
+# Variables:
+#   $url (String): The url for the mapping being configured
+options-local-mode-choose-folder-picker-title = Zvolit složku místního režimu pro: { $url }
+# Error shown when the folder is invalid
+# (can easily be triggered when using about:config and changing underlying mappings prefs)
+options-local-mode-folder-invalid = Tato složka neexistuje nebo je neplatná.
+options-local-mode-toggle =
+    .title = Přepnout toto místní mapování
+options-local-mode-toggle-enable = Povolit
+options-local-mode-toggle-disable = Zakázat
+options-local-mode-navigate-to =
+    .title = Přejít na tuto URL mapování
+# Dialog message prompted when clicking on the Delete button
+# Variables:
+#   $mappingOrigin (String): The origin for the mapping
+options-local-mode-confirm-deletion = Chcete odstranit mapování „{ $mappingOrigin }“?
+options-local-mode-new-mapping = Přidá nové místní mapování
+
+## Advanced section
+
+# The heading (this item is also used in perftools.ftl)
+options-context-advanced-settings = Rozšířené nastavení
+# The label for the checkbox that toggles the HTTP cache on or off
+options-disable-http-cache-label = Zakázat mezipaměť (když jsou nástroje otevřeny)
+options-disable-http-cache-tooltip =
+    .title = Zapnutím této volby bude mezipaměť HTTP vypnuta pro všechny panely, které mají otevřené nástroje. Service Workers nejsou touto volbou ovlivněny.
+# The label for checkbox that toggles JavaScript on or off
+options-disable-javascript-label-2 = Zakázat JavaScript
+# The label for checkbox that toggles JavaScript on or off
+options-disable-javascript-label = Zakázat JavaScript *
+options-disable-javascript-tooltip =
+    .title = Přepnutí této volby zakáže pro aktuální panel JavaScript. Jakmile bude panel nebo nástroje uzavřeny, bude nastavení zapomenuto.
+# The label for checkbox that toggles chrome debugging, i.e. the devtools.chrome.enabled preference
+options-enable-chrome-label = Povolit nástroje ladění pro chrome a doplňky
+options-enable-chrome-tooltip =
+    .title = Zapnutí umožní použít nástroje pro vývojáře v kontextu prohlížeče (přes Nástroje > Nástroje pro vývojáře > Nástroje prohlížeče) nebo pro ladění doplňků ze Správce doplňků
+# The label for checkbox that toggles remote debugging, i.e. the devtools.debugger.remote-enabled preference
+options-enable-remote-label = Povolit vzdálené ladění
+options-enable-remote-tooltip2 =
+    .title = Zapnutí umožní vzdálené ladění této instance prohlížeče
+# The label for checkbox that enables F12 as a shortcut to open DevTools
+options-enable-f12-label = Pomocí klávesy F12 otevřít nebo zavřít Nástroje pro vývojáře
+options-enable-f12-tooltip =
+    .title = Zapnutím této možnosti se nastaví klávesa F12 k otevření či zavření Nástrojů pro vývojáře
+# The label for checkbox that toggles custom formatters for objects
+options-enable-custom-formatters-label = Povolit vlastní formátovače
+options-enable-custom-formatters-tooltip =
+    .title = Zapnutí této možnosti umožní webům definovat vlastní formátovače pro objekty DOM.
+# The label for checkbox that toggles the service workers testing over HTTP on or off.
+options-enable-service-workers-http-label = Povolit Service Workers přes HTTP (když jsou nástroje otevřeny)
+options-enable-service-workers-http-tooltip =
+    .title = Zapnutí této volby umožní Service Workers přes HTTP pro všechny panely, které mají panel nástrojů otevřen.
+# The label for the checkbox that toggles source maps in all tools.
+options-source-maps-label = Povolit zdrojové mapy
+options-source-maps-tooltip =
+    .title = Pokud tuto volbu zapnete, zdroje voleb budou mapované v nástrojích.
+# The message shown for settings that trigger page reload and will only apply to the current session
+# This appears underneath the applicable options (e.g. options-disable-javascript-label-2).
+options-context-triggers-page-refresh-temporary = (pouze aktuální relace, znovu načte stránku)
+# The message shown for settings that trigger page reload and will only apply to the current session
+options-context-triggers-page-refresh = * Pouze aktuální relace, znovu načte stránku
+# The message shown for settings that trigger page reload
+# This appears underneath the applicable options (e.g. options-show-user-agent-shadow-dom-label).
+options-context-triggers-page-refresh-persists = (znovu načte stránku)
+# This is used to add a * marker to the label for the Options Panel tool checkbox for the
+# tool which is not supported for the current toolbox target.
+# Variables:
+#   $toolLabel (String): The name of the tool not being supported
+options-tool-not-supported-marker = { $toolLabel } *
+# Used as a label for auto theme
+options-auto-theme-label = Automatický
+# This is the text that appears in the settings panel for panel that will be removed in future releases.
+# This entire text is treated as a link to an MDN page.
+options-deprecation-notice = Zastaralé. Zjistit více…

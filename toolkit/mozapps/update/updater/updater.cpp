@@ -3398,7 +3398,7 @@ int NS_main(int argc, NS_tchar** argv) {
       isAdmin.unwrap() || isLocalSystem.unwrap();
 #elif defined(XP_MACOSX)
         strstr(argv[0],
-               "/Library/PrivilegedHelperTools/net.waterfox.updater") != 0;
+               "/Library/PrivilegedHelperTools/net.fennec.updater") != 0;
 #else
       false;
 #endif

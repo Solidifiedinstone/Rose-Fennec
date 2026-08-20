@@ -88,11 +88,11 @@ runs:
       shell: bash
       run: |
         locales="$({
-          git -C waterfox/browser/locales ls-files
+          git -C fennec/browser/locales ls-files
         } | awk -F/ '
           NF >= 3 &&
           $1 !~ /^\./ &&
-          ($2 == "browser" || $2 == "toolkit" || $2 == "waterfox") {
+          ($2 == "browser" || $2 == "toolkit" || $2 == "fennec") {
             print $1
           }
         ' | LC_ALL=C sort -u | paste -sd ' ' -)"
@@ -109,7 +109,7 @@ runs:
       shell: bash
       run: |
         rm -rf \
-          waterfox/browser/components/blocker/assets \
+          fennec/browser/components/blocker/assets \
           services/settings/dumps \
           services/settings/static-dumps
         tar -xf artifacts/build-assets-snapshot.tar -C .

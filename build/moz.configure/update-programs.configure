@@ -96,7 +96,7 @@ set_config("MOZ_SMAUTHORIZEDCLIENTS_REQUIREMENTS", smauthorizedclients_requireme
 
 @depends("--enable-mac-elevated-updates-with-generic-certs", when=target_is_osx)
 def smprivilegedexec_requirements(enabled):
-    updater_id = "net.waterfox.updater"
+    updater_id = "net.fennec.updater"
     if enabled:
         return mac_relaxed_requirements_string(updater_id)
     else:

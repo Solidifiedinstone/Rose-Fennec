@@ -408,14 +408,14 @@ def auto_detect_channel(ctx, app):
     # The bundle IDs for different channels. We use these strings to
     # auto-detect the channel being signed. Different channels use
     # different entitlement files. Release and Beta builds both use
-    # net.waterfox.waterfox.
-    NIGHTLY_BUNDLEID = "net.waterfox.nightly"
-    NIGHTLY_DEBUG_BUNDLEID = "net.waterfox.nightlydebug"
-    NIGHTLY_UNOFFICIAL_BUNDLEID = "net.waterfox.nightlyunofficial"
-    NIGHTLY_UNOFFICIAL_DEBUG_BUNDLEID = "net.waterfox.nightlyunofficialdebug"
+    # net.fennec.fennec.
+    NIGHTLY_BUNDLEID = "net.fennec.nightly"
+    NIGHTLY_DEBUG_BUNDLEID = "net.fennec.nightlydebug"
+    NIGHTLY_UNOFFICIAL_BUNDLEID = "net.fennec.nightlyunofficial"
+    NIGHTLY_UNOFFICIAL_DEBUG_BUNDLEID = "net.fennec.nightlyunofficialdebug"
     DEVEDITION_BUNDLEID = "org.mozilla.firefoxdeveloperedition"
     # BETA uses the same bundle ID as Release
-    RELEASE_BUNDLEID = "net.waterfox.waterfox"
+    RELEASE_BUNDLEID = "net.fennec.fennec"
 
     info_plist = os.path.join(app, "Contents/Info.plist")
 

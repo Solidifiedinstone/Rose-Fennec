@@ -12,7 +12,7 @@
 #include "nsString.h"
 
 nsresult GetAppGroupContainerBase(nsIFile** aResult) {
-  NSString* groupID = @"PZWYM7N4GF.net.waterfox.waterfox.browserprofiles";
+  NSString* groupID = @"PZWYM7N4GF.net.fennec.fennec.browserprofiles";
   NSURL* containerURL = [[NSFileManager defaultManager]
       containerURLForSecurityApplicationGroupIdentifier:groupID];
 

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>net.waterfox.updater</string>
+  <string>net.fennec.updater</string>
   <key>RunAtLoad</key>
   <true/>
 </dict>

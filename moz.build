@@ -176,10 +176,10 @@ if CONFIG["ENABLE_CLANG_PLUGIN"]:
 DIRS += [
     "build",
     "config",
+    "fennec",
     "python",
     "testing",
     "third_party/python",
-    "waterfox",
 ]
 
 if CONFIG["MOZ_APPSERVICES_IN_TREE"]:

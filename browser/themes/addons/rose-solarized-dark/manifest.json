@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-solarized-dark@fennec"
+    }
+  },
+  "name": "Solarized Dark",
+  "description": "The Solarized Dark palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#002b36",
+      "frame_inactive": "#002b36",
+      "tab_background_text": "#586e75",
+      "tab_selected": "#0d4451",
+      "tab_text": "#93a1a1",
+      "tab_line": "#268bd2",
+      "tab_loading": "#268bd2",
+      "toolbar": "#00212b",
+      "toolbar_text": "#93a1a1",
+      "toolbar_field": "#073642",
+      "toolbar_field_text": "#93a1a1",
+      "toolbar_field_border": "#0d4451",
+      "toolbar_field_focus": "#0d4451",
+      "toolbar_field_text_focus": "#93a1a1",
+      "toolbar_field_border_focus": "#268bd2",
+      "toolbar_top_separator": "#0d4451",
+      "toolbar_bottom_separator": "#0d4451",
+      "toolbar_vertical_separator": "#0d4451",
+      "ntp_background": "#002b36",
+      "ntp_text": "#93a1a1",
+      "popup": "#073642",
+      "popup_text": "#93a1a1",
+      "popup_border": "#0d4451",
+      "popup_highlight": "#1a5c8a",
+      "popup_highlight_text": "#93a1a1",
+      "sidebar": "#00212b",
+      "sidebar_text": "#93a1a1",
+      "sidebar_border": "#0d4451",
+      "sidebar_highlight": "#1a5c8a",
+      "sidebar_highlight_text": "#93a1a1",
+      "button_background_hover": "#073642",
+      "button_background_active": "#0d4451",
+      "icons": "#586e75",
+      "icons_attention": "#268bd2",
+      "bookmark_text": "#93a1a1",
+      "error_text": "#dc322f"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

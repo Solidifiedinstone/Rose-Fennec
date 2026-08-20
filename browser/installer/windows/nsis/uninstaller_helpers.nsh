@@ -334,9 +334,9 @@
     ; Add the Firewall entries after an update
     Call AddFirewallEntries
 
-    ReadRegStr $0 HKLM "Software\waterfox.net\Waterfox" "CurrentVersion"
+    ReadRegStr $0 HKLM "Software\waterfox.net\Fennec" "CurrentVersion"
     ${If} "$0" != "${GREVersion}"
-      WriteRegStr HKLM "Software\waterfox.net\Waterfox" "CurrentVersion" "${GREVersion}"
+      WriteRegStr HKLM "Software\waterfox.net\Fennec" "CurrentVersion" "${GREVersion}"
     ${EndIf}
   ${EndIf}
 
@@ -390,10 +390,10 @@
     ; If it already exists, just delete the appdata one.
     ; It's possible this was for a different install, but it's impossible to
     ; know for sure, so we may as well just get rid of it.
-    Delete /REBOOTOK "$0\BrowserWorks\Waterfox\postSigningData"
+    Delete /REBOOTOK "$0\BrowserWorks\Fennec\postSigningData"
   ${Else}
-    ${If} ${FileExists} "$0\BrowserWorks\Waterfox\postSigningData"
-      Rename "$0\BrowserWorks\Waterfox\postSigningData" "$INSTDIR\postSigningData"
+    ${If} ${FileExists} "$0\BrowserWorks\Fennec\postSigningData"
+      Rename "$0\BrowserWorks\Fennec\postSigningData" "$INSTDIR\postSigningData"
     ${EndIf}
   ${EndIf}
 

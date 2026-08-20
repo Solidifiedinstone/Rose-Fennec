@@ -27,7 +27,7 @@ void RemoveSecureOutputFiles(LPCWSTR patchDirPath);
 #define PATCH_DIR_PATH L"\\updates\\0"
 
 #ifdef MOZ_MAINTENANCE_SERVICE
-#  define SVC_NAME L"WaterfoxMaintenance"
+#  define SVC_NAME L"FennecMaintenance"
 
 #  define BASE_SERVICE_REG_KEY L"SOFTWARE\\BrowserWorks\\MaintenanceService"
 

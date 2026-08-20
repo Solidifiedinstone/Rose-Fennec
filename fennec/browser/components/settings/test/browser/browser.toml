@@ -1,0 +1,15 @@
+[DEFAULT]
+prefs = [
+  "fennec.blocker.ui.enabled=true",
+]
+support-files = ["head.js"]
+
+["browser_fennec_appearance.js"]
+
+["browser_fennec_data_collection.js"]
+
+["browser_fennec_settings_registration.js"]
+
+["browser_fennec_tabs.js"]
+
+["browser_fennec_ultra_dns.js"]

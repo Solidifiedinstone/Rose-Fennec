@@ -191,7 +191,7 @@
 	<key>CFBundleIconFile</key>
 	<string>firefox.icns</string>
 	<key>CFBundleIconName</key>
-	<string>Waterfox</string>
+	<string>Fennec</string>
 	<key>CFBundleIdentifier</key>
 	<string>@MOZ_MACBUNDLE_ID@</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -264,7 +264,7 @@
   <string>GeckoNSApplication</string>
 	<key>SMPrivilegedExecutables</key>
 	<dict>
-		<key>net.waterfox.updater</key>
+		<key>net.fennec.updater</key>
 		<string>@MOZ_SMPRIVILEGEDEXECUTABLES_REQUIREMENTS@</string>
 	</dict>
   <key>MozillaDeveloperRepoPath</key>

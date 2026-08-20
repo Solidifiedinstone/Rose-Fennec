@@ -660,7 +660,7 @@ FunctionEnd
 Function TestGetHadExistingProfileSuccess
   GetTempFileName $0
   Delete $0
-  CreateDirectory "$0\BrowserWorks\Waterfox"
+  CreateDirectory "$0\BrowserWorks\Fennec"
   StrCpy $MockLocalAppDataFolder $0
 
   Call GetHadExistingProfile

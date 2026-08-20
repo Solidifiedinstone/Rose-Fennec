@@ -1321,7 +1321,7 @@
       "last_modified": 1589285002321
     },
     {
-      "guid": "/^((@adaware_webprotection)|(@adaware_webprotection_test)|(@browser-safety)|(@new-tab-ff-addon)|(@torrent-scanner)|(@waterfox-monitor\\.xpi)|(\\{65c3d1c8-6a6b-4f25-ae84-3770846ded13\\})|(\\{baf80d95-ba88-4506-9b17-d03d2fd188e7\\})|(\\{e789c2ad-91e5-4621-85f0-5e7e43036233\\}))$/",
+      "guid": "/^((@adaware_webprotection)|(@adaware_webprotection_test)|(@browser-safety)|(@new-tab-ff-addon)|(@torrent-scanner)|(@fennec-monitor\\.xpi)|(\\{65c3d1c8-6a6b-4f25-ae84-3770846ded13\\})|(\\{baf80d95-ba88-4506-9b17-d03d2fd188e7\\})|(\\{e789c2ad-91e5-4621-85f0-5e7e43036233\\}))$/",
       "prefs": [],
       "schema": 1589201612918,
       "details": {

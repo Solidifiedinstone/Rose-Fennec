@@ -1,0 +1,9 @@
+[DEFAULT]
+tags = "fennec_onboarding"
+prefs = [
+  "intl.multilingual.aboutWelcome.languageMismatchEnabled=false",
+  "fennec.blocker.enabled=false",
+  "fennec.blocker.enabledLists={\"core-easylist\":false,\"core-easyprivacy\":false,\"core-ublock-filters\":false,\"core-ublock-unbreak\":false,\"core-ublock-quick-fixes\":false,\"privacy-ublock-privacy\":false,\"privacy-ublock-badware\":false,\"privacy-ublock-resource-abuse\":false,\"privacy-adguard-tracking\":false,\"peter-lowe-adservers\":false,\"annoyances-easylist-cookie\":false,\"annoyances-ublock-cookies\":false}",
+]
+
+["browser_aboutwelcome_fennec_defaults.js"]

@@ -93,7 +93,7 @@
 using namespace mozilla;
 
 #define DEV_EDITION_NAME "dev-edition-default"
-// Waterfox has used this name for default profiles since Waterfox 68, so
+// Fennec has used this name for default profiles since Fennec 68, so
 // keep it for existing installs to find their profiles.
 #define DEFAULT_NAME "68-edition-default"
 #define COMPAT_FILE u"compatibility.ini"_ns

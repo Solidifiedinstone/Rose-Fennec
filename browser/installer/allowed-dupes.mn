@@ -6,8 +6,8 @@
 #
 
 # updater on osx is bug 1311194
-LaunchServices/net.waterfox.updater
-updater.app/Contents/MacOS/net.waterfox.updater
+LaunchServices/net.fennec.updater
+updater.app/Contents/MacOS/net.fennec.updater
 
 plugin-container.app/Contents/PkgInfo
 updater.app/Contents/PkgInfo

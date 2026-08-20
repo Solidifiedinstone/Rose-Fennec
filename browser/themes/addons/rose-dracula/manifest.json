@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-dracula@fennec"
+    }
+  },
+  "name": "Dracula",
+  "description": "The Dracula palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#282a36",
+      "frame_inactive": "#282a36",
+      "tab_background_text": "#6272a4",
+      "tab_selected": "#44475a",
+      "tab_text": "#f8f8f2",
+      "tab_line": "#bd93f9",
+      "tab_loading": "#bd93f9",
+      "toolbar": "#21222c",
+      "toolbar_text": "#f8f8f2",
+      "toolbar_field": "#343746",
+      "toolbar_field_text": "#f8f8f2",
+      "toolbar_field_border": "#44475a",
+      "toolbar_field_focus": "#44475a",
+      "toolbar_field_text_focus": "#f8f8f2",
+      "toolbar_field_border_focus": "#bd93f9",
+      "toolbar_top_separator": "#44475a",
+      "toolbar_bottom_separator": "#44475a",
+      "toolbar_vertical_separator": "#44475a",
+      "ntp_background": "#282a36",
+      "ntp_text": "#f8f8f2",
+      "popup": "#343746",
+      "popup_text": "#f8f8f2",
+      "popup_border": "#44475a",
+      "popup_highlight": "#6b5296",
+      "popup_highlight_text": "#f8f8f2",
+      "sidebar": "#21222c",
+      "sidebar_text": "#f8f8f2",
+      "sidebar_border": "#44475a",
+      "sidebar_highlight": "#6b5296",
+      "sidebar_highlight_text": "#f8f8f2",
+      "button_background_hover": "#343746",
+      "button_background_active": "#44475a",
+      "icons": "#6272a4",
+      "icons_attention": "#bd93f9",
+      "bookmark_text": "#f8f8f2",
+      "error_text": "#ff5555"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

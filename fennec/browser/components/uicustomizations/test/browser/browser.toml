@@ -1,0 +1,4 @@
+[DEFAULT]
+tags = "fennec_uicustomizations"
+
+["browser_uicustomizations.js"]

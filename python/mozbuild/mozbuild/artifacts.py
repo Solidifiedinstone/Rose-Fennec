@@ -730,7 +730,7 @@ class MacArtifactJob(ArtifactJob):
                 "*.dylib",
                 "nmhproxy",
                 "plugin-container.app/Contents/MacOS/plugin-container",
-                "updater.app/Contents/MacOS/net.waterfox.updater",
+                "updater.app/Contents/MacOS/net.fennec.updater",
                 # 'xpcshell',
                 "XUL",
             ],

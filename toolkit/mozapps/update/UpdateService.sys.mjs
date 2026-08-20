@@ -4521,7 +4521,7 @@ export class UpdateService {
       // Ignore the exception due to a directory that already exists.
     }
 
-    let jobName = "WaterfoxUpdate " + updateRootDir.leafName;
+    let jobName = "FennecUpdate " + updateRootDir.leafName;
     let updatePath = getDownloadingUpdateDir().path;
     if (!Bits.initialized) {
       Bits.init(jobName, updatePath, monitorTimeout);

@@ -1,4 +1,4 @@
 ;!@Install@!UTF-8!
-Title="Waterfox"
+Title="Fennec"
 RunProgram="setup-stub.exe"
 ;!@InstallEnd@!

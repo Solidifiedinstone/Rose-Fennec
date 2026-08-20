@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-dark@fennec"
+    }
+  },
+  "name": "Rose Dark",
+  "description": "The Rose Dark palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#000000",
+      "frame_inactive": "#000000",
+      "tab_background_text": "#8a8791",
+      "tab_selected": "#1c1c24",
+      "tab_text": "#e8e6ea",
+      "tab_line": "#e0607e",
+      "tab_loading": "#e0607e",
+      "toolbar": "#0d0d10",
+      "toolbar_text": "#e8e6ea",
+      "toolbar_field": "#14141a",
+      "toolbar_field_text": "#e8e6ea",
+      "toolbar_field_border": "#22222c",
+      "toolbar_field_focus": "#1c1c24",
+      "toolbar_field_text_focus": "#e8e6ea",
+      "toolbar_field_border_focus": "#e0607e",
+      "toolbar_top_separator": "#22222c",
+      "toolbar_bottom_separator": "#22222c",
+      "toolbar_vertical_separator": "#22222c",
+      "ntp_background": "#000000",
+      "ntp_text": "#e8e6ea",
+      "popup": "#14141a",
+      "popup_text": "#e8e6ea",
+      "popup_border": "#22222c",
+      "popup_highlight": "#8c3d4f",
+      "popup_highlight_text": "#e8e6ea",
+      "sidebar": "#0d0d10",
+      "sidebar_text": "#e8e6ea",
+      "sidebar_border": "#22222c",
+      "sidebar_highlight": "#8c3d4f",
+      "sidebar_highlight_text": "#e8e6ea",
+      "button_background_hover": "#14141a",
+      "button_background_active": "#1c1c24",
+      "icons": "#8a8791",
+      "icons_attention": "#e0607e",
+      "bookmark_text": "#e8e6ea",
+      "error_text": "#e06c75"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

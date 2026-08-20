@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<?csp default-src chrome:; style-src chrome:; ?>
+
+<window
+  id="FennecBlockerFilterListsWindow"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  data-l10n-id="fennec-blocker-filter-lists-window"
+  data-l10n-attrs="title"
+  persist="width height"
+>
+  <dialog
+    id="fennecBlockerFilterListsDialog"
+    buttons="accept,cancel"
+    data-l10n-id="fennec-blocker-filter-lists-dialog"
+    data-l10n-attrs="buttonlabelaccept, buttonaccesskeyaccept"
+  >
+    <linkset>
+      <html:link rel="stylesheet" href="chrome://global/skin/global.css" />
+      <html:link
+        rel="stylesheet"
+        href="chrome://browser/skin/preferences/preferences.css"
+      />
+      <html:link
+        rel="stylesheet"
+        href="chrome://browser/content/preferences/dialogs/fennecBlockerFilterLists.css"
+      />
+
+      <html:link rel="localization" href="browser/fennec/blocker.ftl" />
+    </linkset>
+
+    <script src="chrome://browser/content/preferences/dialogs/fennecBlockerFilterLists.js" />
+
+    <vbox class="contentPane" flex="1">
+      <label
+        id="fennecBlockerFilterListsDescription"
+        data-l10n-id="fennec-blocker-filter-lists-description"
+      />
+      <separator class="thin" />
+      <hbox id="fennecBlockerFilterListsToolbar" align="center">
+        <button
+          id="fennecBlockerRefreshNow"
+          data-l10n-id="fennec-blocker-filter-lists-refresh-now"
+        />
+      </hbox>
+      <label
+        id="fennecBlockerNextRefresh"
+        class="text-deemphasized fennec-blocker-list-updated"
+      />
+      <separator class="thin" />
+      <html:input
+        id="fennecBlockerFilterListsSearch"
+        type="search"
+        data-l10n-id="fennec-blocker-filter-lists-search"
+        data-l10n-attrs="placeholder"
+      />
+      <separator class="thin" />
+      <vbox
+        id="fennecBlockerFilterListsScrollContainer"
+        class="info-box-container fennec-blocker-scroll-container"
+        flex="1"
+      >
+        <vbox id="fennecBlockerFilterListsCategories" flex="1" />
+      </vbox>
+    </vbox>
+  </dialog>
+</window>

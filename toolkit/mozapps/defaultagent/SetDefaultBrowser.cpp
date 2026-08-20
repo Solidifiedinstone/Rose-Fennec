@@ -444,9 +444,9 @@ nsresult SetDefaultBrowserUserChoice(
   }
 
   nsTArray<nsString> browserDefaults = {
-      u"https"_ns, u"WaterfoxURL"_ns,  u"http"_ns, u"WaterfoxURL"_ns,
-      u".html"_ns, u"WaterfoxHTML"_ns, u".htm"_ns,
-      u"WaterfoxHTML"_ns};
+      u"https"_ns, u"FennecURL"_ns,  u"http"_ns, u"FennecURL"_ns,
+      u".html"_ns, u"FennecHTML"_ns, u".htm"_ns,
+      u"FennecHTML"_ns};
 
   browserDefaults.AppendElements(aExtraFileExtensions);
 

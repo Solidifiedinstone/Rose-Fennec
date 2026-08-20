@@ -5,7 +5,7 @@
 with Files("**"):
     BUG_COMPONENT = ("Firefox", "General")
 
-with Files("waterfox.exe.manifest"):
+with Files("fennec.exe.manifest"):
     BUG_COMPONENT = ("Core", "Widget: Win32")
 with Files("module.ver"):
     BUG_COMPONENT = ("Core", "Widget: Win32")

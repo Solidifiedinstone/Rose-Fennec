@@ -107,12 +107,12 @@ jobs:
           sparse-checkout: |
             scripts
             services/settings
-            waterfox/browser/components/blocker/assets
-            waterfox/browser/components/blocker/scripts
+            fennec/browser/components/blocker/assets
+            fennec/browser/components/blocker/scripts
 
       - name: Update bundled blocker assets
         shell: bash
-        run: node waterfox/browser/components/blocker/scripts/update-bundled-assets.js
+        run: node fennec/browser/components/blocker/scripts/update-bundled-assets.js
 
       - name: Update offline Remote Settings dumps
         shell: bash
@@ -123,7 +123,7 @@ jobs:
         run: |
           mkdir -p artifacts
           tar -cf artifacts/build-assets-snapshot.tar \
-            waterfox/browser/components/blocker/assets \
+            fennec/browser/components/blocker/assets \
             services/settings/dumps \
             services/settings/static-dumps
 
@@ -145,7 +145,7 @@ jobs:
       cancel-in-progress: true
     env:
       ARCH: x86_64-pc-windows-msvc
-      MOZCONFIG: waterfox/build/mozconfig-x86_64-pc-windows-msvc
+      MOZCONFIG: fennec/build/mozconfig-x86_64-pc-windows-msvc
       WINEDEBUG: -all
     steps:
       - name: Checkout
@@ -176,7 +176,7 @@ jobs:
         uses: namespace-actions/upload-artifact@f6ccaacc655aec41b93af180d1d7eef21af862d2 # v1
         with:
           name: windows-${{ env.ARCH }}-pgo-generate
-          path: obj-${{ env.ARCH }}/dist/waterfox
+          path: obj-${{ env.ARCH }}/dist/fennec
 
   build-windows-x64-stage-2:
     name: Windows x64 PGO profile (stage 2)
@@ -210,7 +210,7 @@ jobs:
             third_party/python
             third_party/webkit
             tools/quitter
-            waterfox/build
+            fennec/build
 
       - name: Setup profile packages
         run: |
@@ -225,7 +225,7 @@ jobs:
         uses: namespace-actions/download-artifact@7cbad919e4b0e09f17e9d6311a444ff002992b5b # v2
         with:
           name: windows-${{ env.ARCH }}-pgo-generate
-          path: obj-${{ env.ARCH }}/dist/waterfox
+          path: obj-${{ env.ARCH }}/dist/fennec
 
       - name: Run PGO profile
         shell: pwsh
@@ -233,7 +233,7 @@ jobs:
           Remove-Item .mozconfig
           $env:LLVM_PROFDATA = "$HOME/.mozbuild/clang-22/bin/llvm-profdata.exe"
           $env:JARLOG_FILE = "en-US.log"
-          python mach python build/pgo/profileserver.py --binary "./obj-${{ env.ARCH }}/dist/waterfox/waterfox.exe"
+          python mach python build/pgo/profileserver.py --binary "./obj-${{ env.ARCH }}/dist/fennec/fennec.exe"
 
       - name: Upload Windows x64 PGO profile data
         uses: namespace-actions/upload-artifact@f6ccaacc655aec41b93af180d1d7eef21af862d2 # v1
@@ -255,7 +255,7 @@ jobs:
       cancel-in-progress: true
     env:
       ARCH: x86_64-pc-windows-msvc
-      MOZCONFIG: waterfox/build/mozconfig-x86_64-pc-windows-msvc
+      MOZCONFIG: fennec/build/mozconfig-x86_64-pc-windows-msvc
       WINEDEBUG: -all
     steps:
       - name: Checkout
@@ -288,7 +288,7 @@ jobs:
         shell: bash
         run: |
           ./mach package
-          if [[ -d "$PWD/waterfox/browser/locales/en-GB" ]]; then
+          if [[ -d "$PWD/fennec/browser/locales/en-GB" ]]; then
             ./mach package-multi-locale --locales $WFX_L10N_LOCALES
           fi
 
@@ -297,7 +297,7 @@ jobs:
         with:
           name: windows-${{ env.ARCH }}-build
           path: |
-            obj-${{ env.ARCH }}/dist/waterfox
+            obj-${{ env.ARCH }}/dist/fennec
             obj-${{ env.ARCH }}/dist/host/bin/mar
             obj-${{ env.ARCH }}/dist/host/bin/mbsdiff
             obj-${{ env.ARCH }}/browser/installer/windows/instgen/
@@ -314,7 +314,7 @@ jobs:
       cancel-in-progress: true
     env:
       ARCH: aarch64-pc-windows-msvc
-      MOZCONFIG: waterfox/build/mozconfig-aarch64-pc-windows-msvc
+      MOZCONFIG: fennec/build/mozconfig-aarch64-pc-windows-msvc
       WINEDEBUG: -all
     steps:
       - name: Checkout
@@ -339,7 +339,7 @@ jobs:
         shell: bash
         run: |
           ./mach package
-          if [[ -d "$PWD/waterfox/browser/locales/en-GB" ]]; then
+          if [[ -d "$PWD/fennec/browser/locales/en-GB" ]]; then
             ./mach package-multi-locale --locales $WFX_L10N_LOCALES
           fi
 
@@ -348,7 +348,7 @@ jobs:
         with:
           name: windows-${{ env.ARCH }}-build
           path: |
-            obj-${{ env.ARCH }}/dist/waterfox
+            obj-${{ env.ARCH }}/dist/fennec
             obj-${{ env.ARCH }}/dist/host/bin/mar
             obj-${{ env.ARCH }}/dist/host/bin/mbsdiff
             obj-${{ env.ARCH }}/browser/installer/windows/instgen/
@@ -371,7 +371,7 @@ jobs:
       cancel-in-progress: true
     env:
       ARCH: ${{ matrix.arch }}
-      MOZCONFIG: waterfox/build/mozconfig-${{ matrix.arch }}
+      MOZCONFIG: fennec/build/mozconfig-${{ matrix.arch }}
     steps:
       - name: Checkout
         uses: namespacelabs/nscloud-checkout-action@def520b6c21233362f09c9ceda4352c51cceca26 # v8
@@ -394,7 +394,7 @@ jobs:
         shell: bash
         run: |
           ./mach package
-          if [[ -d "$PWD/waterfox/browser/locales/en-GB" ]]; then
+          if [[ -d "$PWD/fennec/browser/locales/en-GB" ]]; then
             ./mach package-multi-locale --locales $WFX_L10N_LOCALES
           fi
 
@@ -403,7 +403,7 @@ jobs:
         with:
           name: macos-${{ matrix.arch }}-build
           path: |
-            obj-${{ matrix.arch }}/dist/waterfox/*.app
+            obj-${{ matrix.arch }}/dist/fennec/*.app
             obj-${{ matrix.arch }}/dist/host/bin/mar
             obj-${{ matrix.arch }}/dist/host/bin/mbsdiff
 
@@ -419,7 +419,7 @@ jobs:
       cancel-in-progress: true
     env:
       ARCH: x86_64-pc-linux-gnu
-      MOZCONFIG: waterfox/build/mozconfig-x86_64-pc-linux-gnu
+      MOZCONFIG: fennec/build/mozconfig-x86_64-pc-linux-gnu
     steps:
       - name: Checkout
         uses: namespacelabs/nscloud-checkout-action@def520b6c21233362f09c9ceda4352c51cceca26 # v8
@@ -442,7 +442,7 @@ jobs:
         shell: bash
         run: |
           ./mach package
-          if [[ -d "$PWD/waterfox/browser/locales/en-GB" ]]; then
+          if [[ -d "$PWD/fennec/browser/locales/en-GB" ]]; then
             ./mach package-multi-locale --locales $WFX_L10N_LOCALES
           fi
 
@@ -450,7 +450,7 @@ jobs:
         shell: bash
         run: |
           dist_root="obj-${ARCH}/dist"
-          tar -C "$dist_root" -cf linux-build.tar waterfox host/bin/mar host/bin/mbsdiff
+          tar -C "$dist_root" -cf linux-build.tar fennec host/bin/mar host/bin/mbsdiff
 
       - name: Upload Linux build outputs
         uses: namespace-actions/upload-artifact@f6ccaacc655aec41b93af180d1d7eef21af862d2 # v1
@@ -470,7 +470,7 @@ jobs:
       cancel-in-progress: true
     env:
       ARCH: aarch64-unknown-linux-gnu
-      MOZCONFIG: waterfox/build/mozconfig-aarch64-unknown-linux-gnu
+      MOZCONFIG: fennec/build/mozconfig-aarch64-unknown-linux-gnu
     steps:
       - name: Checkout
         uses: namespacelabs/nscloud-checkout-action@def520b6c21233362f09c9ceda4352c51cceca26 # v8
@@ -498,7 +498,7 @@ jobs:
 
       - name: Bundle Linux ARM64 PGO generate outputs
         shell: bash
-        run: tar -C "obj-${ARCH}/dist" -cf linux-aarch64-pgo-generate.tar waterfox
+        run: tar -C "obj-${ARCH}/dist" -cf linux-aarch64-pgo-generate.tar fennec
 
       - name: Upload Linux ARM64 PGO generate outputs
         uses: namespace-actions/upload-artifact@f6ccaacc655aec41b93af180d1d7eef21af862d2 # v1
@@ -536,7 +536,7 @@ jobs:
             third_party/python
             third_party/webkit
             tools/quitter
-            waterfox/build
+            fennec/build
 
       - name: Setup profile packages
         shell: bash
@@ -564,7 +564,7 @@ jobs:
           export CXX="$HOME/.mozbuild/clang-22/bin/clang++"
           export LLVM_PROFDATA="$HOME/.mozbuild/clang-22/bin/llvm-profdata"
           export JARLOG_FILE="en-US.log"
-          xvfb-run -a --server-args="-screen 0 1280x1024x24" python3 mach python build/pgo/profileserver.py --binary "./obj-${ARCH}/dist/waterfox/waterfox"
+          xvfb-run -a --server-args="-screen 0 1280x1024x24" python3 mach python build/pgo/profileserver.py --binary "./obj-${ARCH}/dist/fennec/fennec"
 
       - name: Upload Linux ARM64 PGO profile data
         uses: namespace-actions/upload-artifact@f6ccaacc655aec41b93af180d1d7eef21af862d2 # v1
@@ -586,7 +586,7 @@ jobs:
       cancel-in-progress: true
     env:
       ARCH: aarch64-unknown-linux-gnu
-      MOZCONFIG: waterfox/build/mozconfig-aarch64-unknown-linux-gnu
+      MOZCONFIG: fennec/build/mozconfig-aarch64-unknown-linux-gnu
     steps:
       - name: Checkout
         uses: namespacelabs/nscloud-checkout-action@def520b6c21233362f09c9ceda4352c51cceca26 # v8
@@ -618,7 +618,7 @@ jobs:
         shell: bash
         run: |
           ./mach package
-          if [[ -d "$PWD/waterfox/browser/locales/en-GB" ]]; then
+          if [[ -d "$PWD/fennec/browser/locales/en-GB" ]]; then
             ./mach package-multi-locale --locales $WFX_L10N_LOCALES
           fi
 
@@ -626,7 +626,7 @@ jobs:
         shell: bash
         run: |
           dist_root="obj-${ARCH}/dist"
-          tar -C "$dist_root" -cf linux-aarch64-build.tar waterfox host/bin/mar host/bin/mbsdiff
+          tar -C "$dist_root" -cf linux-aarch64-build.tar fennec host/bin/mar host/bin/mbsdiff
 
       - name: Upload Linux ARM64 build outputs
         uses: namespace-actions/upload-artifact@f6ccaacc655aec41b93af180d1d7eef21af862d2 # v1

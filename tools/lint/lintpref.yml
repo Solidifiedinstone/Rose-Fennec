@@ -4,7 +4,7 @@ lintpref:
     include:
         - 'modules/libpref/init'
         - 'browser/app/profile/'
-        - 'waterfox/browser/app/profile/'
+        - 'fennec/browser/app/profile/'
         - 'mobile/android/app/'
         - 'devtools/client/preferences/'
         - 'browser/branding/'

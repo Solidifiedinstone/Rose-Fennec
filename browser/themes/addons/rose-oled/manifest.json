@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rose-oled@fennec"
+    }
+  },
+  "name": "Rose OLED",
+  "description": "The Rose OLED palette, shared with the other Rose applications.",
+  "author": "Rose Open Source Endeavours",
+  "version": "1.0.0",
+  "icons": {
+    "32": "icon.svg"
+  },
+  "theme": {
+    "colors": {
+      "frame": "#000000",
+      "frame_inactive": "#000000",
+      "tab_background_text": "#7c7986",
+      "tab_selected": "#141419",
+      "tab_text": "#f0eef2",
+      "tab_line": "#e0607e",
+      "tab_loading": "#e0607e",
+      "toolbar": "#000000",
+      "toolbar_text": "#f0eef2",
+      "toolbar_field": "#0a0a0d",
+      "toolbar_field_text": "#f0eef2",
+      "toolbar_field_border": "#1a1a20",
+      "toolbar_field_focus": "#141419",
+      "toolbar_field_text_focus": "#f0eef2",
+      "toolbar_field_border_focus": "#e0607e",
+      "toolbar_top_separator": "#1a1a20",
+      "toolbar_bottom_separator": "#1a1a20",
+      "toolbar_vertical_separator": "#1a1a20",
+      "ntp_background": "#000000",
+      "ntp_text": "#f0eef2",
+      "popup": "#0a0a0d",
+      "popup_text": "#f0eef2",
+      "popup_border": "#1a1a20",
+      "popup_highlight": "#7a3546",
+      "popup_highlight_text": "#f0eef2",
+      "sidebar": "#000000",
+      "sidebar_text": "#f0eef2",
+      "sidebar_border": "#1a1a20",
+      "sidebar_highlight": "#7a3546",
+      "sidebar_highlight_text": "#f0eef2",
+      "button_background_hover": "#0a0a0d",
+      "button_background_active": "#141419",
+      "icons": "#7c7986",
+      "icons_attention": "#e0607e",
+      "bookmark_text": "#f0eef2",
+      "error_text": "#e06c75"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

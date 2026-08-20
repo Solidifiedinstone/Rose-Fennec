@@ -206,6 +206,39 @@
       ]
     },
     {
+      "id": "3e1fed64-5ec7-4b1c-bedc-741fe3c59bc3",
+      "last_modified": 1707833224345,
+      "orders": [
+        {
+          "environment": {
+            "distributions": [
+              "MozillaOnline"
+            ]
+          },
+          "order": [
+            "baidu",
+            "bing",
+            "google",
+            "wikipedia*"
+          ]
+        },
+        {
+          "environment": {
+            "distributions": [
+              "qwant-001",
+              "qwant-002"
+            ]
+          },
+          "order": [
+            "qwant",
+            "qwantjr"
+          ]
+        }
+      ],
+      "recordType": "engineOrders",
+      "schema": 1707824831520
+    },
+    {
       "base": {
         "classification": "unknown",
         "name": "1&1 Suche",
@@ -320,11 +353,11 @@
     {
       "base": {
         "aliases": [
-          "百度",
+          "\u767e\u5ea6",
           "baidu"
         ],
         "classification": "general",
-        "name": "百度",
+        "name": "\u767e\u5ea6",
         "urls": {
           "search": {
             "base": "https://www.baidu.com/baidu",
@@ -642,7 +675,7 @@
     {
       "base": {
         "classification": "unknown",
-        "name": "Cốc Cốc",
+        "name": "C\u1ed1c C\u1ed1c",
         "partnerCode": "firefox",
         "urls": {
           "search": {
@@ -706,7 +739,7 @@
     {
       "base": {
         "classification": "unknown",
-        "name": "다음",
+        "name": "\ub2e4\uc74c",
         "urls": {
           "search": {
             "base": "https://search.daum.net/search",
@@ -2392,7 +2425,7 @@
     {
       "base": {
         "classification": "unknown",
-        "name": "GMX - Búsqueda web",
+        "name": "GMX - B\u00fasqueda web",
         "urls": {
           "search": {
             "base": "https://go.gmx.es/br/moz_search_web/",
@@ -3055,7 +3088,7 @@
     {
       "base": {
         "classification": "unknown",
-        "name": "พจนานุกรม ลองดู",
+        "name": "\u0e1e\u0e08\u0e19\u0e32\u0e19\u0e38\u0e01\u0e23\u0e21 \u0e25\u0e2d\u0e07\u0e14\u0e39",
         "urls": {
           "search": {
             "base": "https://dict.longdo.com/",
@@ -3283,7 +3316,7 @@
     {
       "base": {
         "classification": "unknown",
-        "name": "네이버",
+        "name": "\ub124\uc774\ubc84",
         "urls": {
           "search": {
             "base": "https://search.naver.com/search.naver",
@@ -3341,7 +3374,7 @@
     {
       "base": {
         "classification": "unknown",
-        "name": "Odpiralni Časi",
+        "name": "Odpiralni \u010casi",
         "urls": {
           "search": {
             "base": "https://www.odpiralnicasi.com/spots",
@@ -3662,7 +3695,7 @@
     {
       "base": {
         "classification": "unknown",
-        "name": "楽天市場",
+        "name": "\u697d\u5929\u5e02\u5834",
         "urls": {
           "search": {
             "base": "https://search.rakuten.co.jp/search/mall",
@@ -3689,7 +3722,7 @@
     {
       "base": {
         "classification": "unknown",
-        "name": "Readmoo 讀墨電子書",
+        "name": "Readmoo \u8b80\u58a8\u96fb\u5b50\u66f8",
         "urls": {
           "search": {
             "base": "https://readmoo.com/search/keyword",
@@ -3745,6 +3778,39 @@
             "allRegionsAndLocales": true
           },
           "optional": true
+        }
+      ]
+    },
+    {
+      "base": {
+        "aliases": [
+          "searxng",
+          "searx",
+          "rose"
+        ],
+        "classification": "general",
+        "name": "SearXNG",
+        "urls": {
+          "search": {
+            "base": "http://127.0.0.1:8080/search",
+            "searchTermParamName": "q"
+          },
+          "suggestions": {
+            "base": "http://127.0.0.1:8080/autocompleter",
+            "searchTermParamName": "q"
+          }
+        }
+      },
+      "id": "b1f6f9a2-6f0e-4d5c-9d1a-7f2f0f9a1c3d",
+      "identifier": "rose-searxng",
+      "last_modified": 1755640000000,
+      "recordType": "engine",
+      "schema": 1755640000000,
+      "variants": [
+        {
+          "environment": {
+            "allRegionsAndLocales": true
+          }
         }
       ]
     },
@@ -4154,7 +4220,7 @@
         "name": "Wikipedia (nn)",
         "urls": {
           "search": {
-            "base": "https://nn.wikipedia.org/wiki/Spesial:Søk",
+            "base": "https://nn.wikipedia.org/wiki/Spesial:S\u00f8k",
             "params": [
               {
                 "name": "sourceid",
@@ -4199,7 +4265,7 @@
         "name": "Wikipedia (nb)",
         "urls": {
           "search": {
-            "base": "https://no.wikipedia.org/wiki/Spesial:Søk",
+            "base": "https://no.wikipedia.org/wiki/Spesial:S\u00f8k",
             "params": [
               {
                 "name": "sourceid",
@@ -4329,14 +4395,14 @@
     {
       "base": {
         "aliases": [
-          "ويكيبيديا",
+          "\u0648\u064a\u0643\u064a\u0628\u064a\u062f\u064a\u0627",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "ويكيبيديا (ar)",
+        "name": "\u0648\u064a\u0643\u064a\u0628\u064a\u062f\u064a\u0627 (ar)",
         "urls": {
           "search": {
-            "base": "https://ar.wikipedia.org/wiki/خاص:بحث",
+            "base": "https://ar.wikipedia.org/wiki/\u062e\u0627\u0635:\u0628\u062d\u062b",
             "params": [
               {
                 "name": "sourceid",
@@ -4427,7 +4493,7 @@
         "name": "Vikipediya (az)",
         "urls": {
           "search": {
-            "base": "https://az.wikipedia.org/wiki/Xüsusi:Axtar",
+            "base": "https://az.wikipedia.org/wiki/X\u00fcsusi:Axtar",
             "params": [
               {
                 "name": "sourceid",
@@ -4466,14 +4532,14 @@
     {
       "base": {
         "aliases": [
-          "вікіпедыя",
+          "\u0432\u0456\u043a\u0456\u043f\u0435\u0434\u044b\u044f",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Вікіпедыя (be)",
+        "name": "\u0412\u0456\u043a\u0456\u043f\u0435\u0434\u044b\u044f (be)",
         "urls": {
           "search": {
-            "base": "https://be.wikipedia.org/wiki/Адмысловае:Search",
+            "base": "https://be.wikipedia.org/wiki/\u0410\u0434\u043c\u044b\u0441\u043b\u043e\u0432\u0430\u0435:Search",
             "params": [
               {
                 "name": "sourceid",
@@ -4512,13 +4578,13 @@
     {
       "base": {
         "aliases": [
-          "вікіпэдыя"
+          "\u0432\u0456\u043a\u0456\u043f\u044d\u0434\u044b\u044f"
         ],
         "classification": "unknown",
-        "name": "Вікіпэдыя (be-tarask)",
+        "name": "\u0412\u0456\u043a\u0456\u043f\u044d\u0434\u044b\u044f (be-tarask)",
         "urls": {
           "search": {
-            "base": "https://be-tarask.wikipedia.org/wiki/Спэцыяльныя:Пошук",
+            "base": "https://be-tarask.wikipedia.org/wiki/\u0421\u043f\u044d\u0446\u044b\u044f\u043b\u044c\u043d\u044b\u044f:\u041f\u043e\u0448\u0443\u043a",
             "params": [
               {
                 "name": "sourceid",
@@ -4557,14 +4623,14 @@
     {
       "base": {
         "aliases": [
-          "уикипедия",
+          "\u0443\u0438\u043a\u0438\u043f\u0435\u0434\u0438\u044f",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Уикипедия (bg)",
+        "name": "\u0423\u0438\u043a\u0438\u043f\u0435\u0434\u0438\u044f (bg)",
         "urls": {
           "search": {
-            "base": "https://bg.wikipedia.org/wiki/Специални:Търсене",
+            "base": "https://bg.wikipedia.org/wiki/\u0421\u043f\u0435\u0446\u0438\u0430\u043b\u043d\u0438:\u0422\u044a\u0440\u0441\u0435\u043d\u0435",
             "params": [
               {
                 "name": "sourceid",
@@ -4603,14 +4669,14 @@
     {
       "base": {
         "aliases": [
-          "উইকিপিডিয়া",
+          "\u0989\u0987\u0995\u09bf\u09aa\u09bf\u09a1\u09bf\u09af\u09bc\u09be",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "উইকিপিডিয়া (bn)",
+        "name": "\u0989\u0987\u0995\u09bf\u09aa\u09bf\u09a1\u09bf\u09af\u09bc\u09be (bn)",
         "urls": {
           "search": {
-            "base": "https://bn.wikipedia.org/wiki/বিশেষ:Search",
+            "base": "https://bn.wikipedia.org/wiki/\u09ac\u09bf\u09b6\u09c7\u09b7:Search",
             "params": [
               {
                 "name": "sourceid",
@@ -4741,11 +4807,11 @@
     {
       "base": {
         "aliases": [
-          "viquipèdia",
+          "viquip\u00e8dia",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Viquipèdia (ca)",
+        "name": "Viquip\u00e8dia (ca)",
         "urls": {
           "search": {
             "base": "https://ca.wikipedia.org/wiki/Especial:Cerca",
@@ -4841,7 +4907,7 @@
         "name": "Wikipedie (cs)",
         "urls": {
           "search": {
-            "base": "https://cs.wikipedia.org/wiki/Speciální:Hledání",
+            "base": "https://cs.wikipedia.org/wiki/Speci\u00e1ln\u00ed:Hled\u00e1n\u00ed",
             "params": [
               {
                 "name": "sourceid",
@@ -4886,7 +4952,7 @@
         "name": "Wikipedia (da)",
         "urls": {
           "search": {
-            "base": "https://da.wikipedia.org/wiki/Speciel:Søgning",
+            "base": "https://da.wikipedia.org/wiki/Speciel:S\u00f8gning",
             "params": [
               {
                 "name": "sourceid",
@@ -4977,7 +5043,7 @@
         "name": "Wikipedija (dsb)",
         "urls": {
           "search": {
-            "base": "https://dsb.wikipedia.org/wiki/Specialne:Pytaś",
+            "base": "https://dsb.wikipedia.org/wiki/Specialne:Pyta\u015b",
             "params": [
               {
                 "name": "sourceid",
@@ -5016,14 +5082,14 @@
     {
       "base": {
         "aliases": [
-          "βικιπαίδεια",
+          "\u03b2\u03b9\u03ba\u03b9\u03c0\u03b1\u03af\u03b4\u03b5\u03b9\u03b1",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Βικιπαίδεια (el)",
+        "name": "\u0392\u03b9\u03ba\u03b9\u03c0\u03b1\u03af\u03b4\u03b5\u03b9\u03b1 (el)",
         "urls": {
           "search": {
-            "base": "https://el.wikipedia.org/wiki/Ειδικό:Αναζήτηση",
+            "base": "https://el.wikipedia.org/wiki/\u0395\u03b9\u03b4\u03b9\u03ba\u03cc:\u0391\u03bd\u03b1\u03b6\u03ae\u03c4\u03b7\u03c3\u03b7",
             "params": [
               {
                 "name": "sourceid",
@@ -5069,7 +5135,7 @@
         "name": "Vikipedio (eo)",
         "urls": {
           "search": {
-            "base": "https://eo.wikipedia.org/wiki/Specialaĵo:Serĉi",
+            "base": "https://eo.wikipedia.org/wiki/Speciala\u0135o:Ser\u0109i",
             "params": [
               {
                 "name": "sourceid",
@@ -5249,14 +5315,14 @@
     {
       "base": {
         "aliases": [
-          "ویکی‌پدیا",
+          "\u0648\u06cc\u06a9\u06cc\u200c\u067e\u062f\u06cc\u0627",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "ویکی‌پدیا (fa)",
+        "name": "\u0648\u06cc\u06a9\u06cc\u200c\u067e\u062f\u06cc\u0627 (fa)",
         "urls": {
           "search": {
-            "base": "https://fa.wikipedia.org/wiki/ویژه:جستجو",
+            "base": "https://fa.wikipedia.org/wiki/\u0648\u06cc\u0698\u0647:\u062c\u0633\u062a\u062c\u0648",
             "params": [
               {
                 "name": "sourceid",
@@ -5340,14 +5406,14 @@
     {
       "base": {
         "aliases": [
-          "wikipédia",
+          "wikip\u00e9dia",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Wikipédia (fr)",
+        "name": "Wikip\u00e9dia (fr)",
         "urls": {
           "search": {
-            "base": "https://fr.wikipedia.org/wiki/Spécial:Recherche",
+            "base": "https://fr.wikipedia.org/wiki/Sp\u00e9cial:Recherche",
             "params": [
               {
                 "name": "sourceid",
@@ -5434,11 +5500,11 @@
     {
       "base": {
         "aliases": [
-          "vicipéid",
+          "vicip\u00e9id",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Vicipéid (ga)",
+        "name": "Vicip\u00e9id (ga)",
         "urls": {
           "search": {
             "base": "https://ga.wikipedia.org/wiki/Speisialta:Search",
@@ -5487,7 +5553,7 @@
         "name": "Uicipeid (gd)",
         "urls": {
           "search": {
-            "base": "https://gd.wikipedia.org/wiki/Sònraichte:Search",
+            "base": "https://gd.wikipedia.org/wiki/S\u00f2nraichte:Search",
             "params": [
               {
                 "name": "sourceid",
@@ -5571,14 +5637,14 @@
     {
       "base": {
         "aliases": [
-          "vikipetã",
+          "vikipet\u00e3",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Vikipetã (gn)",
+        "name": "Vikipet\u00e3 (gn)",
         "urls": {
           "search": {
-            "base": "https://gn.wikipedia.org/wiki/Mba'echĩchĩ:Buscar",
+            "base": "https://gn.wikipedia.org/wiki/Mba'ech\u0129ch\u0129:Buscar",
             "params": [
               {
                 "name": "sourceid",
@@ -5617,14 +5683,14 @@
     {
       "base": {
         "aliases": [
-          "વિકિપીડિયા",
+          "\u0ab5\u0abf\u0a95\u0abf\u0aaa\u0ac0\u0aa1\u0abf\u0aaf\u0abe",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "વિકિપીડિયા (gu)",
+        "name": "\u0ab5\u0abf\u0a95\u0abf\u0aaa\u0ac0\u0aa1\u0abf\u0aaf\u0abe (gu)",
         "urls": {
           "search": {
-            "base": "https://gu.wikipedia.org/wiki/વિશેષ:શોધ",
+            "base": "https://gu.wikipedia.org/wiki/\u0ab5\u0abf\u0ab6\u0ac7\u0ab7:\u0ab6\u0acb\u0aa7",
             "params": [
               {
                 "name": "sourceid",
@@ -5663,14 +5729,14 @@
     {
       "base": {
         "aliases": [
-          "ויקיפדיה",
+          "\u05d5\u05d9\u05e7\u05d9\u05e4\u05d3\u05d9\u05d4",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "ויקיפדיה",
+        "name": "\u05d5\u05d9\u05e7\u05d9\u05e4\u05d3\u05d9\u05d4",
         "urls": {
           "search": {
-            "base": "https://he.wikipedia.org/wiki/מיוחד:חיפוש",
+            "base": "https://he.wikipedia.org/wiki/\u05de\u05d9\u05d5\u05d7\u05d3:\u05d7\u05d9\u05e4\u05d5\u05e9",
             "params": [
               {
                 "name": "sourceid",
@@ -5709,14 +5775,14 @@
     {
       "base": {
         "aliases": [
-          "विकिपीडिया",
+          "\u0935\u093f\u0915\u093f\u092a\u0940\u0921\u093f\u092f\u093e",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "विकिपीडिया (hi)",
+        "name": "\u0935\u093f\u0915\u093f\u092a\u0940\u0921\u093f\u092f\u093e (hi)",
         "urls": {
           "search": {
-            "base": "https://hi.wikipedia.org/wiki/विशेष:खोज",
+            "base": "https://hi.wikipedia.org/wiki/\u0935\u093f\u0936\u0947\u0937:\u0916\u094b\u091c",
             "params": [
               {
                 "name": "sourceid",
@@ -5762,7 +5828,7 @@
         "name": "Wikipedija (hr)",
         "urls": {
           "search": {
-            "base": "https://hr.wikipedia.org/wiki/Posebno:Traži",
+            "base": "https://hr.wikipedia.org/wiki/Posebno:Tra\u017ei",
             "params": [
               {
                 "name": "sourceid",
@@ -5808,7 +5874,7 @@
         "name": "Wikipedija (hsb)",
         "urls": {
           "search": {
-            "base": "https://hsb.wikipedia.org/wiki/Specialnje:Pytać",
+            "base": "https://hsb.wikipedia.org/wiki/Specialnje:Pyta\u0107",
             "params": [
               {
                 "name": "sourceid",
@@ -5847,14 +5913,14 @@
     {
       "base": {
         "aliases": [
-          "wikipédia",
+          "wikip\u00e9dia",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Wikipédia (hu)",
+        "name": "Wikip\u00e9dia (hu)",
         "urls": {
           "search": {
-            "base": "https://hu.wikipedia.org/wiki/Speciális:Keresés",
+            "base": "https://hu.wikipedia.org/wiki/Speci\u00e1lis:Keres\u00e9s",
             "params": [
               {
                 "name": "sourceid",
@@ -5893,14 +5959,14 @@
     {
       "base": {
         "aliases": [
-          "վիքիպեդիա",
+          "\u057e\u056b\u0584\u056b\u057a\u0565\u0564\u056b\u0561",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Վիքիպեդիա (hy)",
+        "name": "\u054e\u056b\u0584\u056b\u057a\u0565\u0564\u056b\u0561 (hy)",
         "urls": {
           "search": {
-            "base": "https://hy.wikipedia.org/wiki/Սպասարկող:Որոնել",
+            "base": "https://hy.wikipedia.org/wiki/\u054d\u057a\u0561\u057d\u0561\u0580\u056f\u0578\u0572:\u0548\u0580\u0578\u0576\u0565\u056c",
             "params": [
               {
                 "name": "sourceid",
@@ -6035,7 +6101,7 @@
         "name": "Wikipedia (is)",
         "urls": {
           "search": {
-            "base": "https://is.wikipedia.org/wiki/Kerfissíða:Leit",
+            "base": "https://is.wikipedia.org/wiki/Kerfiss\u00ed\u00f0a:Leit",
             "params": [
               {
                 "name": "sourceid",
@@ -6127,7 +6193,7 @@
         "name": "Wikipedia (ja)",
         "urls": {
           "search": {
-            "base": "https://ja.wikipedia.org/wiki/特別:検索",
+            "base": "https://ja.wikipedia.org/wiki/\u7279\u5225:\u691c\u7d22",
             "params": [
               {
                 "name": "sourceid",
@@ -6167,14 +6233,14 @@
     {
       "base": {
         "aliases": [
-          "ვიკიპედია",
+          "\u10d5\u10d8\u10d9\u10d8\u10de\u10d4\u10d3\u10d8\u10d0",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "ვიკიპედია (ka)",
+        "name": "\u10d5\u10d8\u10d9\u10d8\u10de\u10d4\u10d3\u10d8\u10d0 (ka)",
         "urls": {
           "search": {
-            "base": "https://ka.wikipedia.org/wiki/სპეციალური:ძიება",
+            "base": "https://ka.wikipedia.org/wiki/\u10e1\u10de\u10d4\u10ea\u10d8\u10d0\u10da\u10e3\u10e0\u10d8:\u10eb\u10d8\u10d4\u10d1\u10d0",
             "params": [
               {
                 "name": "sourceid",
@@ -6258,14 +6324,14 @@
     {
       "base": {
         "aliases": [
-          "уикипедия",
+          "\u0443\u0438\u043a\u0438\u043f\u0435\u0434\u0438\u044f",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Уикипедия (kk)",
+        "name": "\u0423\u0438\u043a\u0438\u043f\u0435\u0434\u0438\u044f (kk)",
         "urls": {
           "search": {
-            "base": "https://kk.wikipedia.org/wiki/Арнайы:Іздеу",
+            "base": "https://kk.wikipedia.org/wiki/\u0410\u0440\u043d\u0430\u0439\u044b:\u0406\u0437\u0434\u0435\u0443",
             "params": [
               {
                 "name": "sourceid",
@@ -6304,14 +6370,14 @@
     {
       "base": {
         "aliases": [
-          "វិគីភីឌា",
+          "\u179c\u17b7\u1782\u17b8\u1797\u17b8\u178c\u17b6",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "វិគីភីឌា (km)",
+        "name": "\u179c\u17b7\u1782\u17b8\u1797\u17b8\u178c\u17b6 (km)",
         "urls": {
           "search": {
-            "base": "https://km.wikipedia.org/wiki/ពិសេស:ស្វែងរក",
+            "base": "https://km.wikipedia.org/wiki/\u1796\u17b7\u179f\u17c1\u179f:\u179f\u17d2\u179c\u17c2\u1784\u179a\u1780",
             "params": [
               {
                 "name": "sourceid",
@@ -6350,14 +6416,14 @@
     {
       "base": {
         "aliases": [
-          "ವಿಕಿಪೀಡಿಯ",
+          "\u0cb5\u0cbf\u0c95\u0cbf\u0caa\u0cc0\u0ca1\u0cbf\u0caf",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "ವಿಕಿಪೀಡಿಯ (kn)",
+        "name": "\u0cb5\u0cbf\u0c95\u0cbf\u0caa\u0cc0\u0ca1\u0cbf\u0caf (kn)",
         "urls": {
           "search": {
-            "base": "https://kn.wikipedia.org/wiki/ವಿಶೇಷ:Search",
+            "base": "https://kn.wikipedia.org/wiki/\u0cb5\u0cbf\u0cb6\u0cc7\u0cb7:Search",
             "params": [
               {
                 "name": "sourceid",
@@ -6396,14 +6462,14 @@
     {
       "base": {
         "aliases": [
-          "위키백과",
+          "\uc704\ud0a4\ubc31\uacfc",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "위키백과 (ko)",
+        "name": "\uc704\ud0a4\ubc31\uacfc (ko)",
         "urls": {
           "search": {
-            "base": "https://ko.wikipedia.org/wiki/특수기능:찾기",
+            "base": "https://ko.wikipedia.org/wiki/\ud2b9\uc218\uae30\ub2a5:\ucc3e\uae30",
             "params": [
               {
                 "name": "sourceid",
@@ -6448,7 +6514,7 @@
         "name": "Wikipedia (lij)",
         "urls": {
           "search": {
-            "base": "https://lij.wikipedia.org/wiki/Speçiale:Riçerca",
+            "base": "https://lij.wikipedia.org/wiki/Spe\u00e7iale:Ri\u00e7erca",
             "params": [
               {
                 "name": "sourceid",
@@ -6487,14 +6553,14 @@
     {
       "base": {
         "aliases": [
-          "ວິກິພີເດຍ",
+          "\u0ea7\u0eb4\u0e81\u0eb4\u0e9e\u0eb5\u0ec0\u0e94\u0e8d",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "ວິກິພີເດຍ (lo)",
+        "name": "\u0ea7\u0eb4\u0e81\u0eb4\u0e9e\u0eb5\u0ec0\u0e94\u0e8d (lo)",
         "urls": {
           "search": {
-            "base": "https://lo.wikipedia.org/wiki/ພິເສດ:ຊອກຫາ",
+            "base": "https://lo.wikipedia.org/wiki/\u0e9e\u0eb4\u0ec0\u0eaa\u0e94:\u0e8a\u0ead\u0e81\u0eab\u0eb2",
             "params": [
               {
                 "name": "sourceid",
@@ -6540,7 +6606,7 @@
         "name": "Vikipedija (lt)",
         "urls": {
           "search": {
-            "base": "https://lt.wikipedia.org/wiki/Specialus:Paieška",
+            "base": "https://lt.wikipedia.org/wiki/Specialus:Paie\u0161ka",
             "params": [
               {
                 "name": "sourceid",
@@ -6586,7 +6652,7 @@
         "name": "Vikipedeja (ltg)",
         "urls": {
           "search": {
-            "base": "https://ltg.wikipedia.org/wiki/Seviškuo:Search",
+            "base": "https://ltg.wikipedia.org/wiki/Sevi\u0161kuo:Search",
             "params": [
               {
                 "name": "sourceid",
@@ -6625,11 +6691,11 @@
     {
       "base": {
         "aliases": [
-          "vikipēdija",
+          "vikip\u0113dija",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Vikipēdija (lv)",
+        "name": "Vikip\u0113dija (lv)",
         "urls": {
           "search": {
             "base": "https://lv.wikipedia.org/wiki/Special:Search",
@@ -6671,14 +6737,14 @@
     {
       "base": {
         "aliases": [
-          "википедија",
+          "\u0432\u0438\u043a\u0438\u043f\u0435\u0434\u0438\u0458\u0430",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Википедија (mk)",
+        "name": "\u0412\u0438\u043a\u0438\u043f\u0435\u0434\u0438\u0458\u0430 (mk)",
         "urls": {
           "search": {
-            "base": "https://mk.wikipedia.org/wiki/Специјална:Барај",
+            "base": "https://mk.wikipedia.org/wiki/\u0421\u043f\u0435\u0446\u0438\u0458\u0430\u043b\u043d\u0430:\u0411\u0430\u0440\u0430\u0458",
             "params": [
               {
                 "name": "sourceid",
@@ -6717,14 +6783,14 @@
     {
       "base": {
         "aliases": [
-          "विकिपीडिया",
+          "\u0935\u093f\u0915\u093f\u092a\u0940\u0921\u093f\u092f\u093e",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "विकिपीडिया (mr)",
+        "name": "\u0935\u093f\u0915\u093f\u092a\u0940\u0921\u093f\u092f\u093e (mr)",
         "urls": {
           "search": {
-            "base": "https://mr.wikipedia.org/wiki/विशेष:शोधा",
+            "base": "https://mr.wikipedia.org/wiki/\u0935\u093f\u0936\u0947\u0937:\u0936\u094b\u0927\u093e",
             "params": [
               {
                 "name": "sourceid",
@@ -6808,11 +6874,11 @@
     {
       "base": {
         "aliases": [
-          "ဝီကီပီးဒီးယား",
+          "\u101d\u102e\u1000\u102e\u1015\u102e\u1038\u1012\u102e\u1038\u101a\u102c\u1038",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "ဝီကီပီးဒီးယား (my)",
+        "name": "\u101d\u102e\u1000\u102e\u1015\u102e\u1038\u1012\u102e\u1038\u101a\u102c\u1038 (my)",
         "urls": {
           "search": {
             "base": "https://my.wikipedia.org/wiki/Special:Search",
@@ -6854,14 +6920,14 @@
     {
       "base": {
         "aliases": [
-          "विकिपिडिया",
+          "\u0935\u093f\u0915\u093f\u092a\u093f\u0921\u093f\u092f\u093e",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "विकिपिडिया (ne)",
+        "name": "\u0935\u093f\u0915\u093f\u092a\u093f\u0921\u093f\u092f\u093e (ne)",
         "urls": {
           "search": {
-            "base": "https://ne.wikipedia.org/wiki/विशेष:Search",
+            "base": "https://ne.wikipedia.org/wiki/\u0935\u093f\u0936\u0947\u0937:Search",
             "params": [
               {
                 "name": "sourceid",
@@ -6945,14 +7011,14 @@
     {
       "base": {
         "aliases": [
-          "wikipèdia",
+          "wikip\u00e8dia",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Wikipèdia (oc)",
+        "name": "Wikip\u00e8dia (oc)",
         "urls": {
           "search": {
-            "base": "https://oc.wikipedia.org/wiki/Especial:Recèrca",
+            "base": "https://oc.wikipedia.org/wiki/Especial:Rec\u00e8rca",
             "params": [
               {
                 "name": "sourceid",
@@ -6991,14 +7057,14 @@
     {
       "base": {
         "aliases": [
-          "ਵਿਕੀਪੀਡੀਆ",
+          "\u0a35\u0a3f\u0a15\u0a40\u0a2a\u0a40\u0a21\u0a40\u0a06",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "ਵਿਕੀਪੀਡੀਆ (pa)",
+        "name": "\u0a35\u0a3f\u0a15\u0a40\u0a2a\u0a40\u0a21\u0a40\u0a06 (pa)",
         "urls": {
           "search": {
-            "base": "https://pa.wikipedia.org/wiki/ਖ਼ਾਸ:ਖੋਜੋ",
+            "base": "https://pa.wikipedia.org/wiki/\u0a16\u0a3c\u0a3e\u0a38:\u0a16\u0a4b\u0a1c\u0a4b",
             "params": [
               {
                 "name": "sourceid",
@@ -7083,11 +7149,11 @@
     {
       "base": {
         "aliases": [
-          "wikipédia",
+          "wikip\u00e9dia",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Wikipédia (pt)",
+        "name": "Wikip\u00e9dia (pt)",
         "urls": {
           "search": {
             "base": "https://pt.wikipedia.org/wiki/Especial:Pesquisar",
@@ -7181,7 +7247,7 @@
         "name": "Wikipedia (ro)",
         "urls": {
           "search": {
-            "base": "https://ro.wikipedia.org/wiki/Special:Căutare",
+            "base": "https://ro.wikipedia.org/wiki/Special:C\u0103utare",
             "params": [
               {
                 "name": "sourceid",
@@ -7220,14 +7286,14 @@
     {
       "base": {
         "aliases": [
-          "википедия",
+          "\u0432\u0438\u043a\u0438\u043f\u0435\u0434\u0438\u044f",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Википедия (ru)",
+        "name": "\u0412\u0438\u043a\u0438\u043f\u0435\u0434\u0438\u044f (ru)",
         "urls": {
           "search": {
-            "base": "https://ru.wikipedia.org/wiki/Служебная:Поиск",
+            "base": "https://ru.wikipedia.org/wiki/\u0421\u043b\u0443\u0436\u0435\u0431\u043d\u0430\u044f:\u041f\u043e\u0438\u0441\u043a",
             "params": [
               {
                 "name": "sourceid",
@@ -7266,14 +7332,14 @@
     {
       "base": {
         "aliases": [
-          "විකිපීඩියා",
+          "\u0dc0\u0dd2\u0d9a\u0dd2\u0db4\u0dd3\u0da9\u0dd2\u0dba\u0dcf",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "විකිපීඩියා (si)",
+        "name": "\u0dc0\u0dd2\u0d9a\u0dd2\u0db4\u0dd3\u0da9\u0dd2\u0dba\u0dcf (si)",
         "urls": {
           "search": {
-            "base": "https://si.wikipedia.org/wiki/විශේෂ:ගවේෂණය",
+            "base": "https://si.wikipedia.org/wiki/\u0dc0\u0dd2\u0dc1\u0dda\u0dc2:\u0d9c\u0dc0\u0dda\u0dc2\u0dab\u0dba",
             "params": [
               {
                 "name": "sourceid",
@@ -7312,14 +7378,14 @@
     {
       "base": {
         "aliases": [
-          "wikipédia",
+          "wikip\u00e9dia",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Wikipédia (sk)",
+        "name": "Wikip\u00e9dia (sk)",
         "urls": {
           "search": {
-            "base": "https://sk.wikipedia.org/wiki/Špeciálne:Hľadanie",
+            "base": "https://sk.wikipedia.org/wiki/\u0160peci\u00e1lne:H\u013eadanie",
             "params": [
               {
                 "name": "sourceid",
@@ -7410,7 +7476,7 @@
         "name": "Wikipedia (sq)",
         "urls": {
           "search": {
-            "base": "https://sq.wikipedia.org/wiki/Speciale:Kërkim",
+            "base": "https://sq.wikipedia.org/wiki/Speciale:K\u00ebrkim",
             "params": [
               {
                 "name": "sourceid",
@@ -7449,14 +7515,14 @@
     {
       "base": {
         "aliases": [
-          "википедија",
+          "\u0432\u0438\u043a\u0438\u043f\u0435\u0434\u0438\u0458\u0430",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Википедија (sr)",
+        "name": "\u0412\u0438\u043a\u0438\u043f\u0435\u0434\u0438\u0458\u0430 (sr)",
         "urls": {
           "search": {
-            "base": "https://sr.wikipedia.org/wiki/Посебно:Претражи",
+            "base": "https://sr.wikipedia.org/wiki/\u041f\u043e\u0441\u0435\u0431\u043d\u043e:\u041f\u0440\u0435\u0442\u0440\u0430\u0436\u0438",
             "params": [
               {
                 "name": "sourceid",
@@ -7501,7 +7567,7 @@
         "name": "Wikipedia (sv)",
         "urls": {
           "search": {
-            "base": "https://sv.wikipedia.org/wiki/Special:Sök",
+            "base": "https://sv.wikipedia.org/wiki/Special:S\u00f6k",
             "params": [
               {
                 "name": "sourceid",
@@ -7540,14 +7606,14 @@
     {
       "base": {
         "aliases": [
-          "விக்கிப்பீடியா",
+          "\u0bb5\u0bbf\u0b95\u0bcd\u0b95\u0bbf\u0baa\u0bcd\u0baa\u0bc0\u0b9f\u0bbf\u0baf\u0bbe",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "விக்கிப்பீடியா (ta)",
+        "name": "\u0bb5\u0bbf\u0b95\u0bcd\u0b95\u0bbf\u0baa\u0bcd\u0baa\u0bc0\u0b9f\u0bbf\u0baf\u0bbe (ta)",
         "urls": {
           "search": {
-            "base": "https://ta.wikipedia.org/wiki/சிறப்பு:Search",
+            "base": "https://ta.wikipedia.org/wiki/\u0b9a\u0bbf\u0bb1\u0baa\u0bcd\u0baa\u0bc1:Search",
             "params": [
               {
                 "name": "sourceid",
@@ -7586,14 +7652,14 @@
     {
       "base": {
         "aliases": [
-          "వికీపీడియా",
+          "\u0c35\u0c3f\u0c15\u0c40\u0c2a\u0c40\u0c21\u0c3f\u0c2f\u0c3e",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "వికీపీడియా (te)",
+        "name": "\u0c35\u0c3f\u0c15\u0c40\u0c2a\u0c40\u0c21\u0c3f\u0c2f\u0c3e (te)",
         "urls": {
           "search": {
-            "base": "https://te.wikipedia.org/wiki/ప్రత్యేక:అన్వేషణ",
+            "base": "https://te.wikipedia.org/wiki/\u0c2a\u0c4d\u0c30\u0c24\u0c4d\u0c2f\u0c47\u0c15:\u0c05\u0c28\u0c4d\u0c35\u0c47\u0c37\u0c23",
             "params": [
               {
                 "name": "sourceid",
@@ -7632,14 +7698,14 @@
     {
       "base": {
         "aliases": [
-          "วิกิพีเดีย",
+          "\u0e27\u0e34\u0e01\u0e34\u0e1e\u0e35\u0e40\u0e14\u0e35\u0e22",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "วิกิพีเดีย",
+        "name": "\u0e27\u0e34\u0e01\u0e34\u0e1e\u0e35\u0e40\u0e14\u0e35\u0e22",
         "urls": {
           "search": {
-            "base": "https://th.wikipedia.org/wiki/พิเศษ:ค้นหา",
+            "base": "https://th.wikipedia.org/wiki/\u0e1e\u0e34\u0e40\u0e28\u0e29:\u0e04\u0e49\u0e19\u0e2b\u0e32",
             "params": [
               {
                 "name": "sourceid",
@@ -7730,7 +7796,7 @@
         "name": "Vikipedi (tr)",
         "urls": {
           "search": {
-            "base": "https://tr.wikipedia.org/wiki/Özel:Ara",
+            "base": "https://tr.wikipedia.org/wiki/\u00d6zel:Ara",
             "params": [
               {
                 "name": "sourceid",
@@ -7769,14 +7835,14 @@
     {
       "base": {
         "aliases": [
-          "вікіпедія",
+          "\u0432\u0456\u043a\u0456\u043f\u0435\u0434\u0456\u044f",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "Вікіпедія (uk)",
+        "name": "\u0412\u0456\u043a\u0456\u043f\u0435\u0434\u0456\u044f (uk)",
         "urls": {
           "search": {
-            "base": "https://uk.wikipedia.org/wiki/Спеціальна:Пошук",
+            "base": "https://uk.wikipedia.org/wiki/\u0421\u043f\u0435\u0446\u0456\u0430\u043b\u044c\u043d\u0430:\u041f\u043e\u0448\u0443\u043a",
             "params": [
               {
                 "name": "sourceid",
@@ -7815,14 +7881,14 @@
     {
       "base": {
         "aliases": [
-          "ویکیپیڈیا",
+          "\u0648\u06cc\u06a9\u06cc\u067e\u06cc\u0688\u06cc\u0627",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "ویکیپیڈیا (ur)",
+        "name": "\u0648\u06cc\u06a9\u06cc\u067e\u06cc\u0688\u06cc\u0627 (ur)",
         "urls": {
           "search": {
-            "base": "https://ur.wikipedia.org/wiki/خاص:تلاش",
+            "base": "https://ur.wikipedia.org/wiki/\u062e\u0627\u0635:\u062a\u0644\u0627\u0634",
             "params": [
               {
                 "name": "sourceid",
@@ -7913,7 +7979,7 @@
         "name": "Wikipedia (vi)",
         "urls": {
           "search": {
-            "base": "https://vi.wikipedia.org/wiki/Đặc_biệt:Tìm_kiếm",
+            "base": "https://vi.wikipedia.org/wiki/\u0110\u1eb7c_bi\u1ec7t:T\u00ecm_ki\u1ebfm",
             "params": [
               {
                 "name": "sourceid",
@@ -7997,14 +8063,14 @@
     {
       "base": {
         "aliases": [
-          "维基百科",
+          "\u7ef4\u57fa\u767e\u79d1",
           "wikipedia"
         ],
         "classification": "unknown",
-        "name": "维基百科",
+        "name": "\u7ef4\u57fa\u767e\u79d1",
         "urls": {
           "search": {
-            "base": "https://zh.wikipedia.org/wiki/Special:搜索",
+            "base": "https://zh.wikipedia.org/wiki/Special:\u641c\u7d22",
             "params": [
               {
                 "name": "sourceid",
@@ -8043,14 +8109,14 @@
     {
       "base": {
         "aliases": [
-          "維基百科",
+          "\u7dad\u57fa\u767e\u79d1",
           "wikipedia"
         ],
         "classification": "unknown",
         "name": "Wikipedia (zh)",
         "urls": {
           "search": {
-            "base": "https://zh.wikipedia.org/wiki/Special:搜索",
+            "base": "https://zh.wikipedia.org/wiki/Special:\u641c\u7d22",
             "params": [
               {
                 "name": "sourceid",
@@ -8093,10 +8159,10 @@
     {
       "base": {
         "classification": "unknown",
-        "name": "ವಿಕ್ಷನರಿ (kn)",
+        "name": "\u0cb5\u0cbf\u0c95\u0ccd\u0cb7\u0ca8\u0cb0\u0cbf (kn)",
         "urls": {
           "search": {
-            "base": "https://kn.wiktionary.org/wiki/ವಿಶೇಷ:Search",
+            "base": "https://kn.wiktionary.org/wiki/\u0cb5\u0cbf\u0cb6\u0cc7\u0cb7:Search",
             "searchTermParamName": "search"
           },
           "suggestions": {
@@ -8136,7 +8202,7 @@
         "name": "Wikiccionari (oc)",
         "urls": {
           "search": {
-            "base": "https://oc.wiktionary.org/wiki/Especial:Recèrca",
+            "base": "https://oc.wiktionary.org/wiki/Especial:Rec\u00e8rca",
             "searchTermParamName": "search"
           },
           "suggestions": {
@@ -8173,10 +8239,10 @@
     {
       "base": {
         "classification": "unknown",
-        "name": "விக்சனரி (ta)",
+        "name": "\u0bb5\u0bbf\u0b95\u0bcd\u0b9a\u0ba9\u0bb0\u0bbf (ta)",
         "urls": {
           "search": {
-            "base": "https://ta.wiktionary.org/wiki/சிறப்பு:Search",
+            "base": "https://ta.wiktionary.org/wiki/\u0b9a\u0bbf\u0bb1\u0baa\u0bcd\u0baa\u0bc1:Search",
             "searchTermParamName": "search"
           },
           "suggestions": {
@@ -8213,10 +8279,10 @@
     {
       "base": {
         "classification": "unknown",
-        "name": "విక్షనరీ (te)",
+        "name": "\u0c35\u0c3f\u0c15\u0c4d\u0c37\u0c28\u0c30\u0c40 (te)",
         "urls": {
           "search": {
-            "base": "https://te.wiktionary.org/wiki/ప్రత్యేక:అన్వేషణ",
+            "base": "https://te.wiktionary.org/wiki/\u0c2a\u0c4d\u0c30\u0c24\u0c4d\u0c2f\u0c47\u0c15:\u0c05\u0c28\u0c4d\u0c35\u0c47\u0c37\u0c23",
             "searchTermParamName": "search"
           },
           "suggestions": {
@@ -8329,7 +8395,7 @@
       "base": {
         "charset": "EUC-JP",
         "classification": "unknown",
-        "name": "Yahoo!オークション",
+        "name": "Yahoo!\u30aa\u30fc\u30af\u30b7\u30e7\u30f3",
         "urls": {
           "search": {
             "base": "https://auctions.yahoo.co.jp/search/search",
@@ -8388,39 +8454,6 @@
           "optional": true
         }
       ]
-    },
-    {
-      "id": "3e1fed64-5ec7-4b1c-bedc-741fe3c59bc3",
-      "last_modified": 1707833224345,
-      "orders": [
-        {
-          "environment": {
-            "distributions": [
-              "MozillaOnline"
-            ]
-          },
-          "order": [
-            "baidu",
-            "bing",
-            "google",
-            "wikipedia*"
-          ]
-        },
-        {
-          "environment": {
-            "distributions": [
-              "qwant-001",
-              "qwant-002"
-            ]
-          },
-          "order": [
-            "qwant",
-            "qwantjr"
-          ]
-        }
-      ],
-      "recordType": "engineOrders",
-      "schema": 1707824831520
     }
   ],
   "timestamp": 1783024776556

@@ -1,0 +1,207 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+
+### Localization for Developer Tools options
+
+
+## Default Developer Tools section
+
+# The heading
+options-select-default-tools-label = Công cụ nhà phát triển mặc định
+# The label for the explanation of the * marker on a tool which is currently not supported
+# for the target of the toolbox.
+options-tool-not-supported-label = * Không được hỗ trợ cho hộp công cụ đích hiện tại
+# The label for the heading of group of checkboxes corresponding to the developer tools
+# added by add-ons. This heading is hidden when there is no developer tool installed by add-ons.
+options-select-additional-tools-label = Công cụ phát triển được cài đặt bởi tiện ích
+# The label for the heading of group of checkboxes corresponding to the default developer
+# tool buttons.
+options-select-enabled-toolbox-buttons-label = Các nút trên hộp công cụ có sẵn
+# The label for the heading of the radiobox corresponding to the theme
+options-select-dev-tools-theme-label = Chủ đề
+
+## Inspector section
+
+# The heading
+options-context-inspector = Trình kiểm tra
+# The label for the checkbox option to show user agent styles
+options-show-user-agent-styles-label = Hiển thị kiểu của trình duyệt
+options-show-user-agent-styles-tooltip =
+    .title = Bật tính năng này sẽ hiển thị các kiểu mặc định được tải bởi trình duyệt.
+# The label for the checkbox option to show all anonymous content
+options-show-user-agent-shadow-dom-label = Hiển thị Shadow DOM của trình duyệt
+options-show-user-agent-shadow-dom-tooltip =
+    .title = Bật tính năng này sẽ hiển thị các phần tử Shadow DOM được trình duyệt xử lý.
+# The label for the checkbox option to enable collapse attributes
+options-collapse-attrs-label = Cắt bớt các thuộc tính DOM
+options-collapse-attrs-tooltip =
+    .title = Cắt ngắn các thuộc tính dài trong trình kiểm tra
+# The label for the checkbox option to enable the "drag to update" feature
+options-inspector-draggable-properties-label = Nhấp và kéo để chỉnh sửa giá trị kích thước
+options-inspector-draggable-properties-tooltip =
+    .title = Nhấp và kéo để chỉnh sửa các giá trị kích thước trong phần Quy tắc của Trình kiểm tra.
+# The label for the checkbox option to enable simplified highlighting on page elements
+# within the inspector for users who enabled prefers-reduced-motion = reduce
+options-inspector-simplified-highlighters-label = Sử dụng công cụ tô sáng đơn giản hơn với prefers-reduced-motion
+# The label for the checkbox option to make the Enter key move the focus to the next input
+# when editing a property name or value in the Inspector rules view
+options-inspector-rules-focus-next-on-enter-label = Focus trường nhập tiếp theo khi nhấn <kbd>Enter</kbd>
+options-inspector-rules-focus-next-on-enter-tooltip =
+    .title = Khi được bật, nhấn phím Enter khi chỉnh sửa bộ chọn, tên hoặc giá trị thuộc tính sẽ focus sang trường nhập tiếp theo.
+
+## "Default Color Unit" options for the Inspector
+
+options-default-color-unit-label = Đơn vị màu mặc định
+options-default-color-unit-authored = Theo bản gốc
+options-default-color-unit-hex = Thập lục phân
+options-default-color-unit-hsl = HSL(A)
+options-default-color-unit-rgb = RGB(A)
+options-default-color-unit-hwb = HWB
+options-default-color-unit-name = Tên màu
+
+## Web Console section
+
+# The heading
+options-webconsole-label = Web Console
+# The label for the checkbox that toggle whether the Split console is enabled
+options-webconsole-split-console-label = Bật bảng điều khiển chia tách
+options-webconsole-split-console-tooltip =
+    .title = Mở bảng điều khiển chia tách với phím Escape
+
+## Experimental section
+
+# The heading
+options-experimental-label = Các tính năng thử nghiệm
+# The label for the checkbox that toggles showing stylesheets in the debugger
+options-stylesheets-in-the-debugger-label = Hiện các stylesheet trong trình gỡ lỗi
+options-stylesheets-in-the-debugger-tooltip =
+    .title = Liệt kê và xem các stylesheet trong trình gỡ lỗi
+# The message shown for settings that indicates that the attached setting requires the
+# toolbox to be reopened to take effect.
+options-reopen-toolbox-message = (yêu cầu mở lại hộp công cụ)
+
+## Style Editor section
+
+# The heading
+options-styleeditor-label = Trình chỉnh sửa kiểu mẫu
+# The label for the checkbox that toggles autocompletion of css in the Style Editor
+options-stylesheet-autocompletion-label = Tự động điền CSS
+options-stylesheet-autocompletion-tooltip =
+    .title = Tự động điền các thuộc tính, giá trị và bộ chọn CSS trong trình chỉnh sửa kiểu mẫu khi bạn nhập
+
+## Screenshot section
+
+# The heading
+options-screenshot-label = Hành vi chụp màn hình
+# Label for the checkbox that toggles screenshot to clipboard feature
+options-screenshot-clipboard-only-label = Chỉ chụp màn hình vào bộ nhớ tạm
+options-screenshot-clipboard-tooltip2 =
+    .title = Lưu ảnh chụp màn hình trực tiếp vào bộ nhớ tạm
+# Label for the checkbox that toggles the camera shutter audio for screenshot tool
+options-screenshot-audio-label = Bật tiếng chụp ảnh
+options-screenshot-audio-tooltip =
+    .title = Bật âm thanh camera khi chụp ảnh màn hình
+
+## Editor section
+
+# The heading
+options-sourceeditor-label = Tùy chỉnh trình soạn thảo
+options-sourceeditor-detectindentation-tooltip =
+    .title = Dự đoán cách thụt lề dựa trên nội dung của mã nguồn
+options-sourceeditor-detectindentation-label = Phát hiện thụt lề
+options-sourceeditor-autoclosebrackets-tooltip =
+    .title = Tự động chèn dấu đóng
+options-sourceeditor-autoclosebrackets-label = Tự đóng dấu ngoặc
+options-sourceeditor-expandtab-tooltip =
+    .title = Sử dụng dấu cách thay cho ký tự tab
+options-sourceeditor-expandtab-label = Căn lề bằng khoảng trắng
+options-sourceeditor-tabsize-label = Kích cỡ phím tab
+options-sourceeditor-keybinding-label = Tổ hợp phím
+options-sourceeditor-keybinding-default-label = Mặc định
+
+## Local Mode section
+
+# The heading
+options-local-mode-label = Chế độ cục bộ (local mode)
+options-local-mode-only-work-locally = Chế độ cục bộ chỉ hoạt động cục bộ và bị vô hiệu hóa khi gỡ lỗi trong môi trường từ xa
+options-local-mode-behavior = Chế độ cục bộ cho phép bạn tải các tệp cục bộ thông qua URL HTTPS mà không cần bất kỳ phụ thuộc bên ngoài nào. Các URL chỉ có thể được tải từ các thẻ khi DevTools đang mở.
+options-local-mode-folder-label = Thư mục cục bộ:
+options-local-mode-choose-folder = Duyệt…
+    .title = Chọn một thư mục cục bộ để lưu trữ mapping này
+# Dialog's title when picking a folder for a mapping
+# Variables:
+#   $url (String): The url for the mapping being configured
+options-local-mode-choose-folder-picker-title = Chọn thư mục chế độ cục bộ cho: { $url }
+# Error shown when the folder is invalid
+# (can easily be triggered when using about:config and changing underlying mappings prefs)
+options-local-mode-folder-invalid = Thư mục này không tồn tại hoặc không hợp lệ.
+options-local-mode-toggle =
+    .title = Kích hoạt/vô hiệu hoá mapping cục bộ này
+options-local-mode-toggle-enable = Kích hoạt
+options-local-mode-toggle-disable = Vô hiệu hóa
+options-local-mode-navigate-to =
+    .title = Điều hướng đến URL mapping này
+# Dialog message prompted when clicking on the Delete button
+# Variables:
+#   $mappingOrigin (String): The origin for the mapping
+options-local-mode-confirm-deletion = Bạn có muốn xoá mapping “{ $mappingOrigin }”?
+options-local-mode-new-mapping = Thêm một mapping cục bộ mới
+
+## Advanced section
+
+# The heading (this item is also used in perftools.ftl)
+options-context-advanced-settings = Cài đặt nâng cao
+# The label for the checkbox that toggles the HTTP cache on or off
+options-disable-http-cache-label = Vô hiệu hóa bộ đệm HTTP (khi hộp công cụ đang mở)
+options-disable-http-cache-tooltip =
+    .title = Bật tùy chọn này sẽ vô hiệu hóa bộ đệm HTTP cho tất cả các thẻ có hộp công cụ mở. Service Worker không bị ảnh hưởng bởi tùy chọn này.
+# The label for checkbox that toggles JavaScript on or off
+options-disable-javascript-label-2 = Vô hiệu hóa JavaScript
+# The label for checkbox that toggles JavaScript on or off
+options-disable-javascript-label = Tắt JavaScript *
+options-disable-javascript-tooltip =
+    .title = Bật tùy chọn này sẽ vô hiệu hóa JavaScript cho thẻ hiện tại. Nếu thẻ hoặc hộp công cụ bị đóng thì sẽ tự động tắt tùy chọn này.
+# The label for checkbox that toggles chrome debugging, i.e. the devtools.chrome.enabled preference
+options-enable-chrome-label = Kích hoạt trình duyệt chrome và các hộp công cụ gỡ lỗi tiện ích
+options-enable-chrome-tooltip =
+    .title = Bật tùy chọn này sẽ cho phép bạn sử dụng các công cụ dành cho nhà phát triển khác nhau trong ngữ cảnh trình duyệt (thông qua Công cụ > Nhà phát triển web > Hộp công cụ trình duyệt) và gỡ lỗi các tiện ích từ trình quản lý tiện ích
+# The label for checkbox that toggles remote debugging, i.e. the devtools.debugger.remote-enabled preference
+options-enable-remote-label = Cho phép gỡ lỗi từ xa
+options-enable-remote-tooltip2 =
+    .title = Bật tùy chọn này sẽ cho phép gỡ lỗi phiên bản trình duyệt này từ xa
+# The label for checkbox that enables F12 as a shortcut to open DevTools
+options-enable-f12-label = Sử dụng phím F12 để mở hoặc đóng DevTools
+options-enable-f12-tooltip =
+    .title = Bật tùy chọn này sẽ liên kết phím F12 để mở hoặc đóng hộp công cụ DevTools
+# The label for checkbox that toggles custom formatters for objects
+options-enable-custom-formatters-label = Bật bộ định dạng tùy chỉnh
+options-enable-custom-formatters-tooltip =
+    .title = Bật tùy chọn này sẽ cho phép các trang web xác định bộ định dạng tùy chỉnh cho các đối tượng DOM
+# The label for checkbox that toggles the service workers testing over HTTP on or off.
+options-enable-service-workers-http-label = Cho phép Service Worker qua HTTP (khi hộp công cụ mở)
+options-enable-service-workers-http-tooltip =
+    .title = Bật tùy chọn này sẽ cho phép service workers qua HTTP cho tất cả các thẻ đang mở hộp công cụ.
+# The label for the checkbox that toggles source maps in all tools.
+options-source-maps-label = Bật bản đồ nguồn
+options-source-maps-tooltip =
+    .title = Nếu bạn bật tùy chọn này, các nguồn sẽ được ánh xạ trong các công cụ.
+# The message shown for settings that trigger page reload and will only apply to the current session
+# This appears underneath the applicable options (e.g. options-disable-javascript-label-2).
+options-context-triggers-page-refresh-temporary = (chỉ phiên hiện tại, tải lại trang)
+# The message shown for settings that trigger page reload and will only apply to the current session
+options-context-triggers-page-refresh = * Chỉ phiên hiện tại, tải lại trang
+# The message shown for settings that trigger page reload
+# This appears underneath the applicable options (e.g. options-show-user-agent-shadow-dom-label).
+options-context-triggers-page-refresh-persists = (tải lại trang)
+# This is used to add a * marker to the label for the Options Panel tool checkbox for the
+# tool which is not supported for the current toolbox target.
+# Variables:
+#   $toolLabel (String): The name of the tool not being supported
+options-tool-not-supported-marker = { $toolLabel } *
+# Used as a label for auto theme
+options-auto-theme-label = Tự động
+# This is the text that appears in the settings panel for panel that will be removed in future releases.
+# This entire text is treated as a link to an MDN page.
+options-deprecation-notice = Không còn được dùng nữa. Tìm hiểu thêm…

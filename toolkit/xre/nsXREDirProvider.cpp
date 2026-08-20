@@ -339,16 +339,16 @@ static nsresult GetSystemParentDirectory(nsIFile** aFile) {
   rv = GetOSXFolderType(kOnSystemDisk, kApplicationSupportFolderType,
                         getter_AddRefs(localDir));
   if (NS_SUCCEEDED(rv)) {
-    rv = localDir->AppendNative("Waterfox"_ns);
+    rv = localDir->AppendNative("Fennec"_ns);
   }
 #  else
   constexpr auto dirname =
 #    ifdef HAVE_USR_LIB64_DIR
-      "/usr/lib64/waterfox"_ns
+      "/usr/lib64/fennec"_ns
 #    elif defined(__OpenBSD__) || defined(__FreeBSD__)
-      "/usr/local/lib/waterfox"_ns
+      "/usr/local/lib/fennec"_ns
 #    else
-      "/usr/lib/waterfox"_ns
+      "/usr/lib/fennec"_ns
 #    endif
       ;
   rv = NS_NewNativeLocalFile(dirname, getter_AddRefs(localDir));
@@ -422,9 +422,9 @@ nsXREDirProvider::GetFile(const char* aProperty, bool* aPersistent,
                                   /* aForceLegacy */ true);
     NS_ENSURE_SUCCESS(rv, rv);
 #  if defined(XP_MACOSX)
-    rv = file->AppendNative("Waterfox"_ns);
+    rv = file->AppendNative("Fennec"_ns);
 #  else   // defined(XP_MACOSX)
-    rv = file->AppendNative(".waterfox"_ns);
+    rv = file->AppendNative(".fennec"_ns);
 #  endif  // defined(XP_MACOSX)
   }
 #endif  // defined(XP_UNIX) || defined(XP_MACOSX)
@@ -455,9 +455,9 @@ nsXREDirProvider::GetFile(const char* aProperty, bool* aPersistent,
 #  ifdef ENABLE_SYSTEM_EXTENSION_DIRS
 #    if defined(__OpenBSD__) || defined(__FreeBSD__)
     static const char* const sysLExtDir =
-        "/usr/local/share/waterfox/extensions";
+        "/usr/local/share/fennec/extensions";
 #    else
-    static const char* const sysLExtDir = "/usr/share/waterfox/extensions";
+    static const char* const sysLExtDir = "/usr/share/fennec/extensions";
 #    endif
     rv = NS_NewNativeLocalFile(nsDependentCString(sysLExtDir),
                                getter_AddRefs(file));
@@ -985,7 +985,7 @@ nsresult nsXREDirProvider::GetUpdateRootDir(nsIFile** aResult,
             nsDependentCString(hasVendor ? GetAppVendor() : GetAppName())))) {
       return NS_ERROR_FAILURE;
     }
-  } else if (NS_FAILED(localDir->AppendNative("Waterfox"_ns))) {
+  } else if (NS_FAILED(localDir->AppendNative("Fennec"_ns))) {
     return NS_ERROR_FAILURE;
   }
 
@@ -1283,7 +1283,7 @@ nsresult nsXREDirProvider::AppendSysUserExtensionPath(nsIFile* aFile) {
 
 #if defined(XP_MACOSX) || defined(XP_WIN)
 
-  static const char* const sXR = "Waterfox";
+  static const char* const sXR = "Fennec";
   rv = aFile->AppendNative(nsDependentCString(sXR));
   NS_ENSURE_SUCCESS(rv, rv);
 
@@ -1293,7 +1293,7 @@ nsresult nsXREDirProvider::AppendSysUserExtensionPath(nsIFile* aFile) {
 
 #elif defined(XP_UNIX)
 
-  static const char* const sXR = ".waterfox";
+  static const char* const sXR = ".fennec";
   rv = aFile->AppendNative(nsDependentCString(sXR));
   NS_ENSURE_SUCCESS(rv, rv);
 
@@ -1592,7 +1592,7 @@ nsresult nsXREDirProvider::AppendProfilePath(nsIFile* aFile, bool aLocal) {
   // The parent of this directory is set in GetUserDataDirectoryHome
   // XXX: handle gAppData->profile properly
   // XXXsmaug ...and the rest of the profile creation!
-  rv = aFile->AppendNative(nsDependentCString("waterfox"));
+  rv = aFile->AppendNative(nsDependentCString("fennec"));
   NS_ENSURE_SUCCESS(rv, rv);
 #elif defined(XP_UNIX)
   nsAutoCString folder;

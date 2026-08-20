@@ -180,7 +180,7 @@ bool InstallPrivilegedHelper() {
     // then loaded. The executable is placed in
     // /Library/PrivilegedHelperTools.
     result = (BOOL)SMJobBless(kSMDomainSystemLaunchd,
-                              (CFStringRef) @"net.waterfox.updater", authRef,
+                              (CFStringRef) @"net.fennec.updater", authRef,
                               &cfError);
     if (!result) {
       NSLog(@"Unable to install helper!");
@@ -202,7 +202,7 @@ void AbortElevatedUpdate() {
     @try {
       updateServer = (id)[NSConnection
           rootProxyForConnectionWithRegisteredName:
-              @"net.waterfox.updater.server"
+              @"net.fennec.updater.server"
                                               host:nil
                                    usingNameServer:[NSSocketPortNameServer
                                                        sharedInstance]];

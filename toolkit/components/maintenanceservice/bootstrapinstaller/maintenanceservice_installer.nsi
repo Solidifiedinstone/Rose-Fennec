@@ -50,7 +50,7 @@ Var BrandFullName
 !include defines.nsi
 ; We keep defines.nsi defined so that we get other things like
 ; the version number, but we redefine BrandFullName
-!define MaintFullName "Waterfox Maintenance Service"
+!define MaintFullName "Fennec Maintenance Service"
 !ifdef BrandFullName
 !undef BrandFullName
 !endif
@@ -71,7 +71,7 @@ InstallDirRegKey HKLM "Software\BrowserWorks\MaintenanceService" ""
 SetOverwrite on
 
 !define MaintUninstallKey \
- "Software\Microsoft\Windows\CurrentVersion\Uninstall\WaterfoxMaintenanceService"
+ "Software\Microsoft\Windows\CurrentVersion\Uninstall\FennecMaintenanceService"
 
 ; Always install into the 32-bit location even if we have a 64-bit build.
 ; This is because we use only 1 service for all Firefox channels.
@@ -204,7 +204,7 @@ Section "MaintenanceService"
   ; Included here for debug purposes only.
   ; These keys are used to bypass the installation dir is a valid installation
   ; check from the service so that tests can be run.
-  WriteRegStr HKLM "${FallbackKey}\0" "name" "WATERFOX LIMITED"
+  WriteRegStr HKLM "${FallbackKey}\0" "name" "FENNEC LIMITED"
   WriteRegStr HKLM "${FallbackKey}\0" "issuer" "GlobalSign GCC R45 EV CodeSigning CA 2020"
   WriteRegStr HKLM "${FallbackKey}\1" "name" "Mozilla Fake SPC"
   WriteRegStr HKLM "${FallbackKey}\1" "issuer" "Mozilla Fake CA"
