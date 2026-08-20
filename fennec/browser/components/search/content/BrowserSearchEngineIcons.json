@@ -28,14 +28,6 @@
     "chrome://browser/content/search/icons/qwant.svg"
   ],
   [
-    "searxng",
-    "chrome://browser/content/search/icons/searxng.svg"
-  ],
-  [
-    "searxng-local",
-    "chrome://browser/content/search/icons/searxng.svg"
-  ],
-  [
     "wps",
     "chrome://browser/content/search/icons/wps.svg"
   ]

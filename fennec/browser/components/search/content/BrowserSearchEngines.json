@@ -174,43 +174,5 @@
         "searchTermParamName": "q"
       }
     }
-  },
-  {
-    "aliases": [
-      "searx",
-      "searxng"
-    ],
-    "classification": "general",
-    "identifier": "searxng",
-    "name": "SearXNG",
-    "urls": {
-      "search": {
-        "base": "https://searx.be/search",
-        "searchTermParamName": "q"
-      },
-      "suggestions": {
-        "base": "https://searx.be/autocompleter",
-        "searchTermParamName": "q"
-      }
-    }
-  },
-  {
-    "aliases": [
-      "searxl",
-      "localsearx"
-    ],
-    "classification": "general",
-    "identifier": "searxng-local",
-    "name": "SearXNG (self-hosted)",
-    "urls": {
-      "search": {
-        "base": "http://127.0.0.1:8080/search",
-        "searchTermParamName": "q"
-      },
-      "suggestions": {
-        "base": "http://127.0.0.1:8080/autocompleter",
-        "searchTermParamName": "q"
-      }
-    }
   }
 ]

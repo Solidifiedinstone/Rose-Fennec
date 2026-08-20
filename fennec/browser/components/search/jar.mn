@@ -11,6 +11,5 @@ browser.jar:
         content/browser/search/icons/ecosia.ico                      (content/icons/ecosia.ico)
         content/browser/search/icons/google.svg                      (content/icons/google.svg)
         content/browser/search/icons/mojeek.svg                      (content/icons/mojeek.svg)
-        content/browser/search/icons/searxng.svg                     (content/icons/searxng.svg)
         content/browser/search/icons/qwant.svg                       (content/icons/qwant.svg)
         content/browser/search/icons/wps.svg                         (content/icons/wps.svg)
