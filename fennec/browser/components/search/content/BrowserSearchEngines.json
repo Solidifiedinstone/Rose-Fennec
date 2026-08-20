@@ -1,6 +1,8 @@
 [
   {
-    "aliases": ["1o"],
+    "aliases": [
+      "1o"
+    ],
     "classification": "general",
     "identifier": "1org",
     "name": "1.org Charitable Search",
@@ -22,7 +24,9 @@
     }
   },
   {
-    "aliases": ["bi"],
+    "aliases": [
+      "bi"
+    ],
     "classification": "general",
     "identifier": "bing",
     "name": "Bing",
@@ -38,7 +42,9 @@
     }
   },
   {
-    "aliases": ["ddg"],
+    "aliases": [
+      "ddg"
+    ],
     "classification": "general",
     "identifier": "ddg",
     "name": "DuckDuckGo",
@@ -60,7 +66,9 @@
     }
   },
   {
-    "aliases": ["ec"],
+    "aliases": [
+      "ec"
+    ],
     "classification": "general",
     "identifier": "ecosia",
     "name": "Ecosia",
@@ -82,7 +90,27 @@
     }
   },
   {
-    "aliases": ["go"],
+    "aliases": [
+      "wps"
+    ],
+    "classification": "general",
+    "identifier": "wps",
+    "name": "Fennec Private Search",
+    "urls": {
+      "search": {
+        "base": "https://search.waterfox.com/search",
+        "searchTermParamName": "q"
+      },
+      "suggestions": {
+        "base": "https://search.waterfox.com/autocomplete",
+        "searchTermParamName": "q"
+      }
+    }
+  },
+  {
+    "aliases": [
+      "go"
+    ],
     "classification": "general",
     "identifier": "google",
     "name": "Google",
@@ -98,7 +126,9 @@
     }
   },
   {
-    "aliases": ["mo"],
+    "aliases": [
+      "mo"
+    ],
     "classification": "general",
     "identifier": "mojeek",
     "name": "Mojeek",
@@ -114,7 +144,9 @@
     }
   },
   {
-    "aliases": ["qw"],
+    "aliases": [
+      "qw"
+    ],
     "classification": "general",
     "identifier": "qwant",
     "name": "Qwant",
@@ -144,17 +176,39 @@
     }
   },
   {
-    "aliases": ["wps"],
+    "aliases": [
+      "searx",
+      "searxng"
+    ],
     "classification": "general",
-    "identifier": "wps",
-    "name": "Fennec Private Search",
+    "identifier": "searxng",
+    "name": "SearXNG",
     "urls": {
       "search": {
-        "base": "https://search.waterfox.com/search",
+        "base": "https://searx.be/search",
         "searchTermParamName": "q"
       },
       "suggestions": {
-        "base": "https://search.waterfox.com/autocomplete",
+        "base": "https://searx.be/autocompleter",
+        "searchTermParamName": "q"
+      }
+    }
+  },
+  {
+    "aliases": [
+      "searxl",
+      "localsearx"
+    ],
+    "classification": "general",
+    "identifier": "searxng-local",
+    "name": "SearXNG (self-hosted)",
+    "urls": {
+      "search": {
+        "base": "http://127.0.0.1:8080/search",
+        "searchTermParamName": "q"
+      },
+      "suggestions": {
+        "base": "http://127.0.0.1:8080/autocompleter",
         "searchTermParamName": "q"
       }
     }
